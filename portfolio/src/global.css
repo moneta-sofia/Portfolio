@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Kulim+Park&family=Mandali&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Mandali&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+:root {
+  margin: 0;
+  --primary: #953735;
+  --primary: #FBEEE4;
+}
