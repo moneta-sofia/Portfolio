@@ -9,9 +9,12 @@ export default {
 
       },
       colors: {
-        primary: "#953735",
-        secondary: "#FBEEE4"
+        primary: 'var(--color-primary)',
+        secondary: 'var(--color-secondary)',
       },
+      screens: {
+        '3xl': '1600px',
+      }
     },
   },
   plugins: [],

@@ -1,11 +1,13 @@
 
-import Start from './assets/components/Start'
+import About from './components/About'
+import Start from './components/Start'
 
 function App() {
   return (
-    <>
-    <Start/>
-    </>
+    <div className='flex flex-col justify-center items-center overflow-x-hidden'>
+      <Start/>
+      <About/>
+    </div>
   )
 }
 

@@ -1,1 +1,133 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--logos" width="31.88" height="32" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 257"><defs><linearGradient id="IconifyId1813088fe1fbc01fb466" x1="-.828%" x2="57.636%" y1="7.652%" y2="78.411%"><stop offset="0%" stop-color="#41D1FF"></stop><stop offset="100%" stop-color="#BD34FE"></stop></linearGradient><linearGradient id="IconifyId1813088fe1fbc01fb467" x1="43.376%" x2="50.316%" y1="2.242%" y2="89.03%"><stop offset="0%" stop-color="#FFEA83"></stop><stop offset="8.333%" stop-color="#FFDD35"></stop><stop offset="100%" stop-color="#FFA800"></stop></linearGradient></defs><path fill="url(#IconifyId1813088fe1fbc01fb466)" d="M255.153 37.938L134.897 252.976c-2.483 4.44-8.862 4.466-11.382.048L.875 37.958c-2.746-4.814 1.371-10.646 6.827-9.67l120.385 21.517a6.537 6.537 0 0 0 2.322-.004l117.867-21.483c5.438-.991 9.574 4.796 6.877 9.62Z"></path><path fill="url(#IconifyId1813088fe1fbc01fb467)" d="M185.432.063L96.44 17.501a3.268 3.268 0 0 0-2.634 3.014l-5.474 92.456a3.268 3.268 0 0 0 3.997 3.378l24.777-5.718c2.318-.535 4.413 1.507 3.936 3.838l-7.361 36.047c-.495 2.426 1.782 4.5 4.151 3.78l15.304-4.649c2.372-.72 4.652 1.36 4.15 3.788l-11.698 56.621c-.732 3.542 3.979 5.473 5.943 2.437l1.313-2.028l72.516-144.72c1.215-2.423-.88-5.186-3.54-4.672l-25.505 4.922c-2.396.462-4.435-1.77-3.759-4.114l16.646-57.705c.677-2.35-1.37-4.583-3.769-4.113Z"></path></svg>
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 296 315" width="296" height="315">
+	<title>_bcf5b828-b1eb-4120-a559-52716da8fe60-removebg-preview-svg</title>
+	<defs>
+		<image  width="278" height="295" id="img1" href="data:image/png;base64,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"/>
+	</defs>
+	<style>
+		.s0 { fill: #fb6b50 } 
+		.s1 { fill: #fd684e } 
+		.s2 { fill: #35384f } 
+		.s3 { opacity: .3;fill: #78808f } 
+		.s4 { opacity: .8;fill: #565e6d } 
+		.s5 { fill: #6e8292 } 
+		.s6 { fill: #d2fcfe } 
+		.s7 { fill: #3f4a5c } 
+		.s8 { fill: #463740 } 
+		.s9 { fill: #d0614e } 
+		.s10 { fill: #fafcfd } 
+		.s11 { fill: #d7f0fc } 
+		.s12 { fill: #ec695e } 
+		.s13 { opacity: .8;fill: #2d3545 } 
+		.s14 { fill: #f8fafa } 
+		.s15 { fill: #7e8795 } 
+		.s16 { fill: #583842 } 
+		.s17 { fill: #333a4c } 
+		.s18 { fill: #904749 } 
+		.s19 { fill: #da6555 } 
+		.s20 { fill: #546e86 } 
+		.s21 { fill: #a4bcd1 } 
+		.s22 { fill: #35364d } 
+		.s23 { fill: #6a3c46 } 
+		.s24 { fill: #c96457 } 
+		.s25 { fill: #864c49 } 
+		.s26 { fill: #d76b62 } 
+		.s27 { fill: #f9fbfc } 
+		.s28 { fill: #94b7ce } 
+		.s29 { opacity: .9;fill: #4e5464 } 
+		.s30 { fill: #6d707c } 
+	</style>
+	<g id="Layer">
+		<path id="Layer" fill-rule="evenodd" class="s0" d="m213.5 22.5q5 0.6 10 1.5 3.8 2.2 8 3.5 0.7 2.1 3 2 1 0 2 0 2.5 3.8 7 5 8.6 6.9 16.5 15 2.1 2.9 3.5 6-2 0-4 0 0.2-2.4-2-3.5 1.7-3.1-2-4.5 0 2 0 4-2.4-1.2-2-4-2.5 0.2-5-0.5-3-3.6-5.5-7.5-2.7 1.9-5.5 0-1.3-2.2-4-2.5 1.2-0.5 2-1.5-2.9-1.2-6-1.5 6.7-1.8 1-4.5-1 0.8-1.5 2-0.3-2.2-1.5-4-2.4 1.2-5 1 0 2 0 4-4.1-0.1-8-1 0 2 0 4-16 0-32 0 0-1.5 0-3-4 0-8 0 0-2 0-4 1.6 0.2 3-0.5-5.2-2.1-11-1.5 0.2-0.9 1-1.5 5.9-2 12-2.5 17-2 34 0z"/>
+	</g>
+	<g id="Layer">
+		<path id="Layer" fill-rule="evenodd" class="s1" d="m166.5 26.5q5.8-0.6 11 1.5-1.4 0.7-3 0.5 0 2 0 4 4 0 8 0 0 1.5 0 3 16 0 32 0 0-2 0-4 3.9 0.9 8 1 0-2 0-4 2.6 0.2 5-1 1.2 1.8 1.5 4 0.5-1.2 1.5-2 5.7 2.7-1 4.5 3.1 0.3 6 1.5-0.8 1-2 1.5 2.7 0.3 4 2.5 2.8 1.9 5.5 0 2.5 3.9 5.5 7.5 2.5 0.7 5 0.5-0.4 2.8 2 4 0-2 0-4 3.7 1.4 2 4.5 2.2 1.1 2 3.5 2 0 4 0 2.7 2.4 4 6 4.6 10.4 8 21 0 51 0 102-2.4 6.2-4 13-1.2 3.7-3 7-2.1 0.7-2 3-21.8 30.5-56.5 16-3.4-2.3-6.5-5-4.1-2.6-6-7 0.4-1.7 2.5-2 3.2 0 4.5 3 0.6-1.6 0-4 5.8 1.1 8-4 3-3.2 6.5-6 1.5-4.1 4.5-7 1.1-0.6 1.5-2 1.2-36.8-0.5-73-1.5-5.3-4.5-10-7.2-7-16.5-10.5-10.5-1.6-21-3.5-4.6-4-11-3-24.3-4.3-42.5-21-1.2-6.4 2-12 4.5-8.2 10.5-15 5.1-2.8 9-7.5 2.5-0.9 5-1.5 3.7-1.2 6-4 1.9-2.1 5-2z"/>
+	</g>
+	<g id="Layer">
+		<path id="Layer" fill-rule="evenodd" class="s2" d="m168.5 10.5q-1.7 4.4-3 9-1.7-0.8-3.5-1-5 2.3-10.5 2 0 4 0 8 2.4-0.3 4 1.5-4.3 0.1-7.5 2.5-1-1-2-2-1.6 3.8-2.5 8-0.9-0.3-1.5-1-0.7 1.9-0.5 4-6 6.8-10.5 15-3.2 5.6-2 12 18.2 16.7 42.5 21 5 2.6 11 3 10.5 1.9 21 3.5 9.3 3.5 16.5 10.5 3 4.7 4.5 10 0.4 37.5-1 75-3 2.9-4.5 7-3.5 2.8-6.5 6-7.4 4.1-16 4-0.4 1.9 1 3 1.9 4.4 6 7-0.6 5.2-4.5 1-0.7 1.6 0.5 3-3 1.5-6 3 1.7 1.7 2 4-3.9-1.6-6.5-5-4.7-5.5-8-12-11.7 17.9-21 37-1.4 7 1.5 13.5 14.6 6.7 28 15 7.5 6.8 11 16.5 32.5 1.7 65 0.5 8.3-3 10.5-11.5 1.2-32.8-0.5-65 0.1-0.8 1-1 7 4 1-1.5 3.5-0.7 7-0.5-0.5 11.5 1 23 1-2.2 3-3-0.4 1.9 1 3 0.2 21.9-2 43.5 0.5 0.5 1 1-2.7 4.4-2 9-6.5 4.8-9 12.5-6.7 6-16 6.5-100 1-200 0-19.6-1.1-26.5-19.5-1.9-15.4-2-31-14.9-36.3-29-73-3.8-19.2 14.5-16 1.7 2.9 5 4.5 4.5 0.7 8 3.5 1.3 1.6 2.5 0 0.8-57.5 0.5-115 3.7-16.9 20-23.5 2.5-0.7 5-0.5 34 1 67-2 16.5-20.7 42-28z"/>
+	</g>
+	<g id="Layer">
+		<path id="Layer" fill-rule="evenodd" class="s3" d="m126.5 38.5q-33 3-67 2 33.4-1 67-2z"/>
+	</g>
+	<g id="Layer">
+		<path id="Layer" fill-rule="evenodd" class="s4" d="m275.5 44.5q4.4 1.9 7 6-4.9-1.4-7-6z"/>
+	</g>
+	<g id="Layer">
+		<path id="Layer" fill-rule="evenodd" class="s5" d="m61.5 54.5q27.7-1.5 56-1 0.4 1.9-1 3-27-3-55-2z"/>
+	</g>
+	<g id="Layer">
+		<path id="Layer" fill-rule="evenodd" class="s6" d="m61.5 54.5q28-1 55 2-2.7 7.2-1.5 15 6.4 22.6 14.5 44.5-1.7 8.1-5.5 15.5-2.2 7.5 3.5 12.5 6.4 1.9 13 2.5 9.8 29.6 40 20 2.2 9.1-0.5 18-17.3 29.6-33 60-1.7 4.3-1.5 9-36.2-14.5-49.5 22-1.4 4.4-1.5 9-10 0-20 0-13.8-36.4-27-73-0.3-73 0.5-146 3-6.8 9.5-10 1.8-1.1 4-1z"/>
+	</g>
+	<g id="Layer">
+		<path id="Layer" fill-rule="evenodd" class="s7" d="m57.5 55.5q-6.5 3.2-9.5 10-0.8 73-0.5 146-2.3-1.1-2.5-4-0.5-62.5-1-125-0.6-4.8-1.5-9.5 3.9-6.3 5.5-13.5 3.4-5.2 9.5-4z"/>
+	</g>
+	<g id="Layer">
+		<path id="Layer" fill-rule="evenodd" class="s8" d="m267.5 61.5q3.2 2.4 6 5.5-2 4.2 1.5 7.5 0.7 4 0.5 8-3.4-10.6-8-21z"/>
+	</g>
+	<g id="Layer">
+		<path id="Layer" fill-rule="evenodd" class="s9" d="m171.5 89.5q6.4-1 11 3-6-0.4-11-3z"/>
+	</g>
+	<g id="Layer">
+		<path id="Layer" fill-rule="evenodd" class="s10" d="m169.5 104.5q0 2.3 2 3.5 15.6 4.7 26.5 16.5 4.3 11-3.5 19.5-4.1 1.5-7 4.5-8.2 4-17 6.5-8.8 1.4-14.5-5.5-3.5-6.2-5.5-13-5.9-2.1-11-5.5 2.8-6.9 5-14-2.8-12.4-8-24 0.5-0.8 1-1.5 15 9 32 13z"/>
+	</g>
+	<g id="Layer">
+		<path id="Layer" fill-rule="evenodd" class="s11" d="m169.5 104.5q16 2.9 32 5.5 4.2 2.7 7.5 6.5 2.2 16.8 1.5 34-4.5 2.3-8 6-6.2 0.8-9 6-0.4-8.1-6-14 2.9-3 7-4.5 7.8-8.5 3.5-19.5-10.9-11.8-26.5-16.5-2-1.2-2-3.5z"/>
+	</g>
+	<g id="Layer">
+		<path id="Layer" fill-rule="evenodd" class="s12" d="m224.5 116.5q1.7 36.2 0.5 73-0.4 1.4-1.5 2 1.4-37.5 1-75z"/>
+	</g>
+	<g id="Layer">
+		<path id="Layer" fill-rule="evenodd" class="s13" d="m34.5 64.5q0.3 57.5-0.5 115-1.2 1.6-2.5 0 3-52.7 2-106-0.5-4.8 1-9z"/>
+	</g>
+	<g id="Layer">
+		<path id="Layer" fill-rule="evenodd" class="s14" d="m210.5 150.5q0.3 17.5-0.5 35-5.9 12.7-19.5 9 8.1-15.4 3-32 2.8-5.2 9-6 3.5-3.7 8-6z"/>
+	</g>
+	<g id="Layer">
+		<path id="Layer" fill-rule="evenodd" class="s15" d="m33.5 73.5q1 53.3-2 106-3.5-2.8-8-3.5-3.3-1.6-5-4.5 7.2 2 13.5 6 0.3-52.3 1.5-104z"/>
+	</g>
+	<g id="Layer">
+		<path id="Layer" fill-rule="evenodd" class="s16" d="m275.5 184.5q0.2 4-0.5 8-0.3 3.6-3.5 5 1.6-6.8 4-13z"/>
+	</g>
+	<g id="Layer">
+		<path id="Layer" fill-rule="evenodd" class="s17" d="m284.5 53.5q4.1 5.2 5 12 0 86.5 0 173-1.4-1.1-1-3 0.3-84.5-0.5-169-1-3.1-3.5-5 0.8-1 2-1.5-2.3-2.8-2-6.5z"/>
+	</g>
+	<g id="Layer">
+		<path id="Layer" fill-rule="evenodd" class="s18" d="m268.5 204.5q0.1 2.3-2 3-0.1-2.3 2-3z"/>
+	</g>
+	<g id="Layer">
+		<path id="Layer" fill-rule="evenodd" class="s19" d="m212.5 204.5q-2.2 5.1-8 4 0.6 2.4 0 4-1.3-3-4.5-3-2.1 0.3-2.5 2-1.4-1.1-1-3 8.6 0.1 16-4z"/>
+	</g>
+	<g id="Layer">
+		<path id="Layer" fill-rule="evenodd" class="s20" d="m195.5 229.5q20.5 16.5 47 11.5 20.7-5.3 33-22.5 1.7 32.2 0.5 65-2.2 8.5-10.5 11.5-32.5 1.2-65-0.5-3.5-9.7-11-16.5-13.4-8.3-28-15-2.9-6.5-1.5-13.5 9.3-19.1 21-37 3.3 6.5 8 12 2.6 3.4 6.5 5z"/>
+	</g>
+	<g id="Layer">
+		<path id="Layer" fill-rule="evenodd" class="s21" d="m19.5 187.5q3.9 1.2 5.5 5 17.5 45.1 34.5 90.5-0.5 0.8-1 1.5-21-47.9-39-97z"/>
+	</g>
+	<g id="Layer">
+		<path id="Layer" fill-rule="evenodd" class="s22" d="m275.5 44.5q2.1 4.6 7 6 1.4 1.2 2 3-0.3 3.7 2 6.5-1.2 0.5-2 1.5 2.5 1.9 3.5 5 0.8 84.5 0.5 169-2 0.8-3 3-1.5-11.5-1-23-3.5-0.2-7 0.5 6 5.5-1 1.5-0.9 0.2-1 1-12.3 17.2-33 22.5-26.5 5-47-11.5-0.3-2.3-2-4 3-1.5 6-3-1.2-1.4-0.5-3 3.9 4.2 4.5-1 3.1 2.7 6.5 5 34.7 14.5 56.5-16 2.1-0.7 2-3 1.8-3.3 3-7 3.2-1.4 3.5-5 0.7-4 0.5-8 0-51 0-102 0.2-4-0.5-8-3.5-3.3-1.5-7.5-2.8-3.1-6-5.5-1.3-3.6-4-6-1.4-3.1-3.5-6-7.9-8.1-16.5-15-2.7-3.6-7-5-1 0-2 0-0.7-2.1-3-2-4.2-1.3-8-3.5-5-0.9-10-1.5-1.1-1.2-3-1.5-14-1-28 0-1.9 0.3-3 1.5-6.1 0.5-12 2.5-0.8 0.6-1 1.5-3.1-0.1-5 2-4 0.5-6 4-2.5 0.6-5 1.5-3.9 4.7-9 7.5-0.2-2.1 0.5-4 0.6 0.7 1.5 1 0.9-4.2 2.5-8 1 1 2 2 3.2-2.4 7.5-2.5-1.6-1.8-4-1.5 0-4 0-8 5.5 0.3 10.5-2 1.8 0.2 3.5 1 1.3-4.6 3-9 48.6-13.8 89 16.5 8.9 9.2 18 17.5z"/>
+	</g>
+	<g id="Layer">
+		<path id="Layer" fill-rule="evenodd" class="s23" d="m236.5 29.5q4.3 1.4 7 5-4.5-1.2-7-5z"/>
+	</g>
+	<g id="Layer">
+		<path id="Layer" fill-rule="evenodd" class="s24" d="m161.5 28.5q-2.3 2.8-6 4 2-3.5 6-4z"/>
+	</g>
+	<g id="Layer">
+		<path id="Layer" fill-rule="evenodd" class="s25" d="m231.5 27.5q2.3-0.1 3 2-2.3 0.1-3-2z"/>
+	</g>
+	<g id="Layer">
+		<path id="Layer" fill-rule="evenodd" class="s26" d="m213.5 22.5q-17-2-34 0 1.1-1.2 3-1.5 14-1 28 0 1.9 0.3 3 1.5z"/>
+	</g>
+	<g id="Layer">
+		<path id="Layer" fill-rule="evenodd" class="s27" d="m184.5 294.5q-15.2 1.5-31 1-13.6-7.9-27-16.5-7-3.8-15-4.5 7.6-15.8 24-9.5 21.7 10.6 43 22 3.9 3.1 6 7.5z"/>
+	</g>
+	<g id="Layer">
+		<path id="Layer" fill-rule="evenodd" class="s28" d="m111.5 290.5q4-0.2 8 0.5 3 2 6 4-9 1.2-18-0.5 1.6-2.6 4-4z"/>
+	</g>
+	<g id="Layer">
+		<path id="Layer" fill-rule="evenodd" class="s29" d="m289.5 65.5q1.7 109.7 0.5 220-1.9 12.6-12.5 19 2.5-7.7 9-12.5-0.7-4.6 2-9-0.5-0.5-1-1 2.2-21.6 2-43.5 0-86.5 0-173z"/>
+	</g>
+	<g id="Layer">
+		<path id="Layer" fill-rule="evenodd" class="s30" d="m184.5 294.5q0.8 0.1 1 1-16.2 2-32 0 15.8 0.5 31-1z"/>
+	</g>
+	<use id="Capa 1" href="#img1" x="13" y="10"/>
+</svg>

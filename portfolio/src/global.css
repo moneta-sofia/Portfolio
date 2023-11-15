@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Kulim+Park&family=Mandali&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kulim+Park:wght@300;400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter&family=Mandali&display=swap');
 @tailwind base;
 @tailwind components;
@@ -6,7 +6,15 @@
 
 
 :root {
+  --color-primary: #953735;
+  --color-secondary: #FBEEE4;
+
   margin: 0;
-  --primary: #953735;
-  --primary: #FBEEE4;
+  background: var(--color-secondary);
+}
+.start{
+  background-image:   url(assets/cuadricula.png);
+  background-position: center;
+  background-size: cover;
+  backdrop-filter: opacity(50);
 }
