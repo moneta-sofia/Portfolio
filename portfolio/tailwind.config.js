@@ -14,6 +14,10 @@ export default {
       },
       screens: {
         '3xl': '1600px',
+      },
+      boxShadow:{
+        innerxl: '0px 0px 5px 2px rgba(0,0,0,0.35) inset',
+        xxl: '0px 4px 8px -1px rgba(0,0,0,0.54);'
       }
     },
   },

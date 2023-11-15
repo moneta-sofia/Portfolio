@@ -12,9 +12,57 @@
   margin: 0;
   background: var(--color-secondary);
 }
-.start{
+.bg-cuadricula{
   background-image:   url(assets/cuadricula.png);
   background-position: center;
   background-size: cover;
-  backdrop-filter: opacity(50);
+}
+
+
+.about-slider{
+  position: relative;
+	&::before,
+	&::after {
+		background: linear-gradient(to bottom,#FBEEE4 0%,rgba(255, 0, 0, 0) 100%);
+		content: "";
+		height: 100px;;
+		position: absolute;
+		width:90vw ;
+		z-index: 2;
+    
+	}
+	&::before{
+    top: 0;
+    right: 0;
+    
+  }
+	&::after {
+		right: 0;
+		bottom: 0;
+		transform: rotateZ(180deg);
+	}
+}
+
+
+.description{
+  position: relative;
+  animation: slide 30s cubic-bezier(0.68, -0.55, 0.27, 1.55) infinite;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateY(0);
+  }
+  20%{
+    transform: translateY(-20%);
+  }
+  40%{
+    transform: translateY(-40%);
+  }
+  65%{
+    transform: translateY(-65%);
+  }
+  85% {
+    transform: translateY(-85%);
+  }
 }
