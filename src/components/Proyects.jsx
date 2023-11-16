@@ -27,7 +27,7 @@ export default function Proyects() {
                         <img src={InfinitMockup} className=" relative -bottom-5 self-center"></img>
                     </a>
 
-                    <div className="card-p1 flex flex-col bg-red-100 hover:bg-white px-6 pt-8 mb-16 w-80 overflow-hidden rounded-xl hover:scale-105 transition ease-out shadow-special hover:shadow-special2 mx-5">
+                    <a href="https://odontologos-sofi.netlify.app/" target="_blank" className="card-p1 flex flex-col bg-red-100 hover:bg-white px-6 pt-8 mb-16 w-80 overflow-hidden rounded-xl hover:scale-105 transition ease-out shadow-special hover:shadow-special2 mx-5">
                         <h1 className="text-4xl font-extrabold text-red-600 mb-5">Odontologos</h1>
                         <p className="my-1 font-medium">Proyecto FrontEnd: Listado de Odontologos</p>
                         <div className="flex justify-between items-center text-3xl px-3 my-5">
@@ -37,10 +37,10 @@ export default function Proyects() {
                             <SiVite title="Vite" />
                         </div>
                         <img src={OdontologosMockup} className=" relative -bottom-5 self-center"></img>
-                    </div>
+                    </a>
 
 
-                    <div className="card-p1 flex flex-col bg-slate-100 hover:bg-white px-6 pt-8 mb-16 w-80 overflow-hidden rounded-xl hover:scale-105 transition ease-out shadow-special hover:shadow-special2 mx-5">
+                    <a href="https://github.com/moneta-sofia/ProyectBackend" target="_blank" className="card-p1 flex flex-col bg-slate-100 hover:bg-white px-6 pt-8 mb-16 w-80 overflow-hidden rounded-xl hover:scale-105 transition ease-out shadow-special hover:shadow-special2 mx-5">
                         <h1 className="text-4xl font-extrabold mb-5" style={{ color: '#74a5d2' }}>Clínica</h1>
                         <p className="my-1 font-medium">Proyecto Backend: Gestión de pacientes</p>
                         <div className="flex justify-between items-center text-3xl px-3 my-5">
@@ -51,7 +51,7 @@ export default function Proyects() {
                             <SiSpring title="SpringBoot" />
                         </div>
                         <img src={ClinicaMockup} className=" relative -bottom-5 self-center"></img>
-                    </div>
+                    </a>
                 </div>
             </div>
             <img src={Wave} className="w-full rotate-180 relative -top-5"></img>
