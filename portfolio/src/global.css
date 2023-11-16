@@ -14,8 +14,14 @@
 }
 .bg-cuadricula{
   background-image:   url(assets/cuadricula.png);
-  background-position: center;
   background-size: cover;
+  background-repeat: repeat;
+}
+.bg-cuadricula2{
+  background-image:   url(assets/cuadricula.png);
+  background-position: center top;
+  background-repeat: repeat;
+  background-size: contain;
 }
 
 
@@ -46,7 +52,7 @@
 
 .description{
   position: relative;
-  animation: slide 20s cubic-bezier(0.68, -0.55, 0.27, 1.55) infinite;
+  animation: slide 20s cubic-bezier(0.60, -0.50, 0.24, 1.50) infinite;
 }
 
 @keyframes slide {
@@ -59,8 +65,8 @@
   40%{
     transform: translateY(-40%);
   }
-  65%{
-    transform: translateY(-65%);
+  62%{
+    transform: translateY(-62%);
   }
   85% {
     transform: translateY(-85%);
@@ -79,6 +85,7 @@
   left:4rem;
   top:-0.9rem;
   background-color: white;
+  border-radius: 10px;
 }
 
 textarea:focus,

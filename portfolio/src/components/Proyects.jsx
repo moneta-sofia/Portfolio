@@ -3,6 +3,7 @@ import { FaReact, FaHtml5, FaSass, FaCss3Alt, FaJava } from "react-icons/fa";
 import { GrMysql } from "react-icons/gr";
 import { InfinitMockup, ClinicaMockup, OdontologosMockup } from "../assets/Mockups";
 import Wave from "../assets/wave.png";
+import Line from "../assets/line.svg";
 
 
 
@@ -10,6 +11,7 @@ export default function Proyects() {
     return (
         <>
             <div className="w-full bg-primary flex flex-col items-center relative -top-2 font-inter pt-10">
+            <img src={Line} className="w-full"></img>
                 <h1 className="font-bold text-secondary 3xl:text-8xl xl:text-7xl lg:text-6xl text-5xl my-28">PROYECTOS</h1>
                 <div className="w-full flex flex-row flex-wrap justify-center items-center">
                     <a href="https://infinit-ecommerce.vercel.app/" target="_blank" className="card-p1 flex flex-col bg-gray-200 hover:bg-white px-6 pt-8 mb-16 w-80 overflow-hidden rounded-xl hover:scale-105 transition ease-out shadow-special hover:shadow-special2 mx-5" >

@@ -77,7 +77,7 @@ export default function Contact() {
                     </label>
                     <textarea
                         name="message"
-                        className="px-5 min-h-24 max-h-48 inputName w-full text-lg text-gray-800 rounded-xl bg-inherit border-2 focus:border-4 border-solid border-primary py-3"
+                        className="px-5 lg:h-36 h-60 inputName w-full text-lg text-gray-800 rounded-xl bg-inherit border-2 focus:border-4 border-solid border-primary py-3"
                     />
                 </div>
 
