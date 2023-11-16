@@ -17,7 +17,10 @@ export default {
       },
       boxShadow:{
         innerxl: '0px 0px 5px 2px rgba(0,0,0,0.35) inset',
-        xxl: '0px 4px 8px -1px rgba(0,0,0,0.54);'
+        xxl: '0px 4px 8px -1px rgba(0,0,0,0.54);',
+        special: '1px 1px 10px 0px rgba(0,0,0,0.6);',
+        special2: '1px 1px 29px 0px rgba(0,0,0,0.6);'
+
       }
     },
   },
