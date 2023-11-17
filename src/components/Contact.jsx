@@ -28,10 +28,10 @@ export default function Contact() {
     return (
         <div className="text-center mb-32 flex flex-col justify-center items-center">
             <Toaster richColors expand={false}  position="bottom-center" />
-            <h1 className="font-bold text-primary 3xl:text-8xl xl:text-7xl lg:text-6xl text-5xl my-10">
+            <h1 className="font-bold text-primary 3xl:text-8xl xl:text-7xl lg:text-6xl md:text-5xl text-4xl my-10">
                 TRABAJEMOS JUNTOS!
             </h1>
-            <p className="text-xl px-10">
+            <p className="md:text-xl text-lg md:px-10 px-5">
                 Puedes contactarme por mi correo{" "}
                 <a
                     href="https://mail.google.com/mail/?view=cm&fs=1&to=sofia.moneta.dev@gmail.com"
@@ -45,9 +45,9 @@ export default function Contact() {
             <form
                 ref={form}
                 onSubmit={sendForm}
-                className="my-10 flex flex-col justify-center items-center bg-white py-10 rounded-xl w-3/4"
+                className="my-10 flex flex-col justify-center items-center bg-white sm:px-10 px-8 py-10 rounded-xl md:w-3/4 w-11/12"
             >
-                <div className="flex flex-col w-full px-10 relative my-3">
+                <div className="flex flex-col w-full relative my-3">
                     <label className="labelName text-xl font-bold px-2 text-primary">
                         Nombre
                     </label>
@@ -59,7 +59,7 @@ export default function Contact() {
                     />
                 </div>
 
-                <div className="flex flex-col w-full px-10 relative my-3">
+                <div className="flex flex-col w-full relative my-3">
                     <label className="labelName text-xl font-bold px-2 text-primary">
                         Email
                     </label>
@@ -71,7 +71,7 @@ export default function Contact() {
                     />
                 </div>
 
-                <div className="flex flex-col w-full px-10 relative my-3">
+                <div className="flex flex-col w-full relative my-3">
                     <label className="labelName text-xl font-bold px-2 text-primary">
                         Mensaje
                     </label>
