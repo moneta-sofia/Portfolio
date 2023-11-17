@@ -17,7 +17,7 @@ export default function Start(){
                 <div className='flex w-2/4 justify-between 3xl:my-6 my-2'>
                     <a href='https://github.com/moneta-sofia' target="_blank"><FaGithub className='3xl:h-16 lg:h-10 h-5 3xl:w-16 lg:w-10 w-5 '/></a>
                     <a href='https://www.linkedin.com/in/sofiamoneta/' target="_blank"><FaLinkedin  className='3xl:h-16 lg:h-10 h-5 3xl:w-16 lg:w-10 w-5 '/></a>
-                    <a href='..\..\public\CV-Sofia_Moneta.pdf' download={''}><HiOutlineDocumentDownload  className='3xl:h-16 lg:h-10 h-5 3xl:w-16 lg:w-10 w-5 '/></a>
+                    <a href='/CV-Sofia_Moneta.pdf' download={''}><HiOutlineDocumentDownload  className='3xl:h-16 lg:h-10 h-5 3xl:w-16 lg:w-10 w-5 '/></a>
                 </div>
             </div>
             <img src={imgHome}  className='md:h-3/4 h-5/6 md:p-0 mt-16 sm:p-16 p-5 md:absolute relative 2xl:right-10 right-0 2xl:bottom-10 bottom-5'/>  
