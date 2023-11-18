@@ -57,6 +57,7 @@
     };
     function create() {
         nekoEl.id = "oneko";
+        nekoEl.classList.add('onekouwu');
         nekoEl.style.width = "32px";
         nekoEl.style.height = "32px";
         nekoEl.style.position = "fixed";

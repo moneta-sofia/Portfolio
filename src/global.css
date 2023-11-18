@@ -67,13 +67,15 @@
 	&::before{
     top: 0;
     right: 0;
-    
+    z-index: 10;
   }
 	&::after {
 		right: 0;
 		bottom: 0;
 		transform: rotateZ(180deg);
+    z-index: 10;
 	}
+  
 }
 
 
@@ -118,4 +120,8 @@
 textarea:focus,
 input:focus{
   outline: none;
+}
+
+.onekouwu{
+  z-index: 100;
 }
