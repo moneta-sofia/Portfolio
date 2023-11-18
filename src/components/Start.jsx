@@ -8,7 +8,7 @@ export default function Start(){
     return(   
     <div className='bg-cuadricula font-park  md:h-screen w-screen flex justify-center items-center'>
         <div className='flex flex-col md:items-start items-center relative md:w-5/6 w-full md:h-3/4 h-full'>
-            <div className='flex flex-col md:items-start items-center md:mt-8 mt-20 md:ml-12 ml-0 md: w-fit'>
+            <div className='flex flex-col md:items-start items-center md:mt-8 mt-24 md:ml-12 ml-0 md: w-fit'>
                 <div className="text-black 3xl:my-4 lg:my-2 my-1 ">
                     <p className='flex items-center md:justify-start justify-center 3xl:text-4xl xl:text-2xl lg:text-xl text-sm 3xl:my-4 lg:my-3 my-1 '>Un gusto verte por aqui! <PiHandWaving className='ml-3 text-1xl' /> </p> 
                     <p className='font-bold 3xl:text-8xl xl:text-6xl lg:text-5xl text-4xl md:text-center text-center'>Soy Sofia Moneta</p>
