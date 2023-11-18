@@ -33,6 +33,13 @@
   .bg-cuadricula{
     background-size:150%;
   }
+
+
+  
+.description{
+  position: relative;
+  animation: slide 20s cubic-bezier(0.60, -0.50, 0.24, 1.50) infinite;
+}
 }
 
 @media (max-width: 475px) {
@@ -72,7 +79,7 @@
 
 .description{
   position: relative;
-  animation: slide 20s cubic-bezier(0.60, -0.50, 0.24, 1.50) infinite;
+  animation: slide2 25s cubic-bezier(0.60, -0.50, 0.24, 1.50) infinite;
 }
 
 @keyframes slide {
@@ -93,6 +100,23 @@
   }
 }
 
+@keyframes slide2 {
+  0% {
+    transform: translateY(0);
+  }
+  20%{
+    transform: translateY(-20%);
+  }
+  40%{
+    transform: translateY(-40%);
+  }
+  62%{
+    transform: translateY(-62%);
+  }
+  85% {
+    transform: translateY(-85%);
+  }
+}
 .card-p1:hover img{
   bottom: 0;
   transition: ease-in-out 0.2s;
