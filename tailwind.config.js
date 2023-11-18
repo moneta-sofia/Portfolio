@@ -14,6 +14,8 @@ export default {
       },
       screens: {
         '3xl': '1600px',
+        'sm2': '460px',
+        'sm3': '338px',
       },
       boxShadow:{
         innerxl: '0px 0px 5px 2px rgba(0,0,0,0.35) inset',

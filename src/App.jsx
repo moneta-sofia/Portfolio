@@ -11,8 +11,8 @@ function App() {
       <About/>
       <Proyects/>
       <Contact/>
-      <div className='relative flex self-start justify-start items-start'>
-        <p className='p-5 font-park opacity-70'>©2023 Sofia Moneta. Todos los derechos reservados.</p>
+      <div className='relative flex justify-start items-center'>
+        <p className='p-5 font-park text-center opacity-70 sm2:text'>©2023 Sofia Moneta.<br></br>Todos los derechos reservados.</p>
       </div>
     </div>
   )

@@ -79,44 +79,27 @@
 
 .description{
   position: relative;
-  animation: slide2 25s cubic-bezier(0.60, -0.50, 0.24, 1.50) infinite;
+  animation: slide 30s cubic-bezier(0.60, -0.50, 0.24, 1.50) infinite;
 }
 
 @keyframes slide {
   0% {
     transform: translateY(0);
   }
-  20%{
-    transform: translateY(-20%);
+  18%{
+    transform: translateY(-18%);
   }
-  40%{
-    transform: translateY(-40%);
+  39%{
+    transform: translateY(-39%);
   }
-  62%{
-    transform: translateY(-62%);
+  59%{
+    transform: translateY(-59%);
   }
-  85% {
-    transform: translateY(-85%);
+  83% {
+    transform: translateY(-83%);
   }
 }
 
-@keyframes slide2 {
-  0% {
-    transform: translateY(0);
-  }
-  20%{
-    transform: translateY(-20%);
-  }
-  40%{
-    transform: translateY(-40%);
-  }
-  62%{
-    transform: translateY(-62%);
-  }
-  85% {
-    transform: translateY(-85%);
-  }
-}
 .card-p1:hover img{
   bottom: 0;
   transition: ease-in-out 0.2s;
