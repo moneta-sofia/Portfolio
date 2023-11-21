@@ -6,8 +6,8 @@ export default function About(){
     return (
         <div className="w-screen bg-cuadricula2 font-inter">
                 <img src={Wave} className="w-full"></img>
-            <div className="w-full pb-24 bg-primary relative -top-1 flex flex-col items-center">
-                <h1 className="font-bold text-secondary 3xl:text-8xl xl:text-6xl lg:text-5xl text-4xl">ABOUT ME</h1>
+            <div className="w-full md:pt-0 pt-24 pb-24 bg-primary relative -top-1 flex flex-col items-center" name='sobreMi'>
+                <h1 className="font-bold text-secondary 3xl:text-8xl xl:text-6xl lg:text-5xl text-4xl" >SOBRE MI</h1>
                 {infoText?
                 <div className="about-slider lg:w-4/6 w-5/6 h-72 my-16 md:text-3xl sm2:text-2xl sm2:text-xl sm3:text-lg text-gray-800 text-center bg-secondary lg:p-16 md:p-12 p-10 rounded-3xl hover:shadow-2xl shadow-sm hover:scale-105 transition-all ease-in-out overflow-hidden ">
                     <div className="description">
@@ -36,8 +36,8 @@ export default function About(){
                 </div>
                 }
                 <div className="bg-secondary flex justify-center items-center rounded-xl my-10 font-bold text-xl">
-                    <div className={`py-3 px-12 rounded-tl-xl rounded-bl-xl ${infoText ? 'shadow-innerxl' : 'shadow-xxl'}`} onClick={()=> setInfoText(true)}>TEXT</div>
-                    <div  className={`py-3 px-12 rounded-tr-xl rounded-br-xl ${infoText ? 'shadow-xxl': 'shadow-innerxl'}`} onClick={()=> setInfoText(false)}>VIDEO</div>
+                    <div className={`py-3 md:px-12 px-8 rounded-tl-xl rounded-bl-xl ${infoText ? 'shadow-innerxl' : 'shadow-xxl'}`} onClick={()=> setInfoText(true)}>TEXT</div>
+                    <div  className={`py-3 md:px-12 px-8 rounded-tr-xl rounded-br-xl ${infoText ? 'shadow-xxl': 'shadow-innerxl'}`} onClick={()=> setInfoText(false)}>VIDEO</div>
                 </div>
             </div>
         </div>
