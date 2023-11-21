@@ -6,7 +6,7 @@ import { PiHandWaving } from "react-icons/pi";
 
 export default function Start(){
     return(   
-    <div className='bg-cuadricula font-park  md:h-screen w-screen flex justify-center items-center'>
+    <div className='bg-cuadricula font-park  md:h-screen w-screen flex justify-center items-center' name='inicio'>
         <div className='flex flex-col md:items-start items-center relative md:w-5/6 w-full md:h-3/4 h-full'>
             <div className='flex flex-col md:items-start items-center md:mt-8 mt-24 md:ml-12 ml-0 md: w-fit'>
                 <div className="text-black 3xl:my-4 lg:my-2 my-1 ">

@@ -123,5 +123,21 @@ input:focus{
 }
 
 .onekouwu{
-  z-index: 100;
+  z-index: 30;
+}
+
+.rotate {
+
+  transform: rotate(180deg);
+  /* scale: 0.9; */
+}
+
+.active {
+  color: #953735;
+  font-weight: bold;
+}
+
+.blur{
+  backdrop-filter: blur(2px);
+  background-color: rgba(0, 0, 0, 0.233);
 }

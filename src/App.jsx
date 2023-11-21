@@ -1,7 +1,7 @@
 
 import About from './components/About'
 import Contact from './components/Contact'
-import NavBar from './components/Navbar'
+import NavBar from './components/NavBar'
 import Proyects from './components/Proyects'
 import Start from './components/Start'
 

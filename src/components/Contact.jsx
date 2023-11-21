@@ -26,9 +26,9 @@ export default function Contact() {
     };
 
     return (
-        <div className="text-center mb-32 flex flex-col justify-center items-center">
+        <div className="text-center mb-32 flex flex-col justify-center items-center" name='contacto'>
             <Toaster richColors expand={false}  position="bottom-center" />
-            <h1 className="font-bold text-primary 3xl:text-8xl xl:text-7xl lg:text-6xl md:text-5xl text-4xl my-10">
+            <h1 className="font-bold text-primary 3xl:text-8xl xl:text-7xl lg:text-6xl md:text-5xl text-4xl my-10 px-3" >
                 TRABAJEMOS JUNTOS!
             </h1>
             <p className="md:text-xl text-lg md:px-10 px-5">
@@ -45,7 +45,7 @@ export default function Contact() {
             <form
                 ref={form}
                 onSubmit={sendForm}
-                className="my-10 flex flex-col justify-center items-center bg-white sm:px-10 px-8 py-10 rounded-xl md:w-3/4 w-11/12"
+                className="my-10 flex flex-col justify-center items-center bg-white sm:px-10 px-8 py-10 rounded-xl md:w-3/4 w-11/12 shadow-md"
             >
                 <div className="flex flex-col w-full relative my-3">
                     <label className="labelName text-xl font-bold px-2 text-primary">
