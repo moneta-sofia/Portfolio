@@ -1,14 +1,14 @@
 
 import About from './components/About'
 import Contact from './components/Contact'
-import NavBar from './components/NavBar'
+import Navbar from './components/Navbar'
 import Proyects from './components/Proyects'
 import Start from './components/Start'
 
 function App() {
   return (
     <div className='flex flex-col justify-center items-center overflow-x-hidden'>
-      <NavBar/>
+      <Navbar/>
       <Start/>
       <About/>
       <Proyects/>

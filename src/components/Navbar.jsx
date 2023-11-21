@@ -2,13 +2,13 @@ import { useState } from "react";
 import { IoMenu, IoCloseOutline } from "react-icons/io5";
 import { Link } from "react-scroll";
 
-export default function NavBar() {
+export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
 
     return (
         <div className="fixed top-0 right-0 lg:m-10 md:m-5 mr-7 mt-5 w-1/12 flex flex-col items-center justify-center z-50 ">
             <div
-                className={`bg-white text-secondary font-bold text-4xl flex items-center justify-around w-fit h-fit lg:p-3 p-2 z-50 rounded-full transition-transform shadow-lg ${isOpen ? "rotate" : ""
+                className={`bg-white text-secondary font-bold text-4xl flex items-center justify-around w-fit h-fit lg:p-3 p-2 z-50 rounded-full transition-transform shadow-mdButCenter ${isOpen ? "rotate" : ""
                     }`}
                 onClick={() => setIsOpen(!isOpen)}
             >
