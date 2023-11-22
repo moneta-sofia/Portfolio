@@ -5,6 +5,9 @@
 @tailwind utilities;
 
 
+::-webkit-scrollbar {
+  display: none; /* Oculta el scrollbar */
+}
 :root {
   --color-primary: #953735;
   --color-secondary: #FBEEE4;
