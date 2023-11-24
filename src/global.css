@@ -144,3 +144,11 @@ input:focus{
   backdrop-filter: blur(2px);
   background-color: rgba(0, 0, 0, 0.233);
 }
+
+.subrayado{
+  background: linear-gradient(
+    to bottom, 
+    transparent 50%,
+    #9537356f 50%
+  );
+}
