@@ -3,6 +3,7 @@ import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { HiOutlineDocumentDownload } from "react-icons/hi";
 import { PiHandWaving } from "react-icons/pi";
 import { motion } from "framer-motion"
+import TextAnimation from './TextAnimation';
 
 
 export default function Start() {
@@ -50,19 +51,3 @@ export default function Start() {
     )
 }
 
-const TextAnimation = ({ text }) => {
-    return (
-      <motion.div>
-        {text.split("").map((letter, index) => (
-          <motion.span
-            key={index}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.2, delay: index * 0.1 }}
-          >
-            {letter}
-          </motion.span>
-        ))}
-      </motion.div>
-    );
-  }

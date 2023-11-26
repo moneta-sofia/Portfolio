@@ -1,6 +1,7 @@
 import React, { useRef } from "react";
 import emailjs from "@emailjs/browser";
 import { Toaster, toast } from "sonner";
+import TextAnimation from "./TextAnimation";
 
 export default function Contact() {
     const form = useRef();
@@ -29,7 +30,7 @@ export default function Contact() {
         <div className="text-center mb-32 flex flex-col justify-center items-center" name='contacto'>
             <Toaster richColors expand={false}  position="bottom-center" />
             <h1 className="font-bold text-primary 3xl:text-8xl xl:text-7xl lg:text-6xl md:text-5xl text-4xl my-10 px-3" >
-                TRABAJEMOS JUNTOS!
+                <TextAnimation text='TRABAJEMOS JUNTOS!'/>
             </h1>
             <p className="md:text-xl text-lg md:px-10 px-5">
                 Puedes contactarme por mi correo{" "}

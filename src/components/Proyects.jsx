@@ -4,6 +4,7 @@ import { GrMysql } from "react-icons/gr";
 import { InfinitMockup, ClinicaMockup, OdontologosMockup } from "../assets/Mockups";
 import Wave from "../assets/wave.png";
 import Line from "../assets/line.svg";
+import TextAnimation from "./TextAnimation";
 
 
 
@@ -14,7 +15,7 @@ export default function Proyects() {
                 <img src={Line} className="w-full"></img>
                 <div className="flex flex-col items-center" name='proyectos'>
 
-                    <h1 className="font-bold text-secondary 3xl:text-8xl xl:text-7xl lg:text-6xl md:text-5xl text-4xl my-28" >PROYECTOS</h1>
+                    <h1 className="font-bold text-secondary 3xl:text-8xl xl:text-7xl lg:text-6xl md:text-5xl text-4xl my-28" > <TextAnimation text='PROYECTOS'/></h1>
                     <div className="w-full flex flex-row flex-wrap justify-center items-center">
                         <a href="https://infinit-ecommerce.vercel.app/" target="_blank" className="card-p1 flex flex-col bg-gray-200 hover:bg-white px-6 pt-8 mb-16 w-80 overflow-hidden rounded-xl hover:scale-105 transition ease-out shadow-special hover:shadow-special2 mx-5" >
                             <h1 className="md:text-4xl text-3xl font-extrabold text-sky-950 md:mb-5 mb-2">Infinit</h1>
