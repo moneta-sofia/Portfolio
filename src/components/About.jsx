@@ -9,7 +9,7 @@ export default function About(){
 
     return (
         <div className="w-screen bg-cuadricula2 font-inter">
-                <img src={Wave} className="w-full"></img>
+                <img src={Wave} className="w-full md:pt-10 pt-24"></img>
             <div className="w-full md:pt-0 pt-24 pb-24 bg-primary relative -top-1 flex flex-col items-center" name='sobreMi'>
                 <motion.h1 className="font-bold text-secondary 3xl:text-8xl xl:text-6xl lg:text-5xl text-4xl" ><TextAnimation text='SOBRE MI'/></motion.h1>
                 {infoText?
