@@ -9,8 +9,8 @@ export default function About(){
 
     return (
         <div className="w-screen bg-cuadricula2 font-inter">
-                <img src={Wave} className="w-full md:pb-0 pb-24"></img>
-            <div className="w-full pb-24 bg-primary relative -top-1 flex flex-col items-center" name='sobreMi'>
+                <img src={Wave} className="w-full"></img>
+            <div className="w-full md:pt-0 pt-24 pb-24 bg-primary relative -top-1 flex flex-col items-center" name='sobreMi'>
                 <motion.h1 className="font-bold text-secondary 3xl:text-8xl xl:text-6xl lg:text-5xl text-4xl" ><TextAnimation text='SOBRE MI'/></motion.h1>
                 {infoText?
                 <div className="about-slider lg:w-4/6 w-5/6 h-72 my-16 md:text-3xl sm2:text-2xl sm2:text-xl sm3:text-lg text-gray-800 text-center bg-secondary lg:p-16 md:p-12 p-10 rounded-3xl hover:shadow-2xl shadow-sm hover:scale-105 transition-all ease-in-out overflow-hidden ">
