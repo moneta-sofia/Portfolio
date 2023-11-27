@@ -46,7 +46,7 @@ export default function About(){
                 </motion.div>
                 }
                 <motion.div className="bg-secondary flex justify-center items-center rounded-xl my-10 font-bold text-xl"
-                      initial={{ opacity: 0, scale:0 }}
+                      initial={{ opacity: 0, scale:0.75 }}
                       whileInView={{ opacity: 1, scale:1, transition: {delay:0.2,ease:"easeIn"} }}
                       viewport={{once:true}}>
                     <div className={`py-3 md:px-12 px-8 rounded-tl-xl rounded-bl-xl ${infoText ? 'shadow-innerxl' : 'shadow-xxl'}`} onClick={()=> setInfoText(true)}>TEXT</div>
