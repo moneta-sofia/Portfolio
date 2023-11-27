@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Wave from "../assets/wave.png";
-import { motion } from "framer-motion"
+import { easeOut, motion } from "framer-motion"
 import TextAnimation from "./TextAnimation";
 
 
@@ -13,7 +13,11 @@ export default function About(){
             <div className="w-full md:pt-0 pt-24 pb-24 bg-primary relative -top-1 flex flex-col items-center" name='sobreMi'>
                 <motion.h1 className="font-bold text-secondary 3xl:text-8xl xl:text-6xl lg:text-5xl text-4xl" ><TextAnimation text='SOBRE MI'/></motion.h1>
                 {infoText?
-                <div className="about-slider lg:w-4/6 w-5/6 h-72 my-16 md:text-3xl sm2:text-2xl sm2:text-xl sm3:text-lg text-gray-800 text-center bg-secondary lg:p-16 md:p-12 p-10 rounded-3xl hover:shadow-2xl shadow-sm hover:scale-105 transition-all ease-in-out overflow-hidden ">
+                <motion.div className="about-slider lg:w-4/6 w-5/6 h-72 my-16 md:text-3xl sm2:text-2xl sm2:text-xl sm3:text-lg text-gray-800 text-center bg-secondary lg:p-16 md:p-12 p-10 rounded-3xl hover:shadow-2xl shadow-sm hover:scale-105 transition-all ease-in-out overflow-hidden "
+                initial={{opacity:0}}
+                whileInView={{opacity:1, transition: {easeOut,duration:1.5}}}
+                viewport={{once:true}}
+                >
                     <div className="description">
                         <p className="description-item mb-16 mt-10">
                             Soy una <b className="text-bold">desarrolladora apasionada</b> 💪 con un gusto equilibrado por el <b className="text-bold">backend y el frontend</b>. 
@@ -33,16 +37,21 @@ export default function About(){
                             Estoy emocionada por lo que el futuro me depara y me encuentro <b className="text-bold">comprometida a crecer</b> constantemente en este apasionante campo 🌱.
                         </p>
                     </div>
-                </div> 
+                </motion.div> 
                 :
-                <div>
+                <motion.div                 initial={{opacity:0}}
+                whileInView={{opacity:1, transition: {easeOut,duration:1.5}}}
+                viewport={{once:true}}>
                     <iframe className="my-16" width="1000" height="562" src="https://www.youtube.com/embed/8sjn-bJOBBQ?si=NVPicFw9JOUm5T4H" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                </div>
+                </motion.div>
                 }
-                <div className="bg-secondary flex justify-center items-center rounded-xl my-10 font-bold text-xl">
+                <motion.div className="bg-secondary flex justify-center items-center rounded-xl my-10 font-bold text-xl"
+                      initial={{ opacity: 0, scale:0 }}
+                      whileInView={{ opacity: 1, scale:1, transition: {delay:0.2,ease:"easeIn"} }}
+                      viewport={{once:true}}>
                     <div className={`py-3 md:px-12 px-8 rounded-tl-xl rounded-bl-xl ${infoText ? 'shadow-innerxl' : 'shadow-xxl'}`} onClick={()=> setInfoText(true)}>TEXT</div>
                     <div  className={`py-3 md:px-12 px-8 rounded-tr-xl rounded-br-xl ${infoText ? 'shadow-xxl': 'shadow-innerxl'}`} onClick={()=> setInfoText(false)}>VIDEO</div>
-                </div>
+                </motion.div>
             </div>
         </div>
     )
