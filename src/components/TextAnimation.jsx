@@ -7,7 +7,7 @@ const TextAnimation = ({ text }) => {
                 <motion.span
                     key={index}
                     initial={{ opacity: 0 }}
-                    whileInView={{opacity:1, transition: {duration: 0.2, delay: index * 0.1 + 0.25}}}
+                    whileInView={{opacity:1, transition: {duration: 0.2, delay: index * 0.05 + 0.25}}}
                     viewport={{once:true}}
                 >
                     {letter}
