@@ -28,7 +28,7 @@ export default function Proyects() {
                             return(
                                 <motion.a href={proy.link} target="_blank" className={`card-p1 flex flex-col ${proy.color} hover:bg-white px-6 pt-8 mb-16 w-80 overflow-hidden rounded-xl hover:scale-105 transition ease-out shadow-special hover:shadow-special2 mx-5`} key={index}
                                 initial={{ opacity: 0, scale: 0 }}
-                                whileInView={{ opacity: 1, scale: 1, transition: { delay: 0.3 * index }}}
+                                whileInView={{ opacity: 1, scale: 1, transition: { delay: window.innerWidth <= 768 ? 0.3: 0.3 * index}}}
                                 viewport={{once:true}}>
                                     
                                     <h1 className="md:text-4xl text-3xl font-extrabold md:mb-5 mb-2" style={{color:proy.textColor}}>{proy.name}</h1>
