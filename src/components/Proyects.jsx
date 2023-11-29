@@ -5,6 +5,7 @@ import { InfinitMockup, ClinicaMockup, OdontologosMockup } from "../assets/Mocku
 import Wave from "../assets/wave.png";
 import TextAnimation from "./TextAnimation";
 import { motion } from "framer-motion"
+import { useInView } from "react-intersection-observer";
 
     const proyects = [
         {link:'https://infinit-ecommerce.vercel.app/', name:'Infinit', description:'Proyecto grupal: Alquiler de autos de lujo',icons: [<FaReact title="React"/>, <SiTailwindcss title="Tailwind" />,<SiNextdotjs title="Next" />,<SiPrisma title="Prisma" />, <GrMysql title="mySQL" />], image: InfinitMockup, color: 'bg-gray-200', textColor:'#26485f' },
@@ -14,20 +15,26 @@ import { motion } from "framer-motion"
 
 
 export default function Proyects() {
+    const [ref, inView] = useInView({
+        triggerOnce: true, // Change this to false if you want the animation to trigger again whenever it comes in view
+      });
+    
     return (
         <>
             <div className="w-full bg-primary relative -top-2 font-inter pt-10">
 
-            <svg className="w-full h-full" viewBox="1 0 190 70">
+            <svg className="w-full h-full"  ref={ref} viewBox="1 0 190 70">
                 <motion.path
                     fill="transparent"
                     strokeWidth="3"
                     stroke="#FBEEE4"
                     d="m 0 30 q 39.75 -37.5 75 0 t 64.5 -2.25 c 4.5 -8.25 -13.5 -10.5 -9.75 -1.5 c 3 6.75 12.75 15.75 16.5 15 c 25.5 2.25 20.25 -27 47.25 -11.25"
-                    animate={{
-                    pathLength: [0, 1],
-                    strokeDashoffset: [2, 0]
-                    }}
+                    animate={
+                        inView ? {
+                            pathLength: [0, 1],
+                            strokeDashoffset: [2]
+                          } : {}
+                    }
                     transition={{
                     duration: 2,
                     ease: "easeInOut",
