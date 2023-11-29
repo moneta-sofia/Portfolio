@@ -17,12 +17,13 @@ export default function Proyects() {
     return (
         <>
             <div className="w-full bg-primary relative -top-2 font-inter pt-10">
-            <svg className="w-full h-full" viewBox="0 80 258 45">
+
+            <svg className="w-full h-full" viewBox="1 0 190 70">
                 <motion.path
                     fill="transparent"
                     strokeWidth="3"
                     stroke="#FBEEE4"
-                    d="M 0 100 Q 53 50 100 100 T 186 97 C 192 86 168 83 173 95 C 177 104 190 116 195 115 C 229 118 222 79 258 100"
+                    d="m 0 30 q 39.75 -37.5 75 0 t 64.5 -2.25 c 4.5 -8.25 -13.5 -10.5 -9.75 -1.5 c 3 6.75 12.75 15.75 16.5 15 c 25.5 2.25 20.25 -27 47.25 -11.25"
                     animate={{
                     pathLength: [0, 1],
                     strokeDashoffset: [2, 0]
@@ -57,8 +58,8 @@ export default function Proyects() {
                                 </motion.a>
                             )
                             })}
-
                     </motion.div>
+                
                 </motion.div>
             </div>
             <img src={Wave} className="w-full rotate-180 relative -top-5"></img>
