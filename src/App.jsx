@@ -12,9 +12,21 @@ function App() {
   const [cargando, setCargando] = useState(true);
   
   useEffect(() => {
-    window.addEventListener('load', () => {
-      setCargando(false);
-    });
+    const handleLoad = () => {
+      console.log('La página ha cargado completamente');
+      setCargando(false); // Aquí cambiamos el estado a false cuando la página carga
+    };
+
+    if (document.readyState === 'complete') {
+      handleLoad();
+    } else {
+      window.addEventListener('load', handleLoad);
+    }
+
+    // Recuerda quitar el event listener cuando el componente se desmonte
+    return () => {
+      window.removeEventListener('load', handleLoad);
+    };
   }, []);
 
   /* -------------- Para evitar que oneko cargue junto al loader -------------- */
