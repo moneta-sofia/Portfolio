@@ -6,15 +6,18 @@ import Wave from "../assets/wave.png";
 import TextAnimation from "./TextAnimation";
 import { motion } from "framer-motion"
 import { useInView } from "react-intersection-observer";
+import { useContext } from "react";
+import { LanguageContext } from "../contexts/LanguageContext";
 
 const proyects = [
-    { link: 'https://infinit-ecommerce.vercel.app/', name: 'Infinit', description: 'Proyecto grupal: Alquiler de autos de lujo', icons: [<FaReact title="React" />, <SiTailwindcss title="Tailwind" />, <SiNextdotjs title="Next" />, <SiPrisma title="Prisma" />, <GrMysql title="mySQL" />], image: InfinitMockup, color: 'bg-gray-200', textColor: '#26485f' },
-    { link: 'https://odontologos-sofi.netlify.app/', name: 'Odontologos', description: 'Proyecto FrontEnd: Listado de Odontologos', icons: [<FaCss3Alt title="CSS" />, <FaSass title="Sass" />, <FaReact title="React" />, <SiVite title="Vite" />], image: OdontologosMockup, color: 'bg-red-100', textColor: '#d02a2e' },
-    { link: 'https://github.com/moneta-sofia/ProyectBackend', name: 'Clínica', description: 'Proyecto Backend: Gestión de pacientes', icons: [<FaHtml5 title="HTML" />, <FaCss3Alt title="CSS" />, <FaSass title="Sass" />, <FaJava title="Java" />, <SiSpring title="SpringBoot" />], image: ClinicaMockup, color: 'bg-slate-100', textColor: '#74a5d2' },
-]
+    { link: 'https://infinit-ecommerce.vercel.app/', nameSpanish: 'Infinit', nameEnglish: 'Infinit', descriptionSpanish: 'Proyecto grupal: Alquiler de autos de lujo', descriptionEnglish: 'Group project: Luxury car rental service with premium fleet ', icons: [<FaReact title="React" />, <SiTailwindcss title="Tailwind" />, <SiNextdotjs title="Next" />, <SiPrisma title="Prisma" />, <GrMysql title="mySQL" />], image: InfinitMockup, color: 'bg-gray-200', textColor: '#26485f' },
+    { link: 'https://odontologos-sofi.netlify.app/', nameSpanish: 'Odontologos', nameEnglish:'Dentists', descriptionSpanish: 'Proyecto FrontEnd: Listado de Odontologos', descriptionEnglish: 'Frontend Project: Dentists listing and storage', icons: [<FaCss3Alt title="CSS" />, <FaSass title="Sass" />, <FaReact title="React" />, <SiVite title="Vite" />], image: OdontologosMockup, color: 'bg-red-100', textColor: '#d02a2e' },
+    { link: 'https://github.com/moneta-sofia/ProyectBackend', nameSpanish: 'Clínica', nameEnglish:'Clinic', descriptionSpanish: 'Proyecto Backend: Gestión de pacientes', descriptionEnglish: 'Backend Project: Patient Management', icons: [<FaHtml5 title="HTML" />, <FaCss3Alt title="CSS" />, <FaSass title="Sass" />, <FaJava title="Java" />, <SiSpring title="SpringBoot" />], image: ClinicaMockup, color: 'bg-slate-100', textColor: '#74a5dE'}]
 
 
 export default function Proyects() {
+    const {isSpanish} = useContext(LanguageContext)
+
     const [ref, inView] = useInView({
         triggerOnce: true, // Change this to false if you want the animation to trigger again whenever it comes in view
     });
@@ -46,7 +49,7 @@ export default function Proyects() {
                 </svg>
                 <motion.div className="flex flex-col items-center" name='proyectos' >
 
-                    <h1 className="font-bold text-secondary 3xl:text-8xl xl:text-7xl lg:text-6xl md:text-5xl text-4xl my-28" > <TextAnimation text='PROYECTOS' /></h1>
+                    <h1 className="font-bold text-secondary 3xl:text-8xl xl:text-7xl lg:text-6xl md:text-5xl text-4xl my-28" > {isSpanish? <TextAnimation text='PROYECTOS' /> : <TextAnimation text='PROYECTS' />}</h1>
                     <motion.div className="w-full flex flex-row flex-wrap justify-center items-center" >
 
                         {proyects.map((proy, index) => {
@@ -56,8 +59,8 @@ export default function Proyects() {
                                     whileInView={{ opacity: 1, scale: 1, transition: { delay: window.innerWidth <= 768 ? 0.3 : 0.3 * index } }}
                                     viewport={{ once: true }}>
 
-                                    <h1 className="md:text-4xl text-3xl font-extrabold md:mb-5 mb-2" style={{ color: proy.textColor }}>{proy.name}</h1>
-                                    <p className="my-1 font-medium">{proy.description}</p>
+                                    <h1 className="md:text-4xl text-3xl font-extrabold md:mb-5 mb-2" style={{ color: proy.textColor }}>{isSpanish? proy.nameSpanish : proy.nameEnglish}</h1>
+                                    <p className="my-1 font-medium">{isSpanish? proy.descriptionSpanish: proy.descriptionEnglish}</p>
                                     <div className="flex justify-between items-center text-3xl px-3 my-5">
                                         {proy.icons.map((icon) => { return icon })}
                                     </div>
