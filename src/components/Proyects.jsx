@@ -49,7 +49,7 @@ export default function Proyects() {
                 </svg>
                 <motion.div className="flex flex-col items-center" name='proyectos' >
 
-                    <h1 className="font-bold text-secondary 3xl:text-8xl xl:text-7xl lg:text-6xl md:text-5xl text-4xl my-28" > {isSpanish? <TextAnimation text='PROYECTOS' /> : <TextAnimation text='PROYECTS' />}</h1>
+                    <h1 className="font-bold text-secondary 3xl:text-8xl xl:text-7xl lg:text-6xl md:text-5xl text-4xl my-28" > {isSpanish? <TextAnimation text='PROYECTOS' /> : <TextAnimation text='PROJECTS' />}</h1>
                     <motion.div className="w-full flex flex-row flex-wrap justify-center items-center" >
 
                         {proyects.map((proy, index) => {

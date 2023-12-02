@@ -38,7 +38,7 @@ export default function Navbar() {
                             onClick={() => setIsOpen(false)}
                             className="my-2 "
                         >
-                            Inicio
+                            {isSpanish? 'Inicio' : 'Start'}
                         </Link>
                         <hr className="w-full " />
                         <Link
@@ -51,7 +51,7 @@ export default function Navbar() {
                             onClick={() => setIsOpen(false)}
                             className="my-2"
                         >
-                            Sobre Mi
+                            { isSpanish? 'Sobre Mi' : 'About Me'}
                         </Link>
                         <hr className="w-full " />
                         <Link
@@ -64,7 +64,7 @@ export default function Navbar() {
                             onClick={() => setIsOpen(false)}
                             className="my-2"
                         >
-                            Proyectos
+                            {isSpanish?'Proyectos': 'Projects'}
                         </Link>
                         <hr className="w-full " />
                         <Link
@@ -77,7 +77,7 @@ export default function Navbar() {
                             onClick={() => setIsOpen(false)}
                             className="my-2"
                         >
-                            Contacto
+                            {isSpanish?'Contacto': 'Contact'}
                         </Link>
                     </div>
                     <div className={`bg-white text-black font-bold text-2xl md:hidden flex items-center justify-around mt-5 lg:w-16 w-14 h-14 p-1 z-50 rounded-full transition-transform shadow-mdButCenter`} onClick={()=>
