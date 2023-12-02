@@ -1,44 +1,68 @@
-import React, { useRef } from "react";
+import React, { useContext, useRef } from "react";
 import emailjs from "@emailjs/browser";
 import { Toaster, toast } from "sonner";
 import TextAnimation from "./TextAnimation";
 import {motion} from "framer-motion";
+import { LanguageContext } from "../contexts/LanguageContext";
 
 export default function Contact() {
+    const {isSpanish} = useContext(LanguageContext)
     const form = useRef();
 
     const sendForm = (e) => {
         e.preventDefault();
 
-        toast.promise(
-            emailjs.sendForm(
-                "service_evftutj",
-                "template_gi3ns3s",
-                form.current,
-                "1i2zGYSVJo9MrYcxO"
-            ),
-            {
-                loading: "Loading...",
-                success: () => {
-                    return "El correo se ha enviado correctamente!";
-                },
-                error: "Lo siento! No se ha podido enviar el mail :/",
-            }
-        );
+        if (isSpanish) {            
+            toast.promise(
+                emailjs.sendForm(
+                    "service_evftutj",
+                    "template_gi3ns3s",
+                    form.current,
+                    "1i2zGYSVJo9MrYcxO"
+                ),
+                {
+                    loading: "Cargando...",
+                    success: () => {
+                        return "El correo se ha enviado correctamente!";
+                    },
+                    error: "Lo siento! No se ha podido enviar el mail :/",
+                }
+            );
+        } else {
+            toast.promise(
+                emailjs.sendForm(
+                    "service_evftutj",
+                    "template_gi3ns3s",
+                    form.current,
+                    "1i2zGYSVJo9MrYcxO"
+                ),
+                {
+                    loading: "Loading...",
+                    success: () => {
+                        return "The email has been sent successfully!";
+                    },
+                    error: "I'm sorry! The email couldn't be sent :/",
+                }
+            );
+
+        }
     };
 
     return (
         <div className="text-center mb-32 flex flex-col justify-center items-center" name='contacto'>
             <Toaster richColors expand={false}  position="bottom-center" />
             <h1 className="font-bold text-primary 3xl:text-8xl xl:text-7xl lg:text-6xl md:text-5xl text-4xl my-10 px-3" >
-                <TextAnimation text='TRABAJEMOS JUNTOS!'/>
+                {isSpanish?
+                <TextAnimation text='TRABAJEMOS JUNTOS!  '/>
+                :
+                <TextAnimation text="LET'S WORK TOGETHER!"/>}
             </h1>
             <motion.p className="md:text-xl text-lg md:px-10 px-5"
                 initial={{opacity:0}}
                 whileInView={{opacity:1, transition:{ duration:1.5, delay:0.5}}}
                 viewport={{once:true}}
             >
-                Puedes contactarme por mi correo{" "}
+                {isSpanish? 'Puedes contactarme por mi correo' : 'You can reach out to me via my email at '}
                 <a
                     href="https://mail.google.com/mail/?view=cm&fs=1&to=sofia.moneta.dev@gmail.com"
                     target="_blank"
@@ -46,7 +70,7 @@ export default function Contact() {
                 >
                     sofia.moneta.dev@gmail.com
                 </a>
-                , o bien por este formulario 🥰
+                {isSpanish? ', o bien por este formulario 🥰' : ' or through this form 🥰.'}
             </motion.p>
             <motion.form
                 ref={form}
@@ -58,7 +82,7 @@ export default function Contact() {
             >
                 <div className="flex flex-col w-full relative my-3">
                     <label className="labelName text-xl font-bold px-2 text-primary">
-                        Nombre
+                        {isSpanish? 'Nombre' : 'Name'}
                     </label>
                     <input
                         type="text"
@@ -82,7 +106,7 @@ export default function Contact() {
 
                 <div className="flex flex-col w-full relative my-3">
                     <label className="labelName text-xl font-bold px-2 text-primary">
-                        Mensaje
+                        {isSpanish? 'Mensaje' : 'Message'}
                     </label>
                     <textarea
                         name="message"
@@ -91,7 +115,7 @@ export default function Contact() {
                 </div>
 
                 <button className="bg-primary w-3/4 py-3 rounded-xl font-bold text-secondary my-3">
-                    Enviar
+                    {isSpanish? 'Enviar' : 'Send'}
                 </button>
             </motion.form>
         </div>
