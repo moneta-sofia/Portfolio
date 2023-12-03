@@ -1,8 +1,6 @@
 import { SiTailwindcss, SiNextdotjs, SiPrisma, SiSpring, SiVite } from "react-icons/si";
 import { FaReact, FaHtml5, FaSass, FaCss3Alt, FaJava } from "react-icons/fa";
 import { GrMysql } from "react-icons/gr";
-import { InfinitMockup, ClinicaMockup, OdontologosMockup } from "../assets/Mockups";
-import Wave from "../assets/wave.png";
 import TextAnimation from "./TextAnimation";
 import { motion } from "framer-motion"
 import { useInView } from "react-intersection-observer";
@@ -10,9 +8,9 @@ import { useContext } from "react";
 import { LanguageContext } from "../contexts/LanguageContext";
 
 const proyects = [
-    { link: 'https://infinit-ecommerce.vercel.app/', nameSpanish: 'Infinit', nameEnglish: 'Infinit', descriptionSpanish: 'Proyecto grupal: Alquiler de autos de lujo', descriptionEnglish: 'Group project: Luxury car rental service with premium fleet ', icons: [<FaReact title="React" />, <SiTailwindcss title="Tailwind" />, <SiNextdotjs title="Next" />, <SiPrisma title="Prisma" />, <GrMysql title="mySQL" />], image: InfinitMockup, color: 'bg-gray-200', textColor: '#26485f' },
-    { link: 'https://odontologos-sofi.netlify.app/', nameSpanish: 'Odontologos', nameEnglish:'Dentists', descriptionSpanish: 'Proyecto FrontEnd: Listado de Odontologos', descriptionEnglish: 'Frontend Project: Dentists listing and storage', icons: [<FaCss3Alt title="CSS" />, <FaSass title="Sass" />, <FaReact title="React" />, <SiVite title="Vite" />], image: OdontologosMockup, color: 'bg-red-100', textColor: '#d02a2e' },
-    { link: 'https://github.com/moneta-sofia/ProyectBackend', nameSpanish: 'Clínica', nameEnglish:'Clinic', descriptionSpanish: 'Proyecto Backend: Gestión de pacientes', descriptionEnglish: 'Backend Project: Patient Management', icons: [<FaHtml5 title="HTML" />, <FaCss3Alt title="CSS" />, <FaSass title="Sass" />, <FaJava title="Java" />, <SiSpring title="SpringBoot" />], image: ClinicaMockup, color: 'bg-slate-100', textColor: '#74a5dE'}]
+    { link: 'https://infinit-ecommerce.vercel.app/', nameSpanish: 'Infinit', nameEnglish: 'Infinit', descriptionSpanish: 'Proyecto grupal: Alquiler de autos de lujo', descriptionEnglish: 'Group project: Luxury car rental service with premium fleet ', icons: [<FaReact title="React" />, <SiTailwindcss title="Tailwind" />, <SiNextdotjs title="Next" />, <SiPrisma title="Prisma" />, <GrMysql title="mySQL" />], image: 'https://wsrv.nl/?url=https://drive.google.com/uc?id=1_TBYmWLjG1XXnT4c_yNQR1eak76WO7oL', color: 'bg-gray-200', textColor: '#26485f' },
+    { link: 'https://odontologos-sofi.netlify.app/', nameSpanish: 'Odontologos', nameEnglish:'Dentists', descriptionSpanish: 'Proyecto FrontEnd: Listado de Odontologos', descriptionEnglish: 'Frontend Project: Dentists listing and storage', icons: [<FaCss3Alt title="CSS" />, <FaSass title="Sass" />, <FaReact title="React" />, <SiVite title="Vite" />], image: 'https://wsrv.nl/?url=https://drive.google.com/uc?id=1fv1Cgf-64Ly_XEeyEf5oDXtu_P-MRrk2', color: 'bg-red-100', textColor: '#d02a2e' },
+    { link: 'https://github.com/moneta-sofia/ProyectBackend', nameSpanish: 'Clínica', nameEnglish:'Clinic', descriptionSpanish: 'Proyecto Backend: Gestión de pacientes', descriptionEnglish: 'Backend Project: Patient Management', icons: [<FaHtml5 title="HTML" />, <FaCss3Alt title="CSS" />, <FaSass title="Sass" />, <FaJava title="Java" />, <SiSpring title="SpringBoot" />], image: 'https://wsrv.nl/?url=https://drive.google.com/uc?id=1-7eM_W6b59q7QxdZra3N7mwLlXT-kLyn', color: 'bg-slate-100', textColor: '#74a5dE'}]
 
 
 export default function Proyects() {
@@ -72,7 +70,7 @@ export default function Proyects() {
 
                 </motion.div>
             </div>
-            <img src={Wave} className="w-full rotate-180 relative -top-5"></img>
+            <img src='https://wsrv.nl/?url=https://drive.google.com/uc?id=10L0xCwzyWLSPEweljc6hqhABQYxBGiAe' className="w-full rotate-180 relative -top-5"></img>
         </>
     )
 }

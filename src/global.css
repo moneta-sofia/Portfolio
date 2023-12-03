@@ -16,13 +16,13 @@
   background: var(--color-secondary);
 }
 .bg-cuadricula{
-  background-image:   url(assets/cuadricula.png);
+  background-image:   url('https://wsrv.nl/?url=https://drive.google.com/uc?id=1FnWwgFE0zDRzSTXjCpR0MPsNxWW8dm5C');
   background-position: center top;
   background-size:100%;
   background-repeat: repeat;
 }
 .bg-cuadricula2{
-  background-image:   url(assets/cuadricula.png);
+  background-image:   url('https://wsrv.nl/?url=https://drive.google.com/uc?id=1FnWwgFE0zDRzSTXjCpR0MPsNxWW8dm5C');
   background-position: center top;
   background-repeat: repeat;
   background-size:100%;
@@ -189,7 +189,7 @@ input:focus{
   height: 50%;
   background-size: 200%;
   background-repeat: no-repeat;
-  background-image: url("./assets/catLoader.png");
+  background-image: url('https://wsrv.nl/?url=https://drive.google.com/uc?id=1DVn_x-fuNsp8frVOMXKitM1gwlAX7Rqa');
 }
 
 .cat__head::before {
