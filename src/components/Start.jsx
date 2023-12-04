@@ -44,7 +44,7 @@ export default function Start() {
             <motion.a variants={item} href='/CV-Sofia_Moneta.pdf' download={''}><HiOutlineDocumentDownload className='3xl:h-16 lg:h-10 h-5 3xl:w-16 lg:w-10 w-5 ' /></motion.a>
           </div>
         </motion.div>
-        <motion.img src='https://wsrv.nl/?url=https://drive.google.com/uc?id=1ORaKpxYtqjRuekvTuVRE5haeLdjgaSzI' className='md:h-3/4 h-5/6 md:p-0 mt-16 sm:p-16 p-5 md:absolute relative 2xl:right-10 right-0 2xl:bottom-10 bottom-5'
+        <motion.img src='https://wsrv.nl/?url=https://drive.google.com/uc?id=1qRHpGJ5fRv-cg5M0bhmLK2_T5YgjFALB' className='md:h-3/4 h-5/6 md:p-0 mt-16 sm:p-16 p-5 md:absolute relative 2xl:right-10 right-0 2xl:bottom-10 bottom-5'
           initial={{ y: "10px", opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 1 }} />
