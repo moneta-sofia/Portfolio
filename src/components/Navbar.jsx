@@ -8,7 +8,7 @@ export default function Navbar() {
     const {isSpanish, setIsSpanish} = useContext(LanguageContext)
 
     return (
-        <div className="fixed top-0 right-0 lg:mr-16 mr-10 lg:mt-10 mt-5  z-50 flex justify-around">
+        <div className="fixed top-0 right-0 lg:mr-16 mr-5 lg:mt-10 mt-5  z-50 flex justify-around">
 
                 <div className={`bg-white text-black font-bold text-2xl md:flex hidden items-center justify-around lg:mr-10 mr-6 lg:w-16 w-14 p-1 z-50 rounded-full transition-transform shadow-mdButCenter`} onClick={()=>setIsSpanish(!isSpanish)}>{isSpanish? 'En' : 'Es'}</div>
             <div className="flex flex-col items-center justify-center">
