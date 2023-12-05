@@ -39,9 +39,9 @@ export default function Start() {
             <motion.p className='3xl:text-5xl xl:text-4xl lg:text-3xl text-xl 3xl:my-6 lg:my-5 my-4 font-extrabold md:text-start text-center' variants={item} >{isSpanish? <TextAnimation text="Desarrolladora Web Full-Stack"/>: <TextAnimation text="Full-Stack Web Developer     " />}</motion.p>
           </motion.div>
           <div className='flex w-2/4 justify-between 3xl:my-6 my-2'>
-            <motion.a variants={item} href='https://github.com/moneta-sofia' target="_blank"><FaGithub className='3xl:h-16 lg:h-10 h-5 3xl:w-16 lg:w-10 w-5 ' /></motion.a>
-            <motion.a variants={item} href='https://www.linkedin.com/in/sofiamoneta/' target="_blank"><FaLinkedin className='3xl:h-16 lg:h-10 h-5 3xl:w-16 lg:w-10 w-5 ' /></motion.a>
-            <motion.a variants={item} href='/CV-Sofia_Moneta.pdf' download={''}><HiOutlineDocumentDownload className='3xl:h-16 lg:h-10 h-5 3xl:w-16 lg:w-10 w-5 ' /></motion.a>
+            <motion.a variants={item} href='https://github.com/moneta-sofia' target="_blank" aria-label={isSpanish? 'Clickea aqui para ir a mi GitHub':'Click here to go to my GitHub '}><FaGithub className='3xl:h-16 lg:h-10 h-5 3xl:w-16 lg:w-10 w-5 ' /></motion.a>
+            <motion.a variants={item} href='https://www.linkedin.com/in/sofiamoneta/' target="_blank" aria-label={isSpanish? 'Clickea aqui para ir a mi Linkedin':'Click here to go to my Linkedin '}><FaLinkedin className='3xl:h-16 lg:h-10 h-5 3xl:w-16 lg:w-10 w-5 ' /></motion.a>
+            <motion.a variants={item} href='/CV-Sofia_Moneta.pdf' download={''} aria-label={isSpanish? 'Clickea aqui para descargar mi curriculum vitae':'Click here to download my curriculum vitae '}><HiOutlineDocumentDownload className='3xl:h-16 lg:h-10 h-5 3xl:w-16 lg:w-10 w-5 ' /></motion.a>
           </div>
         </motion.div>
         <motion.img src='https://wsrv.nl/?url=https://drive.google.com/uc?id=1qRHpGJ5fRv-cg5M0bhmLK2_T5YgjFALB' className='md:h-3/4 h-5/6 md:p-0 mt-16 sm:p-16 p-5 md:absolute relative 2xl:right-10 right-0 2xl:bottom-10 bottom-5'
