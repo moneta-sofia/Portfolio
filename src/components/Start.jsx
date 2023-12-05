@@ -47,7 +47,8 @@ export default function Start() {
         <motion.img src='https://wsrv.nl/?url=https://drive.google.com/uc?id=1qRHpGJ5fRv-cg5M0bhmLK2_T5YgjFALB' className='md:h-3/4 h-5/6 md:p-0 mt-16 sm:p-16 p-5 md:absolute relative 2xl:right-10 right-0 2xl:bottom-10 bottom-5'
           initial={{ y: "10px", opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
-          transition={{ duration: 1 }} />
+          transition={{ duration: 1 }}
+          alt={isSpanish? 'Dibujo de una chica plirroja con su computadora':'Drawing of red-haired girl with her computer '}/>
       </div>
 
     </div>

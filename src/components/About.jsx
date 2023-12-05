@@ -10,7 +10,7 @@ export default function About() {
 
     return (
         <div className="w-screen bg-cuadricula2 font-inter">
-            <img src='https://wsrv.nl/?url=https://drive.google.com/uc?id=1hYgYqlgtYylE1-y7_CE_efNghaO5ZYTb' className="w-full md:pt-10 pt-24"></img>
+            <img alt={isSpanish? 'Una ola color bordo para la estetica de la página': "A Burgundy wave for web's aesthetics"} src='https://wsrv.nl/?url=https://drive.google.com/uc?id=1hYgYqlgtYylE1-y7_CE_efNghaO5ZYTb' className="w-full md:pt-10 pt-24"></img>
             <div className="w-full md:pt-0 pt-24 pb-24 bg-primary relative -top-1 flex flex-col items-center" name='sobreMi'>
                 <motion.h1 className="font-bold text-secondary 3xl:text-8xl xl:text-6xl lg:text-5xl text-4xl" >{isSpanish ? <TextAnimation text='SOBRE MI' /> : <TextAnimation text='ABOUT ME' />}</motion.h1>
                 {infoText ?

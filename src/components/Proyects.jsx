@@ -8,9 +8,9 @@ import { useContext } from "react";
 import { LanguageContext } from "../contexts/LanguageContext";
 
 const proyects = [
-    { link: 'https://infinit-ecommerce.vercel.app/', nameSpanish: 'Infinit', nameEnglish: 'Infinit', descriptionSpanish: 'Proyecto grupal: Alquiler de autos de lujo', descriptionEnglish: 'Group project: Luxury car rental service with premium fleet ', icons: [<FaReact title="React" />, <SiTailwindcss title="Tailwind" />, <SiNextdotjs title="Next" />, <SiPrisma title="Prisma" />, <GrMysql title="mySQL" />], image: 'https://wsrv.nl/?url=https://drive.google.com/uc?id=1V0m0pNmu6huuvDIMZvAlNAUVvMR_-kox', color: 'bg-gray-200', textColor: '#26485f' },
-    { link: 'https://odontologos-sofi.netlify.app/', nameSpanish: 'Odontologos', nameEnglish:'Dentists', descriptionSpanish: 'Proyecto FrontEnd: Listado de Odontologos', descriptionEnglish: 'Frontend Project: Dentists listing and storage', icons: [<FaCss3Alt title="CSS" />, <FaSass title="Sass" />, <FaReact title="React" />, <SiVite title="Vite" />], image: 'https://wsrv.nl/?url=https://drive.google.com/uc?id=1_vs3EbMz8cdjNQ2n7MC1yGKwu2MzRosd', color: 'bg-red-100', textColor: '#d02a2e' },
-    { link: 'https://github.com/moneta-sofia/ProyectBackend', nameSpanish: 'Clínica', nameEnglish:'Clinic', descriptionSpanish: 'Proyecto Backend: Gestión de pacientes', descriptionEnglish: 'Backend Project: Patient Management', icons: [<FaHtml5 title="HTML" />, <FaCss3Alt title="CSS" />, <FaSass title="Sass" />, <FaJava title="Java" />, <SiSpring title="SpringBoot" />], image: 'https://wsrv.nl/?url=https://drive.google.com/uc?id=1K6bOhHW0qgNcDagSYS7nnhxFuBoZCUEC', color: 'bg-slate-100', textColor: '#74a5dE'}]
+    { link: 'https://infinit-ecommerce.vercel.app/', nameSpanish: 'Infinit', nameEnglish: 'Infinit', descriptionSpanish: 'Proyecto grupal: Alquiler de autos de lujo', descriptionEnglish: 'Group project: Luxury car rental service with premium fleet ', icons: [<FaReact title="React" />, <SiTailwindcss title="Tailwind" />, <SiNextdotjs title="Next" />, <SiPrisma title="Prisma" />, <GrMysql title="mySQL" />], image: 'https://wsrv.nl/?url=https://drive.google.com/uc?id=1V0m0pNmu6huuvDIMZvAlNAUVvMR_-kox', color: 'bg-gray-200', textColor: '#26485f', spanishAlt:'Un monitor con mi proyecto de alquiler de autos', englishAlt:'A monitor displaying my car rental project' },
+    { link: 'https://odontologos-sofi.netlify.app/', nameSpanish: 'Odontologos', nameEnglish:'Dentists', descriptionSpanish: 'Proyecto FrontEnd: Listado de Odontologos', descriptionEnglish: 'Frontend Project: Dentists listing and storage', icons: [<FaCss3Alt title="CSS" />, <FaSass title="Sass" />, <FaReact title="React" />, <SiVite title="Vite" />], image: 'https://wsrv.nl/?url=https://drive.google.com/uc?id=1_vs3EbMz8cdjNQ2n7MC1yGKwu2MzRosd', color: 'bg-red-100', textColor: '#d02a2e', spanishAlt:'Un monitor con mi proyecto de listado de odontologos', englishAlt:'A monitor displaying my dentists listing project' },
+    { link: 'https://github.com/moneta-sofia/ProyectBackend', nameSpanish: 'Clínica', nameEnglish:'Clinic', descriptionSpanish: 'Proyecto Backend: Gestión de pacientes', descriptionEnglish: 'Backend Project: Patient Management', icons: [<FaHtml5 title="HTML" />, <FaCss3Alt title="CSS" />, <FaSass title="Sass" />, <FaJava title="Java" />, <SiSpring title="SpringBoot" />], image: 'https://wsrv.nl/?url=https://drive.google.com/uc?id=1K6bOhHW0qgNcDagSYS7nnhxFuBoZCUEC', color: 'bg-slate-100', textColor: '#74a5dE', spanishAlt:'Un monitor con mi proyecto de gestion de pacientes', englishAlt:'A monitor displaying my patient management project'}]
 
 
 export default function Proyects() {
@@ -62,7 +62,7 @@ export default function Proyects() {
                                     <div className="flex justify-between items-center text-3xl px-3 my-5">
                                         {proy.icons.map((icon) => { return icon })}
                                     </div>
-                                    <img src={proy.image} className=" relative -bottom-5 self-center"></img>
+                                    <img alt={isSpanish? proy.spanishAlt: proy.englishAlt} src={proy.image} className=" relative -bottom-5 self-center"></img>
                                 </motion.a>
                             )
                         })}
