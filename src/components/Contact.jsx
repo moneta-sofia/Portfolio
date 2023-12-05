@@ -81,11 +81,12 @@ export default function Contact() {
                 viewport={{once:true}}
             >
                 <div className="flex flex-col w-full relative my-3">
-                    <label className="labelName text-xl font-bold px-2 text-primary">
+                    <label for="name"  className="labelName text-xl font-bold px-2 text-primary">
                         {isSpanish? 'Nombre' : 'Name'}
                     </label>
                     <input
                         type="text"
+                        id="name"
                         name="user_name"
                         required
                         className="pl-5 inputName h-14 w-full text-lg text-gray-800 rounded-xl bg-inherit border-2 focus:border-4 border-solid border-primary"
@@ -93,10 +94,11 @@ export default function Contact() {
                 </div>
 
                 <div className="flex flex-col w-full relative my-3">
-                    <label className="labelName text-xl font-bold px-2 text-primary">
+                    <label for="email" className="labelName text-xl font-bold px-2 text-primary">
                         Email
                     </label>
                     <input
+                        id="email"
                         type="email"
                         name="user_email"
                         required
@@ -105,10 +107,11 @@ export default function Contact() {
                 </div>
 
                 <div className="flex flex-col w-full relative my-3">
-                    <label className="labelName text-xl font-bold px-2 text-primary">
+                    <label for="message" className="labelName text-xl font-bold px-2 text-primary">
                         {isSpanish? 'Mensaje' : 'Message'}
                     </label>
                     <textarea
+                        id="message"
                         name="message"
                         className="px-5 lg:h-36 h-60 inputName w-full text-lg text-gray-800 rounded-xl bg-inherit border-2 focus:border-4 border-solid border-primary py-3"
                     />

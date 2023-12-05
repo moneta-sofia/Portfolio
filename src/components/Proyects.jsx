@@ -70,7 +70,7 @@ export default function Proyects() {
 
                 </motion.div>
             </div>
-            <img src='https://wsrv.nl/?url=https://drive.google.com/uc?id=1hYgYqlgtYylE1-y7_CE_efNghaO5ZYTb' className="w-full rotate-180 relative -top-5"></img>
+            <img alt={isSpanish? 'Una ola color bordo para la estetica de la página': "A Burgundy wave for web's aesthetics"} src='https://wsrv.nl/?url=https://drive.google.com/uc?id=1hYgYqlgtYylE1-y7_CE_efNghaO5ZYTb' className="w-full rotate-180 relative -top-5"></img>
         </>
     )
 }
