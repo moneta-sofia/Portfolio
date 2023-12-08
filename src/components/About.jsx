@@ -71,11 +71,11 @@ export default function About() {
                     :
                     <motion.div initial={{ opacity: 0 }}
                         whileInView={{ opacity: 1, transition: { easeOut, duration: 1.5 } }}
-                        viewport={{ once: true }} className="my-16 bg-secondary p-8 rounded-xl hover:shadow-2xl shadow-sm hover:scale-105 transition-all ease-in-out">
+                        viewport={{ once: true }} className="md:my-16 my-9 bg-secondary md:p-8 p-3 rounded-xl hover:shadow-2xl shadow-sm hover:scale-105 transition-all ease-in-out md:w-2/3 w-10/12 ">
                             {isSpanish?
-                            <iframe width="560" height="315" src="https://www.youtube.com/embed/QKuRQq6rXBw?si=_3PaF-SIybFlff4D" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                            <iframe className="w-full aspect-video rounded-xl"  src="https://www.youtube.com/embed/QKuRQq6rXBw?si=_3PaF-SIybFlff4D" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                             :
-<iframe width="560" height="315" src="https://www.youtube.com/embed/dC3VYLMZD7A?si=9UyOHbM5ZMEdkRVu" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                            <iframe className="w-full aspect-video rounded-xl" src="https://www.youtube.com/embed/dC3VYLMZD7A?si=9UyOHbM5ZMEdkRVu" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                         }
                     </motion.div>
                 }
