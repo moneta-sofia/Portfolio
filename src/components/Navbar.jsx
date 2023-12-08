@@ -27,7 +27,7 @@ export default function Navbar() {
                 {isOpen && (
                 <>
                     <div className={`blur w-screen h-screen fixed inset-0 ${isOpen ? 'md:hidden flex' : 'hidden'}  `}></div>
-                    <div className=" flex flex-col items-center justify-center md:text-xl text-2xl md:mt-5 mt-0 bg-white rounded-xl md:px-4 px-10 md:py-0 py-5 md:absolute fixed md:inset-0 md:-translate-x-0 -translate-x-2/4 md:-translate-y-0 -translate-y-2/4 md:left-auto left-2/4 md:-right-7 md:top-14 top-2/4 z-40 h-fit w-fit p-3 shadow-mdButCenter">
+                    <div className=" flex flex-col text-center items-center justify-center md:text-xl text-2xl md:mt-5 mt-0 bg-white rounded-xl md:px-4 px-10 md:py-0 py-5 md:absolute fixed md:inset-0 md:-translate-x-0 -translate-x-2/4 md:-translate-y-0 -translate-y-2/4 md:left-auto left-2/4 md:-right-7 md:top-14 top-2/4 z-40 h-fit w-fit p-3 shadow-mdButCenter">
                         <Link
                             activeClass="active"
                             to="inicio"
