@@ -10,10 +10,10 @@ export default function Navbar() {
     return (
         <div className="fixed top-0 right-0 lg:mr-16 mr-5 lg:mt-10 mt-5  z-50 flex justify-around">
 
-                <div className={`bg-white text-black font-bold text-2xl md:flex hidden items-center justify-around lg:mr-10 mr-6 lg:w-16 w-14 p-1 z-50 rounded-full transition-transform shadow-mdButCenter`} onClick={()=>setIsSpanish(!isSpanish)}>{isSpanish? 'En' : 'Es'}</div>
+                <div className={` cursor-pointer bg-white text-black font-bold text-2xl md:flex hidden items-center justify-around lg:mr-10 mr-6 lg:w-16 w-14 p-1 z-50 rounded-full transition-transform shadow-mdButCenter`} onClick={()=>setIsSpanish(!isSpanish)}>{isSpanish? 'En' : 'Es'}</div>
             <div className="flex flex-col items-center justify-center">
                 <div
-                    className={`relative bg-white text-secondary font-bold text-4xl flex items-center justify-around w-fit h-fit lg:p-3 p-2 z-50 rounded-full transition-transform shadow-mdButCenter ${isOpen ? "rotate" : ""
+                    className={`relative bg-white text-secondary font-bold text-4xl flex items-center justify-around w-fit h-fit lg:p-3 p-2 z-50 rounded-full transition-transform shadow-mdButCenter cursor-pointer ${isOpen ? "rotate" : ""
                         }`}
                     onClick={() => setIsOpen(!isOpen)}
                 >
@@ -36,7 +36,7 @@ export default function Navbar() {
                             offset={0}
                             duration={500}
                             onClick={() => setIsOpen(false)}
-                            className="my-2 "
+                            className="my-2 cursor-pointer "
                         >
                             {isSpanish? 'Inicio' : 'Start'}
                         </Link>
@@ -49,7 +49,7 @@ export default function Navbar() {
                             offset={-80}
                             duration={500}
                             onClick={() => setIsOpen(false)}
-                            className="my-2"
+                            className="my-2 cursor-pointer"
                         >
                             { isSpanish? 'Sobre Mi' : 'About Me'}
                         </Link>
@@ -62,7 +62,7 @@ export default function Navbar() {
                             offset={0}
                             duration={500}
                             onClick={() => setIsOpen(false)}
-                            className="my-2"
+                            className="my-2 cursor-pointer"
                         >
                             {isSpanish?'Proyectos': 'Projects'}
                         </Link>
@@ -75,7 +75,7 @@ export default function Navbar() {
                             offset={-10}
                             duration={500}
                             onClick={() => setIsOpen(false)}
-                            className="my-2"
+                            className="my-2 cursor-pointer"
                         >
                             {isSpanish?'Contacto': 'Contact'}
                         </Link>
