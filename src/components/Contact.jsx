@@ -15,7 +15,7 @@ export default function Contact() {
         if (isSpanish) {            
             toast.promise(
                 emailjs.sendForm(
-                    "service_evftutj",
+                    "service_5ivri1s",
                     "template_gi3ns3s",
                     form.current,
                     "1i2zGYSVJo9MrYcxO"
