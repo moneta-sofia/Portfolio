@@ -18,7 +18,7 @@ export default function Contact() {
                     "service_5ivri1s",
                     "template_gi3ns3s",
                     form.current,
-                    "1i2zGYSVJo9MrYcxO"
+                    {publicKey: "1i2zGYSVJo9MrYcxO",}
                 ),
                 {
                     loading: "Cargando...",
