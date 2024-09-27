@@ -29,6 +29,30 @@ export default function Contact() {
         );
     };
 
+    const onReCAPTCHAChange = (captchaValue) => {
+        if (!captchaValue) {
+            toast.error(isSpanish ? "Captcha no validado." : "Captcha not validated.");
+            return;
+        }
+        toast.promise(
+            emailjs.sendForm(
+                import.meta.env.VITE_EMAILJS_SERVICE,
+                import.meta.env.VITE_EMAILJS_TEMPLATE,
+                form.current,
+                import.meta.env.VITE_EMAILJS_PASSWORD
+            ),
+            {
+                loading: isSpanish ? "Cargando..." : "Loading...",
+                success: isSpanish
+                    ? "El correo se ha enviado correctamente!"
+                    : "The email has been sent successfully!",
+                error: isSpanish
+                    ? "Lo siento! No se ha podido enviar el mail :/"
+                    : "I'm sorry! The email couldn't be sent :/",
+            }
+        );
+    };
+
     return (
         <div className="text-center mb-32 flex flex-col justify-center items-center" name='contacto'>
             <Toaster richColors expand={false} position="bottom-center" />
