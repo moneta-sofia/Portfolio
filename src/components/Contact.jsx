@@ -1,4 +1,4 @@
-import React, { useContext, useRef } from "react";
+import React, { useContext, useRef, useState } from "react";
 import ReCAPTCHA from "react-google-recaptcha";
 import emailjs from "@emailjs/browser";
 import { Toaster, toast } from "sonner";
@@ -8,6 +8,7 @@ import { LanguageContext } from "../contexts/LanguageContext";
 
 export default function Contact() {
     const { isSpanish } = useContext(LanguageContext)
+    const [validCaptcha, setValidCaptcha] = useState(false);
     const form = useRef();
     const captcha = useRef();
 
@@ -16,6 +17,7 @@ export default function Contact() {
 
         captcha.current.execute();
 
+        if (captcha.current.status)
         toast.promise(
             emailjs.sendForm(import.meta.env.VITE_EMAILJS_SERVICE, import.meta.env.VITE_EMAILJS_TEMPLATE, form.current, import.meta.env.VITE_EMAILJS_PASSWORD
             ),
@@ -126,6 +128,7 @@ export default function Contact() {
                     ref={captcha}
                     size="invisible"
                     sitekey={import.meta.env.VITE_SITE_KEY_CAPTCHA}
+                    onChange={onReCAPTCHAChange}
                 />
 
                 <button className="bg-primary w-3/4 py-3 rounded-xl font-bold text-secondary my-3">
