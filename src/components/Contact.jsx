@@ -69,7 +69,7 @@ export default function Contact() {
                 whileInView={{ opacity: 1, transition: { duration: 1.5, delay: 0.5 } }}
                 viewport={{ once: true }}
             >
-                {isSpanish ? 'Puedes contactarme por mi correo' : 'You can reach out to me via my email at '}
+                {isSpanish ? 'Puedes contactarme por mi correo ' : 'You can reach out to me via my email at '}
                 <a
                     href="https://mail.google.com/mail/?view=cm&fs=1&to=sofia.moneta.dev@gmail.com"
                     target="_blank"
