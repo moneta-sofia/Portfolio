@@ -60,9 +60,9 @@ export default function Start() {
               variants={item}
             >
               {isSpanish ? (
-                <TextAnimation text="Desarrolladora Web Full-Stack" />
+                <TextAnimation text="Desarrolladora Full-Stack" />
               ) : (
-                <TextAnimation text="Full-Stack Web Developer     " />
+                <TextAnimation text="Full-Stack Developer     " />
               )}
             </motion.p>
           </motion.div>
