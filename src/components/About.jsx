@@ -40,42 +40,42 @@ export default function About() {
               {isSpanish ? (
                 <p className="description-item mb-16 mt-10">
                   Soy una <b className="text-bold">desarrolladora apasionada</b>{" "}
-                  💪 con un gusto equilibrado por el{" "}
-                  <b className="text-bold">backend y el frontend</b>.
+                  💪 con inclinación por el Back-End{" "}
+                  <b className="text-bold">sin dejar de lado el Front-End</b>
                 </p>
               ) : (
                 <p className="description-item mb-16 mt-10">
                   I am a <b className="text-bold">passionate developer</b> 💪
-                  with a balanced taste for both{" "}
-                  <b className="text-bold">backend and frontend</b>.
+                  with a strong preference for Back-End{" "}
+                  <b className="text-bold">while still appreciating the Front-End</b>
                 </p>
               )}
               {isSpanish ? (
                 <p className="description-item my-16">
-                  Actualmente, estoy inmersa en mi{" "}
+                  He completado mi especialización en Back-End {" "}
                   <b className="text-bold">
-                    formación en la especialización de backend
+                  y busco activamente una oportunidad laboral
                   </b>{" "}
-                  en Digital House 📚.
+                  combinándola con proyectos freelance 📚
                 </p>
               ) : (
                 <p className="description-item my-16">
-                  Currently, I am inmersed in my{" "}
+                  I have completed my Back-End specialization{" "}
                   <b className="text-bold">
-                    trining in the Back-End specialization
+                  and now am seeking job opportunities
                   </b>{" "}
-                  Digital House 📚.
+                  while working on freelance projects📚
                 </p>
               )}
               {isSpanish ? (
                 <p className="description-item my-16">
                   Mi enfoque versátil me permite no solo entender la lógica del
-                  backend 🤓, sino también la creatividad del frontend 🖌️.
+                  Back-End 🤓, sino también la creatividad del Front-End 🖌️
                 </p>
               ) : (
                 <p className="description-item my-16">
                   My versatile approach allows me not only to grasp the logic of
-                  the backend 🤓 but also the creativity of the frontend 🖌️.
+                  the Back-End 🤓 but also the creativity of the Front-End 🖌️
                 </p>
               )}
               {isSpanish ? (
@@ -102,7 +102,7 @@ export default function About() {
                 <p className="description-item my-16">
                   Estoy emocionada por lo que el futuro me depara y me encuentro{" "}
                   <b className="text-bold">comprometida a crecer</b>{" "}
-                  constantemente en este apasionante campo 🌱.
+                  constantemente en este apasionante campo 🌱
                 </p>
               ) : (
                 <p className="description-item my-16">
@@ -110,7 +110,7 @@ export default function About() {
                   <b className="text-bold">
                     I'm committed to continuously growing
                   </b>{" "}
-                  in this exciting field 🌱.
+                  in this exciting field 🌱
                 </p>
               )}
             </div>
@@ -123,23 +123,29 @@ export default function About() {
             className="md:my-16 my-9 bg-secondary md:p-8 p-3 rounded-xl hover:shadow-2xl shadow-sm hover:scale-105 transition-all ease-in-out md:w-2/3 w-10/12 "
           >
             {isSpanish ? (
-              <iframe
-                className="w-full aspect-video rounded-xl"
-                src="https://www.youtube.com/embed/QKuRQq6rXBw?si=_3PaF-SIybFlff4D"
-                title="YouTube video player"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowfullscreen
-              ></iframe>
+              <>
+                <iframe
+                  className="w-full aspect-video rounded-xl"
+                  src="https://www.youtube.com/embed/QKuRQq6rXBw?si=_3PaF-SIybFlff4D"
+                  title="YouTube video player"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowfullscreen
+                ></iframe>
+                <p className="pt-3">*Desactualizado</p>
+              </>
             ) : (
-              <iframe
-                className="w-full aspect-video rounded-xl"
-                src="https://www.youtube.com/embed/dC3VYLMZD7A?si=9UyOHbM5ZMEdkRVu"
-                title="YouTube video player"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowfullscreen
-              ></iframe>
+              <>
+                <iframe
+                  className="w-full aspect-video rounded-xl"
+                  src="https://www.youtube.com/embed/dC3VYLMZD7A?si=9UyOHbM5ZMEdkRVu"
+                  title="YouTube video player"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowfullscreen
+                ></iframe>
+                <p className="pt-3">*Outdated</p>
+              </>
             )}
           </motion.div>
         )}
