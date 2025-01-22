@@ -1,103 +1,97 @@
-@import url('https://fonts.googleapis.com/css2?family=Kulim+Park:wght@300;400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;400;500;700;800&family=Kulim+Park:wght@300;400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Kulim+Park:wght@300;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;400;500;700;800&family=Kulim+Park:wght@300;400;700&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
 
 ::-webkit-scrollbar {
   display: none; /* Oculta el scrollbar */
 }
 :root {
   --color-primary: #953735;
-  --color-secondary: #FBEEE4;
+  --color-secondary: #fbeee4;
 
   margin: 0;
   background: var(--color-secondary);
 }
-.bg-cuadricula{
-  background-image:   url('https://wsrv.nl/?url=https://drive.google.com/uc?id=1uc5QagiRZKnRR5ICDciANzJy07vMBgoE');
+.bg-cuadricula {
+  background-image: url("https://wsrv.nl/?url=https://drive.google.com/uc?id=1uc5QagiRZKnRR5ICDciANzJy07vMBgoE");
   background-position: center top;
-  background-size:100%;
+  background-size: 100%;
   background-repeat: repeat;
 }
-.bg-cuadricula2{
-  background-image:   url('https://wsrv.nl/?url=https://drive.google.com/uc?id=1uc5QagiRZKnRR5ICDciANzJy07vMBgoE');
+.bg-cuadricula2 {
+  background-image: url("https://wsrv.nl/?url=https://drive.google.com/uc?id=1uc5QagiRZKnRR5ICDciANzJy07vMBgoE");
   background-position: center top;
   background-repeat: repeat;
-  background-size:100%;
+  background-size: 100%;
 }
 
 @media (max-width: 750px) {
-  .bg-cuadricula2{
-    background-size:150%;
+  .bg-cuadricula2 {
+    background-size: 150%;
   }
 
-  .bg-cuadricula{
-    background-size:150%;
+  .bg-cuadricula {
+    background-size: 150%;
   }
 
-
-  
-.description{
-  position: relative;
-  animation: slide 20s cubic-bezier(0.60, -0.50, 0.24, 1.50) infinite;
-}
+  .description {
+    position: relative;
+    animation: slide 20s cubic-bezier(0.6, -0.5, 0.24, 1.5) infinite;
+  }
 }
 
 @media (max-width: 475px) {
-  .bg-cuadricula2{
-    background-size:175%;
+  .bg-cuadricula2 {
+    background-size: 175%;
   }
 
-  .bg-cuadricula{
-    background-size:175%;
+  .bg-cuadricula {
+    background-size: 175%;
   }
 }
 
-.about-slider{
+.about-slider {
   position: relative;
-	&::before,
-	&::after {
-		background: linear-gradient(to bottom,#FBEEE4 0%,rgba(255, 0, 0, 0) 100%);
-		content: "";
-		height: 100px;;
-		position: absolute;
-		width:90vw ;
-		z-index: 2;
-    
-	}
-	&::before{
+  &::before,
+  &::after {
+    background: linear-gradient(to bottom, #fbeee4 0%, rgba(255, 0, 0, 0) 100%);
+    content: "";
+    height: 100px;
+    position: absolute;
+    width: 90vw;
+    z-index: 2;
+  }
+  &::before {
     top: 0;
     right: 0;
     z-index: 10;
   }
-	&::after {
-		right: 0;
-		bottom: 0;
-		transform: rotateZ(180deg);
+  &::after {
+    right: 0;
+    bottom: 0;
+    transform: rotateZ(180deg);
     z-index: 10;
-	}
-  
+  }
 }
 
-
-.description{
+.description {
   position: relative;
-  animation: slide 30s cubic-bezier(0.60, -0.50, 0.24, 1.50) infinite;
+  animation: slide 30s cubic-bezier(0.6, -0.5, 0.24, 1.5) infinite;
 }
 
 @keyframes slide {
   0% {
     transform: translateY(0);
   }
-  18%{
+  18% {
     transform: translateY(-18%);
   }
-  39%{
+  39% {
     transform: translateY(-39%);
   }
-  59%{
+  59% {
     transform: translateY(-59%);
   }
   83% {
@@ -105,32 +99,31 @@
   }
 }
 
-.card-p1:hover img{
+.card-p1:hover img {
   bottom: 0;
   transition: ease-in-out 0.2s;
 }
 
 /* ---------------------------------- Form ---------------------------------- */
 
-.labelName{
+.labelName {
   position: absolute;
-  left:1rem;
-  top:-0.9rem;
+  left: 1rem;
+  top: -0.9rem;
   background-color: white;
   border-radius: 10px;
 }
 
 textarea:focus,
-input:focus{
+input:focus {
   outline: none;
 }
 
-.onekouwu{
+.onekouwu {
   z-index: 30;
 }
 
 .rotate {
-
   transform: rotate(180deg);
   /* scale: 0.9; */
 }
@@ -140,17 +133,13 @@ input:focus{
   font-weight: bold;
 }
 
-.blur{
+.blur {
   backdrop-filter: blur(2px);
   background-color: rgba(0, 0, 0, 0.233);
 }
 
-.subrayado{
-  background: linear-gradient(
-    to bottom, 
-    transparent 50%,
-    #9537356f 50%
-  );
+.subrayado {
+  background: linear-gradient(to bottom, transparent 50%, #9537356f 50%);
 }
 
 /* ------------------------------- cat loader ------------------------------- */
@@ -170,26 +159,31 @@ input:focus{
 }
 .cat:active > * {
   -webkit-animation-play-state: running;
-          animation-play-state: running;
+  animation-play-state: running;
 }
 
-.cat__body, .cat__tail, .cat__head {
+.cat__body,
+.cat__tail,
+.cat__head {
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  -webkit-animation: rotating 2.79s cubic-bezier(0.65, 0.54, 0.12, 0.93) infinite;
-          animation: rotating 2.79s cubic-bezier(0.65, 0.54, 0.12, 0.93) infinite;
+  -webkit-animation: rotating 2.79s cubic-bezier(0.65, 0.54, 0.12, 0.93)
+    infinite;
+  animation: rotating 2.79s cubic-bezier(0.65, 0.54, 0.12, 0.93) infinite;
 }
-.cat__body::before, .cat__tail::before, .cat__head::before {
+.cat__body::before,
+.cat__tail::before,
+.cat__head::before {
   content: "";
   position: absolute;
   width: 50%;
   height: 50%;
   background-size: 200%;
   background-repeat: no-repeat;
-  background-image: url('/catLoader.webp');
+  background-image: url("/catLoader.webp");
 }
 
 .cat__head::before {
@@ -202,7 +196,7 @@ input:focus{
 
 .cat__tail {
   -webkit-animation-delay: 0.2s;
-          animation-delay: 0.2s;
+  animation-delay: 0.2s;
 }
 .cat__tail::before {
   left: 0;
@@ -214,11 +208,11 @@ input:focus{
 
 .cat__body {
   -webkit-animation-delay: 0.1s;
-          animation-delay: 0.1s;
+  animation-delay: 0.1s;
 }
 .cat__body:nth-of-type(2) {
   -webkit-animation-delay: 0.2s;
-          animation-delay: 0.2s;
+  animation-delay: 0.2s;
 }
 .cat__body::before {
   right: 0;
@@ -264,6 +258,13 @@ input:focus{
   box-sizing: border-box;
 }
 
-p, h1, h2, h3, text, button, label, div{
+p,
+h1,
+h2,
+h3,
+text,
+button,
+label,
+div {
   user-select: none;
 }

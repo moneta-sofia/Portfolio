@@ -1,24 +1,18 @@
 const randomInt = (min, max) =>
-  Math.floor((Math.random() * (max - min + 1)) + min)
+  Math.floor(Math.random() * (max - min + 1) + min);
 
 export const tileFrames = (tileList) =>
   tileList.map(([x, y]) => ({ backgroundPosition: `${x * 32}px ${y * 32}px` }));
 
 export const spriteSets = {
-  idle: [
-    [-3, -3]
-  ],
-  alert: [
-    [-7, -3]
-  ],
+  idle: [[-3, -3]],
+  alert: [[-7, -3]],
   scratch: [
     [-5, 0],
     [-6, 0],
     [-7, 0],
   ],
-  tired: [
-    [-3, -2]
-  ],
+  tired: [[-3, -2]],
   sleeping: [
     [-2, 0],
     [-2, -1],
@@ -58,7 +52,9 @@ export const spriteSets = {
 };
 
 export class ONekoElement extends HTMLElement {
-  static get observedAttributes() { return ['speed', 'x', 'y', 'goto-x', 'goto-y', 'neko-x', 'neko-y']; }
+  static get observedAttributes() {
+    return ["speed", "x", "y", "goto-x", "goto-y", "neko-x", "neko-y"];
+  }
 
   neko = {
     x: 32,
@@ -76,27 +72,33 @@ export class ONekoElement extends HTMLElement {
 
   constructor() {
     super();
-    
-    
+
     // todo: make cat follow mouse stuff separate or optional and make element more versatile
     this.onMouseMove = (e) => {
       // todo: make this better
-      const [x, y] = this.style.position === "fixed"
-        ? [e.clientX, e.clientY]
-        : [e.offsetX, e.offsetY]
+      const [x, y] =
+        this.style.position === "fixed"
+          ? [e.clientX, e.clientY]
+          : [e.offsetX, e.offsetY];
 
       this.goto.x = x;
       this.goto.y = y;
     };
 
     this.onMouseOut = () => {
-      this.goto.x = this.neko.x
-      this.goto.y = this.neko.y
-    }
+      this.goto.x = this.neko.x;
+      this.goto.y = this.neko.y;
+    };
 
     // todo: use handleEvent instead
-    this.parentNode.addEventListener("mousemove", this.onMouseMove, { passive: true, capture: true });
-    this.parentNode.addEventListener('mouseout', this.onMouseOut, { passive: true, capture: true })
+    this.parentNode.addEventListener("mousemove", this.onMouseMove, {
+      passive: true,
+      capture: true,
+    });
+    this.parentNode.addEventListener("mouseout", this.onMouseOut, {
+      passive: true,
+      capture: true,
+    });
 
     this.interval = setInterval(() => this.playFrame(), 100);
   }
@@ -116,7 +118,7 @@ export class ONekoElement extends HTMLElement {
     if (this.idleFrame > 1) {
       this.setAnimation("alert");
       this.idleFrame = Math.min(this.idleFrame, 7) - 1;
-      return
+      return;
     }
 
     let direction;
@@ -130,17 +132,22 @@ export class ONekoElement extends HTMLElement {
     this.neko.x -= (diffX / distance) * this.neko.speed;
     this.neko.y -= (diffY / distance) * this.neko.speed;
 
-    this.updatePosition()
+    this.updatePosition();
   }
 
   playIdleAnimation() {
-    const playingIdleAnimation = ["sleeping", "scratch", "tired"]
-      .includes(this.currAnim);
+    const playingIdleAnimation = ["sleeping", "scratch", "tired"].includes(
+      this.currAnim,
+    );
 
     let idleAnimation = null;
-    if (this.idleFrame > 10 && !playingIdleAnimation && randomInt(0, 200) === 0) {
-      idleAnimation = ["sleeping", "scratch"][randomInt(0, 1)]
-      this.idleFrame = 0
+    if (
+      this.idleFrame > 10 &&
+      !playingIdleAnimation &&
+      randomInt(0, 200) === 0
+    ) {
+      idleAnimation = ["sleeping", "scratch"][randomInt(0, 1)];
+      this.idleFrame = 0;
     }
 
     switch (idleAnimation ?? this.currAnim) {
@@ -153,14 +160,14 @@ export class ONekoElement extends HTMLElement {
         }
         if (this.idleFrame > 192) {
           this.idleFrame = 0;
-          this.setAnimation("idle", 0)
+          this.setAnimation("idle", 0);
         }
         break;
       case "scratch":
         this.setAnimation("scratch", 300);
         if (this.idleFrame > 9) {
           this.idleFrame = 0;
-          this.setAnimation("idle", 0)
+          this.setAnimation("idle", 0);
         }
         break;
       default:
@@ -187,7 +194,7 @@ export class ONekoElement extends HTMLElement {
         duration,
         easing: `steps(${frames.length},jump-none)`,
         startTime: Math.round(
-          ((duration / frames.length) * startFrame) % frames.length
+          ((duration / frames.length) * startFrame) % frames.length,
         ),
       });
     } else {
@@ -210,50 +217,49 @@ export class ONekoElement extends HTMLElement {
     this.style.imageRendering ||= "pixelated";
     this.style.width ||= `32px`;
     this.style.height ||= `32px`;
-    this.style.position ||= 'fixed'
-    this.style.pointerEvents ||= 'none'
-    this.updatePosition()
-
+    this.style.position ||= "fixed";
+    this.style.pointerEvents ||= "none";
+    this.updatePosition();
 
     this.setAnimation("idle");
   }
 
   disconnectedCallback() {
-    document.removeEventListener(this.onMouseOut)
-    document.removeEventListener(this.onMouseMove)
-    clearInterval(this.interval)
+    document.removeEventListener(this.onMouseOut);
+    document.removeEventListener(this.onMouseMove);
+    clearInterval(this.interval);
   }
 
   attributeChangedCallback(name, _oldValue, newValue) {
     switch (name) {
       case "speed": {
-        this.neko.speed = parseInt(newValue)
-        break
+        this.neko.speed = parseInt(newValue);
+        break;
       }
       case "x":
       case "y": {
-        const value = parseInt(newValue)
-        this.goto[name] = value
-        this.neko[name] = value
-        break
+        const value = parseInt(newValue);
+        this.goto[name] = value;
+        this.neko[name] = value;
+        break;
       }
       case "goto-x":
       case "goto-y": {
-        this.goto[name[5]] = parseInt(newValue)
-        break
+        this.goto[name[5]] = parseInt(newValue);
+        break;
       }
       case "neko-x":
       case "neko-y": {
-        this.neko[name[5]] = parseInt(newValue)
-        break
+        this.neko[name[5]] = parseInt(newValue);
+        break;
       }
     }
   }
 }
 
 // src="oneko-element.js?define=foo-element"
-const url = new URL(import.meta.url)
-const define = url.searchParams.get('define')
+const url = new URL(import.meta.url);
+const define = url.searchParams.get("define");
 if (define != null) {
-  customElements.define(define || 'o-neko', ONekoElement);
+  customElements.define(define || "o-neko", ONekoElement);
 }
