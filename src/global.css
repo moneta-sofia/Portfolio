@@ -263,3 +263,7 @@ input:focus{
   padding: 0;
   box-sizing: border-box;
 }
+
+p, h1, h2, h3, text, button, label, div{
+  user-select: none;
+}
