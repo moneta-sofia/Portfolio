@@ -4,8 +4,10 @@ import {
   SiPrisma,
   SiSpring,
   SiVite,
+  SiExpress 
 } from "react-icons/si";
-import { FaReact, FaHtml5, FaSass, FaCss3Alt, FaJava } from "react-icons/fa";
+import { FaReact, FaHtml5, FaSass, FaCss3Alt, FaJava, FaNodeJs  } from "react-icons/fa";
+import { DiMongodb } from "react-icons/di";
 import { GrMysql } from "react-icons/gr";
 import TextAnimation from "./TextAnimation";
 import { motion } from "framer-motion";
@@ -34,6 +36,27 @@ const proyects = [
     textColor: "#26485f",
     spanishAlt: "Un monitor con mi proyecto de alquiler de autos",
     englishAlt: "A monitor displaying my car rental project",
+  },
+    {
+    link: "https://tacoportfolio.netlify.app/",
+    nameSpanish: "Taco Works",
+    nameEnglish: "Taco's Works",
+    descriptionSpanish: "Proyecto Full-Stack: Obras y trayectoria artística",
+    descriptionEnglish: "Frontend Project: Artistic works and journey",
+    icons: [
+      <FaNodeJs title="NodeJS" />,
+      <SiExpress  title="Express" />,
+      <DiMongodb  title="MongoDB" />,
+      <FaReact title="React" />,
+      <SiTailwindcss title="Tailwind"/>,
+      <SiVite title="Vite" />,
+    ],
+    image:
+      "https://wsrv.nl/?url=https://drive.google.com/uc?id=17n8ONybOT5SE1YZgf09diL5m41ugCkW3",
+    color: "bg-red-100",
+    textColor: "#d02a2e",
+    spanishAlt: "Un monitor con mi proyecto de listado de odontologos",
+    englishAlt: "A monitor displaying my dentists listing project",
   },
   // {
   //   link: "https://odontologos-sofi.netlify.app/",
