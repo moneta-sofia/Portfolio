@@ -4,9 +4,10 @@ import {
   SiPrisma,
   SiSpring,
   SiVite,
-  SiExpress 
+  SiExpress,
+  SiKeycloak 
 } from "react-icons/si";
-import { FaReact, FaHtml5, FaSass, FaCss3Alt, FaJava, FaNodeJs  } from "react-icons/fa";
+import { FaReact, FaHtml5, FaSass, FaCss3Alt, FaJava, FaNodeJs, FaDocker  } from "react-icons/fa";
 import { DiMongodb } from "react-icons/di";
 import { GrMysql } from "react-icons/gr";
 import TextAnimation from "./TextAnimation";
@@ -17,32 +18,11 @@ import { LanguageContext } from "../contexts/LanguageContext";
 
 const proyects = [
   {
-    link: "https://infinit-ecommerce.vercel.app/",
-    nameSpanish: "Infinit",
-    nameEnglish: "Infinit",
-    descriptionSpanish: "Proyecto grupal: Alquiler de autos de lujo",
-    descriptionEnglish:
-      "Group project: Luxury car rental service with premium fleet ",
-    icons: [
-      <FaReact title="React" />,
-      <SiTailwindcss title="Tailwind" />,
-      <SiNextdotjs title="Next" />,
-      <SiPrisma title="Prisma" />,
-      <GrMysql title="mySQL" />,
-    ],
-    image:
-      "https://wsrv.nl/?url=https://drive.google.com/uc?id=1V0m0pNmu6huuvDIMZvAlNAUVvMR_-kox",
-    color: "bg-gray-200",
-    textColor: "#26485f",
-    spanishAlt: "Un monitor con mi proyecto de alquiler de autos",
-    englishAlt: "A monitor displaying my car rental project",
-  },
-    {
     link: "https://tacoportfolio.netlify.app/",
     nameSpanish: "Taco Works",
     nameEnglish: "Taco's Works",
     descriptionSpanish: "Proyecto Full-Stack: Obras y trayectoria artística",
-    descriptionEnglish: "Frontend Project: Artistic works and journey",
+    descriptionEnglish: "Frontend project: Artistic works and journey",
     icons: [
       <FaNodeJs title="NodeJS" />,
       <SiExpress  title="Express" />,
@@ -53,36 +33,61 @@ const proyects = [
     ],
     image:
       "https://wsrv.nl/?url=https://drive.google.com/uc?id=17n8ONybOT5SE1YZgf09diL5m41ugCkW3",
-    color: "bg-red-100",
-    textColor: "#d02a2e",
-    spanishAlt: "Un monitor con mi proyecto de listado de odontologos",
-    englishAlt: "A monitor displaying my dentists listing project",
+    color: "bg-stone-300",
+    textColor: "#000",
+    spanishAlt: "Un monitor con mi proyecto del Portfolio de Taco, Diego Ruiz",
+    englishAlt: "A monitor displaying my Taco's Portfolio project",
   },
-  // {
-  //   link: "https://odontologos-sofi.netlify.app/",
-  //   nameSpanish: "Odontologos",
-  //   nameEnglish: "Dentists",
-  //   descriptionSpanish: "Proyecto FrontEnd: Listado de Odontologos",
-  //   descriptionEnglish: "Frontend Project: Dentists listing and storage",
-  //   icons: [
-  //     <FaCss3Alt title="CSS" />,
-  //     <FaSass title="Sass" />,
-  //     <FaReact title="React" />,
-  //     <SiVite title="Vite" />,
-  //   ],
-  //   image:
-  //     "https://wsrv.nl/?url=https://drive.google.com/uc?id=1_vs3EbMz8cdjNQ2n7MC1yGKwu2MzRosd",
-  //   color: "bg-red-100",
-  //   textColor: "#d02a2e",
-  //   spanishAlt: "Un monitor con mi proyecto de listado de odontologos",
-  //   englishAlt: "A monitor displaying my dentists listing project",
-  // },
+
+  {
+    link: "https://github.com/moneta-sofia/challengebackend",
+    nameSpanish: "Digital Money",
+    nameEnglish: "Digital Money",
+    descriptionSpanish: "Proyecto Back-End: Microservicios con Spring Boot, Keycloak y Docker",
+    descriptionEnglish: "Back-End project: Microservices with Spring Boot, Keycloak, and Docker",
+    icons: [
+      <FaJava title="Java" />,
+      <SiSpring title="SpringBoot" />,
+      <FaDocker title="Docker" />,
+      <SiKeycloak  title="Keycloak" />,
+      <GrMysql  title="MySql" />,
+
+    ],
+    image:
+      "https://wsrv.nl/?url=https://drive.google.com/uc?id=1AowPqlt2VlsdZ5TYL5dknPvioRv7DtM0",
+    color: "bg-blue-100",
+    textColor: "#09192A",
+    spanishAlt: "Un monitor con mi proyecto de Digital Money",
+    englishAlt: "A monitor displaying my Digital Money project",
+  },
+
+  {
+    link: "https://infinit-ecommerce.vercel.app/",
+    nameSpanish: "Infinit",
+    nameEnglish: "Infinit",
+    descriptionSpanish: "Proyecto Full-Stack: Alquiler de autos de lujo",
+    descriptionEnglish:
+      "Full-Stack project: Luxury car rental service with premium fleet ",
+    icons: [
+      <FaReact title="React" />,
+      <SiTailwindcss title="Tailwind" />,
+      <SiNextdotjs title="Next" />,
+      <SiPrisma title="Prisma" />,
+      <GrMysql title="mySQL" />,
+    ],
+    image:
+      "https://wsrv.nl/?url=https://drive.google.com/uc?id=1V0m0pNmu6huuvDIMZvAlNAUVvMR_-kox",
+    color: "bg-blue-50",
+    textColor: "#2B4D6D",
+    spanishAlt: "Un monitor con mi proyecto de alquiler de autos",
+    englishAlt: "A monitor displaying my car rental project",
+  },
   {
     link: "https://github.com/moneta-sofia/ProyectBackend",
     nameSpanish: "Clínica",
     nameEnglish: "Clinic",
     descriptionSpanish: "Proyecto Backend: Gestión de pacientes",
-    descriptionEnglish: "Backend Project: Patient Management",
+    descriptionEnglish: "Backend project: Patient Management",
     icons: [
       <FaHtml5 title="HTML" />,
       <FaCss3Alt title="CSS" />,
@@ -92,11 +97,31 @@ const proyects = [
     ],
     image:
       "https://wsrv.nl/?url=https://drive.google.com/uc?id=1K6bOhHW0qgNcDagSYS7nnhxFuBoZCUEC",
-    color: "bg-slate-100",
-    textColor: "#74a5dE",
+    color: "bg-stone-50",
+    textColor: "#9AB6D3",
     spanishAlt: "Un monitor con mi proyecto de gestion de pacientes",
     englishAlt: "A monitor displaying my patient management project",
   },
+  {
+    link: "https://odontologos-sofi.netlify.app/",
+    nameSpanish: "Odontologos",
+    nameEnglish: "Dentists",
+    descriptionSpanish: "Proyecto FrontEnd: Listado de Odontologos",
+    descriptionEnglish: "Frontend project: Dentists listing and storage",
+    icons: [
+      <FaCss3Alt title="CSS" />,
+      <FaSass title="Sass" />,
+      <FaReact title="React" />,
+      <SiVite title="Vite" />,
+    ],
+    image:
+      "https://wsrv.nl/?url=https://drive.google.com/uc?id=1_vs3EbMz8cdjNQ2n7MC1yGKwu2MzRosd",
+    color: "bg-red-100",
+    textColor: "#FF0002",
+    spanishAlt: "Un monitor con mi proyecto de listado de odontologos",
+    englishAlt: "A monitor displaying my dentists listing project",
+  },
+
 ];
 
 export default function Proyects() {
