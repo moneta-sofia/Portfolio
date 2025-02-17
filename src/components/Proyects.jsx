@@ -62,7 +62,7 @@ const proyects = [
   },
 
   {
-    link: "https://infinit-ecommerce.vercel.app/",
+    link: "https://infinit-ashen.vercel.app/",
     nameSpanish: "Infinit",
     nameEnglish: "Infinit",
     descriptionSpanish: "Proyecto Full-Stack: Alquiler de autos de lujo",
