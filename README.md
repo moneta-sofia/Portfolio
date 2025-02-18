@@ -1,5 +1,6 @@
 <h1>My Portfolio</h1>
 <p>This project showcases my experience, skills, and background. It serves as a personal portfolio where you can learn more about me, my work, and the technologies I specialize in.</p><h2>Technologies Used</h2>
+![screenshot of my portfolio]([http://url/to/img.png](https://i.imgur.com/WHYw9W5))
 <ul>
 <li>CSS</li>
 </ul><ul>
