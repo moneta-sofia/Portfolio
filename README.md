@@ -10,4 +10,4 @@
 <li>Tailwind</li>
 </ul><h2>Project Status</h2>
 <p>Continuously updated</p><h2>Contact</h2>
-<hr><p><span style="margin-right: 30px;"></span><a href="https://www.linkedin.com/in/sofiamoneta/"><img target="_blank" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" style="width: 10%;"></a></p>
+<p><span style="margin-right: 30px;"></span><a href="https://www.linkedin.com/in/sofiamoneta/"><img target="_blank" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" style="width: 10%;"></a></p>
