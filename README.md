@@ -1,14 +1,18 @@
-<h1>My Portfolio</h1>
-<p>This project showcases my experience, skills, and background. It serves as a personal portfolio where you can learn more about me, my work, and the technologies I specialize in.</p><h2>Technologies Used</h2>
-![screenshot of my portfolio]([http://url/to/img.png](https://i.imgur.com/WHYw9W5))
-<ul>
-<li>CSS</li>
-</ul><ul>
-<li>JavaScript</li>
-</ul><ul>
-<li>React</li>
-</ul><ul>
-<li>Tailwind</li>
-</ul><h2>Project Status</h2>
-<p>Continuously updated</p><h2>Contact</h2>
-<p><span style="margin-right: 30px;"></span><a href="https://www.linkedin.com/in/sofiamoneta/"><img target="_blank" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" style="width: 10%;"></a></p>
+# My Portfolio
+
+This project showcases my experience, skills, and background. It serves as a personal portfolio where you can learn more about me, my work, and the technologies I specialize in.
+
+## Screenshot  
+![Screenshot of my portfolio](https://i.imgur.com/WHYw9W5)
+
+## Technologies Used  
+- CSS  
+- JavaScript  
+- React  
+- Tailwind  
+
+## Project Status  
+This portfolio is continuously updated with new projects and improvements.  
+
+## Contact  
+[![LinkedIn](https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg)](https://www.linkedin.com/in/sofiamoneta/)  
