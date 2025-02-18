@@ -7,12 +7,9 @@ This project showcases my experience, skills, and background. It serves as a per
 
 ## Technologies Used  
 - CSS  
-- JavaScript  
 - React  
 - Tailwind  
 
 ## Project Status  
 This portfolio is continuously updated with new projects and improvements.  
 
-## Contact  
-[![LinkedIn](https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg)](https://www.linkedin.com/in/sofiamoneta/)  
