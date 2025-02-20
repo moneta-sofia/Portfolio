@@ -35,11 +35,6 @@
   .bg-cuadricula {
     background-size: 150%;
   }
-
-  .description {
-    position: relative;
-    animation: slide 20s cubic-bezier(0.6, -0.5, 0.24, 1.5) infinite;
-  }
 }
 
 @media (max-width: 475px) {
@@ -52,52 +47,6 @@
   }
 }
 
-.about-slider {
-  position: relative;
-  &::before,
-  &::after {
-    background: linear-gradient(to bottom, #fbeee4 0%, rgba(255, 0, 0, 0) 100%);
-    content: "";
-    height: 100px;
-    position: absolute;
-    width: 90vw;
-    z-index: 2;
-  }
-  &::before {
-    top: 0;
-    right: 0;
-    z-index: 10;
-  }
-  &::after {
-    right: 0;
-    bottom: 0;
-    transform: rotateZ(180deg);
-    z-index: 10;
-  }
-}
-
-.description {
-  position: relative;
-  animation: slide 30s cubic-bezier(0.6, -0.5, 0.24, 1.5) infinite;
-}
-
-@keyframes slide {
-  0% {
-    transform: translateY(0);
-  }
-  18% {
-    transform: translateY(-18%);
-  }
-  39% {
-    transform: translateY(-39%);
-  }
-  59% {
-    transform: translateY(-59%);
-  }
-  83% {
-    transform: translateY(-83%);
-  }
-}
 
 .card-p1:hover img {
   bottom: 0;

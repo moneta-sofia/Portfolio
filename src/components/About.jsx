@@ -2,10 +2,31 @@ import { useContext, useState } from "react";
 import { easeOut, motion } from "framer-motion";
 import TextAnimation from "./TextAnimation";
 import { LanguageContext } from "../contexts/LanguageContext";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 export default function About() {
   const [infoText, setInfoText] = useState(true);
   const { isSpanish } = useContext(LanguageContext);
+
+  var settings = {
+    dots: true,
+    infinite: true,
+    autoplay: true,
+    speed: 1000,
+    autoplaySpeed: 2500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    vertical: true,
+    verticalSwiping: true,
+    swipeToSlide: true,
+    arrows: false,
+    cssEase: "cubic-bezier(0.6, -0.3, 0.2, 1.3)",
+    adaptiveHeight: true
+    // resizeBy:
+    // fix bug to swipe on mobile
+  };
 
   return (
     <div className="w-screen bg-cuadricula2 font-inter">
@@ -30,91 +51,89 @@ export default function About() {
           )}
         </motion.h1>
         {infoText ? (
-          <motion.div
-            className="about-slider lg:w-4/6 w-5/6 h-72 my-16 md:text-3xl sm2:text-2xl sm2:text-xl sm3:text-lg text-gray-800 text-center bg-secondary lg:p-16 md:p-12 p-10 rounded-3xl hover:shadow-2xl shadow-sm hover:scale-105 transition-all ease-in-out overflow-hidden "
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1, transition: { easeOut, duration: 1.5 } }}
-            viewport={{ once: true }}
+          <Slider
+            className="flex items-center md:w-10/12 w-11/12 md:px-10 px-3 md:text-3xl text-sm my-10 text-center bg-secondary rounded-3xl "
+            {...settings}
           >
-            <div className="description">
-              {isSpanish ? (
-                <p className="description-item mb-16 mt-10">
-                  Soy una <b className="text-bold">desarrolladora apasionada</b>{" "}
-                  💪 con inclinación por el Back-End{" "}
-                  <b className="text-bold">sin dejar de lado el Front-End</b>
-                </p>
-              ) : (
-                <p className="description-item mb-16 mt-10">
-                  I am a <b className="text-bold">passionate developer</b> 💪
-                  with a strong preference for Back-End{" "}
-                  <b className="text-bold">while still appreciating the Front-End</b>
-                </p>
-              )}
-              {isSpanish ? (
-                <p className="description-item my-16">
-                  He completado mi especialización en Back-End {" "}
-                  <b className="text-bold">
+            {isSpanish ? (
+              <p className="py-20">
+                Soy una <b className="text-bold">desarrolladora apasionada</b>{" "}
+                💪 con inclinación por el Back-End{" "}
+                <b className="text-bold">sin dejar de lado el Front-End</b>
+              </p>
+            ) : (
+              <p className="py-20">
+                I am a <b className="text-bold">passionate developer</b> 💪 with
+                a strong preference for Back-End{" "}
+                <b className="text-bold">
+                  while still appreciating the Front-End
+                </b>
+              </p>
+            )}
+            {isSpanish ? (
+              <p className="py-20">
+                He completado mi especialización en Back-End{" "}
+                <b className="text-bold">
                   y busco activamente una oportunidad laboral
-                  </b>{" "}
-                  combinándola con proyectos freelance 📚
-                </p>
-              ) : (
-                <p className="description-item my-16">
-                  I have completed my Back-End specialization{" "}
-                  <b className="text-bold">
+                </b>{" "}
+                combinándola con proyectos freelance 📚
+              </p>
+            ) : (
+              <p className="py-20">
+                I have completed my Back-End specialization{" "}
+                <b className="text-bold">
                   and now am seeking job opportunities
-                  </b>{" "}
-                  while working on freelance projects📚
-                </p>
-              )}
-              {isSpanish ? (
-                <p className="description-item my-16">
-                  Mi enfoque versátil me permite no solo entender la lógica del
-                  Back-End 🤓, sino también la creatividad del Front-End 🖌️
-                </p>
-              ) : (
-                <p className="description-item my-16">
-                  My versatile approach allows me not only to grasp the logic of
-                  the Back-End 🤓 but also the creativity of the Front-End 🖌️
-                </p>
-              )}
-              {isSpanish ? (
-                <p className="description-item my-16 ">
-                  En mi viaje, he descubierto que el desarrollo va más allá de
-                  líneas de código; se trata de{" "}
-                  <b className="text-bold">
-                    resolver problemas y mejorar experiencias 🙌
-                  </b>
-                  .
-                </p>
-              ) : (
-                <p className="description-item my-16 ">
-                  In my journey, I've discovered that development goes beyond
-                  lines of code; it's about
-                  <b className="text-bold">
-                    {" "}
-                    solving problems and enhancing experiences 🙌
-                  </b>
-                  .
-                </p>
-              )}
-              {isSpanish ? (
-                <p className="description-item my-16">
-                  Estoy emocionada por lo que el futuro me depara y me encuentro{" "}
-                  <b className="text-bold">comprometida a crecer</b>{" "}
-                  constantemente en este apasionante campo 🌱
-                </p>
-              ) : (
-                <p className="description-item my-16">
-                  I'm excited about what the future holds for me, and{" "}
-                  <b className="text-bold">
-                    I'm committed to continuously growing
-                  </b>{" "}
-                  in this exciting field 🌱
-                </p>
-              )}
-            </div>
-          </motion.div>
+                </b>{" "}
+                while working on freelance projects📚
+              </p>
+            )}
+            {isSpanish ? (
+              <p className="py-20">
+                Mi enfoque versátil me permite no solo entender la lógica del
+                Back-End 🤓, sino también la creatividad del Front-End 🖌️
+              </p>
+            ) : (
+              <p className="py-20">
+                My versatile approach allows me not only to grasp the logic of
+                the Back-End 🤓 but also the creativity of the Front-End 🖌️
+              </p>
+            )}
+            {isSpanish ? (
+              <p className="py-20">
+                En mi viaje, he descubierto que el desarrollo va más allá de
+                líneas de código; se trata de{" "}
+                <b className="text-bold">
+                  resolver problemas y mejorar experiencias 🙌
+                </b>
+                .
+              </p>
+            ) : (
+              <p className="py-20">
+                In my journey, I've discovered that development goes beyond
+                lines of code; it's about
+                <b className="text-bold">
+                  {" "}
+                  solving problems and enhancing experiences 🙌
+                </b>
+                .
+              </p>
+            )}
+            {isSpanish ? (
+              <p className="py-20">
+                Estoy emocionada por lo que el futuro me depara y me encuentro{" "}
+                <b className="text-bold">comprometida a crecer</b>{" "}
+                constantemente en este apasionante campo 🌱
+              </p>
+            ) : (
+              <p className="py-20">
+                I'm excited about what the future holds for me, and{" "}
+                <b className="text-bold">
+                  I'm committed to continuously growing
+                </b>{" "}
+                in this exciting field 🌱
+              </p>
+            )}
+          </Slider>
         ) : (
           <motion.div
             initial={{ opacity: 0 }}
