@@ -15,12 +15,15 @@ import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { useContext } from "react";
 import { LanguageContext } from "../contexts/LanguageContext";
+import ProyectInfo from "./ProyectInfo";
 
 const proyects = [
   {
     link: "https://tacoportfolio.netlify.app/",
     nameSpanish: "Taco Works",
     nameEnglish: "Taco's Works",
+    descriptionLongSpanish: "Un proyecto Full-Stack que recopila y muestra las obras artísticas de Taco, junto con su trayectoria. Incluye un frontend interactivo construido con React y TailwindCSS, un backend con Node.js y Express, y base de datos en MongoDB.",
+    descriptionLongEnglish: "A Full-Stack project that showcases Taco’s artistic works and career journey. It features an interactive frontend built with React and TailwindCSS, a backend powered by Node.js and Express, and MongoDB as the database.",
     descriptionSpanish: "Proyecto Full-Stack: Obras y trayectoria artística",
     descriptionEnglish: "Frontend project: Artistic works and journey",
     icons: [
@@ -45,6 +48,8 @@ const proyects = [
     nameEnglish: "Digital Money",
     descriptionSpanish: "Proyecto Back-End: Microservicios con Spring Boot, Keycloak y Docker",
     descriptionEnglish: "Back-End project: Microservices with Spring Boot, Keycloak, and Docker",
+    descriptionLongSpanish: "Un backend basado en microservicios que gestiona operaciones de dinero digital. Desarrollado con Spring Boot y asegurado con Keycloak para autenticación y autorización. Los servicios se despliegan y orquestan mediante Docker, con MySQL como base de datos.",
+    descriptionLongEnglish: "A backend built on microservices to manage digital money operations. Developed with Spring Boot and secured with Keycloak for authentication and authorization. Services are deployed and orchestrated using Docker, with MySQL as the database.",
     icons: [
       <FaJava title="Java" />,
       <SiSpring title="SpringBoot" />,
@@ -68,6 +73,8 @@ const proyects = [
     descriptionSpanish: "Proyecto Full-Stack: Alquiler de autos de lujo",
     descriptionEnglish:
       "Full-Stack project: Luxury car rental service with premium fleet ",
+    descriptionLongSpanish: "Una aplicación Full-Stack para gestionar un servicio de alquiler de autos de lujo. Ofrece una interfaz moderna desarrollada con Next.js, React y TailwindCSS, y un backend conectado a MySQL mediante Prisma, lo que permite administrar flota y reservas.",
+    descriptionLongEnglish: "A Full-Stack application for managing a luxury car rental service. It features a modern interface developed with Next.js, React, and TailwindCSS, and a backend connected to MySQL using Prisma, enabling fleet and booking management.",
     icons: [
       <FaReact title="React" />,
       <SiTailwindcss title="Tailwind" />,
@@ -88,6 +95,8 @@ const proyects = [
     nameEnglish: "Clinic",
     descriptionSpanish: "Proyecto Backend: Gestión de pacientes",
     descriptionEnglish: "Backend project: Patient Management",
+    descriptionLongSpanish: "Un sistema backend para la gestión de pacientes en una clínica. Implementado con Spring Boot y Java, incluye lógica para administrar datos de pacientes, turnos y profesionales de la salud. También cuenta con integración de tecnologías web básicas.",
+    descriptionLongEnglish: "A backend system for managing patients in a clinic. Implemented with Spring Boot and Java, it includes logic for handling patient data, appointments, and healthcare professionals. It also integrates basic web technologies.",
     icons: [
       <FaHtml5 title="HTML" />,
       <FaCss3Alt title="CSS" />,
@@ -108,6 +117,8 @@ const proyects = [
     nameEnglish: "Dentists",
     descriptionSpanish: "Proyecto FrontEnd: Listado de Odontologos",
     descriptionEnglish: "Frontend project: Dentists listing and storage",
+    descriptionLongSpanish: "Una aplicación frontend que permite visualizar y almacenar un listado de odontólogos. Construida con React, Vite, CSS y Sass, incluye un diseño atractivo y funcionalidades de almacenamiento básico para la gestión de profesionales.",
+    descriptionLongEnglish: "A frontend application that allows displaying and storing a list of dentists. Built with React, Vite, CSS, and Sass, it features an appealing design and basic storage functionalities for managing professionals.",
     icons: [
       <FaCss3Alt title="CSS" />,
       <FaSass title="Sass" />,
@@ -133,6 +144,7 @@ export default function Proyects() {
 
   return (
     <>
+    <ProyectInfo proyect={proyects[1]}/>
       <div className="w-full bg-primary relative -top-2 font-inter pt-10">
         <svg className="w-full h-full" ref={ref} viewBox="1 0 190 70">
           <motion.path
