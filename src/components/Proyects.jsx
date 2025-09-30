@@ -13,7 +13,7 @@ import { GrMysql } from "react-icons/gr";
 import TextAnimation from "./TextAnimation";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { LanguageContext } from "../contexts/LanguageContext";
 import ProyectInfo from "./ProyectInfo";
 
@@ -137,6 +137,14 @@ const proyects = [
 
 export default function Proyects() {
   const { isSpanish } = useContext(LanguageContext);
+  const [openInfo, setOpenInfo] = useState(false); 
+  const [idProyectInfo, setidProyectInfo] = useState(0); 
+
+  const handlerOpenProyectInfo = (idProyect) => {
+    setidProyectInfo(idProyect)
+    setOpenInfo(true)
+    console.log(idProyect);
+  }
 
   const [ref, inView] = useInView({
     triggerOnce: true, // Change this to false if you want the animation to trigger again whenever it comes in view
@@ -144,7 +152,7 @@ export default function Proyects() {
 
   return (
     <>
-    <ProyectInfo proyect={proyects[1]}/>
+      <ProyectInfo proyect={proyects[idProyectInfo]} setOpenInfo={setOpenInfo} openInfo={openInfo}/>
       <div className="w-full bg-primary relative -top-2 font-inter pt-10">
         <svg className="w-full h-full" ref={ref} viewBox="1 0 190 70">
           <motion.path
@@ -181,10 +189,11 @@ export default function Proyects() {
           <motion.div className="w-full flex flex-row flex-wrap justify-center items-center">
             {proyects.map((proy, index) => {
               return (
-                <motion.a
-                  href={proy.link}
-                  target="_blank"
-                  className={`card-p1 flex flex-col ${proy.color} hover:bg-white px-6 pt-8 mb-16 w-80 overflow-hidden rounded-xl hover:scale-105 transition ease-out shadow-special hover:shadow-special2 mx-5`}
+                <motion.div
+                  onClick={()=>handlerOpenProyectInfo(index)}
+                  // href={proy.link}
+                  // target="_blank"
+                  className={` cursor-pointer card-p1 flex flex-col ${proy.color} hover:bg-white px-6 pt-8 mb-16 w-80 overflow-hidden rounded-xl hover:scale-105 transition ease-out shadow-special hover:shadow-special2 mx-5`}
                   key={index}
                   initial={{ opacity: 0, scale: 0 }}
                   whileInView={{
@@ -217,7 +226,7 @@ export default function Proyects() {
                     src={proy.image}
                     className=" relative -bottom-5 self-center"
                   ></img>
-                </motion.a>
+                </motion.div>
               );
             })}
           </motion.div>
