@@ -7,7 +7,8 @@ import {
   SiExpress,
   SiKeycloak 
 } from "react-icons/si";
-import { FaReact, FaHtml5, FaSass, FaCss3Alt, FaJava, FaNodeJs, FaDocker  } from "react-icons/fa";
+import { RiComputerLine } from "react-icons/ri";
+import { FaReact, FaHtml5, FaSass, FaCss3Alt, FaJava, FaNodeJs, FaDocker ,FaGithub   } from "react-icons/fa";
 import { DiMongodb } from "react-icons/di";
 import { GrMysql } from "react-icons/gr";
 
@@ -17,10 +18,12 @@ export const proyects = [
     link: "https://tacoportfolio.netlify.app/",
     nameSpanish: "Taco Works",
     nameEnglish: "Taco's Works",
+
     descriptionLongSpanish: "Un proyecto Full-Stack que recopila y muestra las obras artísticas de Taco, junto con su trayectoria. Incluye un frontend interactivo construido con React y TailwindCSS, un backend con Node.js y Express, y base de datos en MongoDB.",
     descriptionLongEnglish: "A Full-Stack project that showcases Taco’s artistic works and career journey. It features an interactive frontend built with React and TailwindCSS, a backend powered by Node.js and Express, and MongoDB as the database.",
     descriptionSpanish: "Proyecto Full-Stack: Obras y trayectoria artística",
     descriptionEnglish: "Frontend project: Artistic works and journey",
+
     icons: [
       <FaNodeJs title="NodeJS" />,
       <SiExpress  title="Express" />,
@@ -33,6 +36,15 @@ export const proyects = [
       "https://wsrv.nl/?url=https://drive.google.com/uc?id=17n8ONybOT5SE1YZgf09diL5m41ugCkW3",
     color: "bg-stone-300",
     textColor: "#000",
+
+    links: [
+      {site: "FrontEnd", url: "https://github.com/moneta-sofia/ProyectoTaco", icon: <FaGithub /> },
+      {site: "BackEnd", url: "https://github.com/moneta-sofia/BackTaco", icon: <FaGithub /> },
+      {site: "Deploy", url: "https://tacoportfolio.netlify.app/", icon: <RiComputerLine /> },
+    ],
+
+
+
     spanishAlt: "Un monitor con mi proyecto del Portfolio de Taco, Diego Ruiz",
     englishAlt: "A monitor displaying my Taco's Portfolio project",
   },

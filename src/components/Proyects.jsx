@@ -2,7 +2,7 @@
 import TextAnimation from "./TextAnimation";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { LanguageContext } from "../contexts/LanguageContext";
 import ProyectInfo from "./ProyectInfo";
 import { proyects } from "../data/proyects"
@@ -13,6 +13,16 @@ export default function Proyects() {
   const { isSpanish } = useContext(LanguageContext);
   const [openInfo, setOpenInfo] = useState(false); 
   const [idProyectInfo, setidProyectInfo] = useState(0); 
+
+  useEffect(() => {
+  if (openInfo) {
+    document.body.style.overflow = "hidden";
+  } else {
+    document.body.style.overflow = "auto";
+  }
+
+  return () => (document.body.style.overflow = "auto");
+}, [openInfo]);
 
   const handlerOpenProyectInfo = (idProyect) => {
     setidProyectInfo(idProyect)
