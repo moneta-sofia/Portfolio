@@ -15,7 +15,6 @@ import { GrMysql } from "react-icons/gr";
 
 export const proyects = [
   {
-    link: "https://tacoportfolio.netlify.app/",
     nameSpanish: "Taco Works",
     nameEnglish: "Taco's Works",
 
@@ -38,12 +37,10 @@ export const proyects = [
     textColor: "#000",
 
     links: [
-      {site: "FrontEnd", url: "https://github.com/moneta-sofia/ProyectoTaco", icon: <FaGithub /> },
-      {site: "BackEnd", url: "https://github.com/moneta-sofia/BackTaco", icon: <FaGithub /> },
-      {site: "Deploy", url: "https://tacoportfolio.netlify.app/", icon: <RiComputerLine /> },
+      {siteSpanish: "FrontEnd",siteEnglish: "Frontend", url: "https://github.com/moneta-sofia/ProyectoTaco", icon: <FaGithub /> },
+      {siteSpanish: "BackEnd", siteEnglish:"BackEnd", url: "https://github.com/moneta-sofia/BackTaco", icon: <FaGithub /> },
+      {siteSpanish: "Ver sitio", siteEnglish:"View site", url: "https://tacoportfolio.netlify.app/", icon: <RiComputerLine /> },
     ],
-
-
 
     spanishAlt: "Un monitor con mi proyecto del Portfolio de Taco, Diego Ruiz",
     englishAlt: "A monitor displaying my Taco's Portfolio project",
@@ -53,20 +50,28 @@ export const proyects = [
     link: "https://github.com/moneta-sofia/challengebackend",
     nameSpanish: "Digital Money",
     nameEnglish: "Digital Money",
+
     descriptionSpanish: "Proyecto Back-End: Microservicios con Spring Boot, Keycloak y Docker",
     descriptionEnglish: "Back-End project: Microservices with Spring Boot, Keycloak, and Docker",
     descriptionLongSpanish: "Un backend basado en microservicios que gestiona operaciones de dinero digital. Desarrollado con Spring Boot y asegurado con Keycloak para autenticación y autorización. Los servicios se despliegan y orquestan mediante Docker, con MySQL como base de datos.",
     descriptionLongEnglish: "A backend built on microservices to manage digital money operations. Developed with Spring Boot and secured with Keycloak for authentication and authorization. Services are deployed and orchestrated using Docker, with MySQL as the database.",
+    
     icons: [
       <FaJava title="Java" />,
       <SiSpring title="SpringBoot" />,
       <FaDocker title="Docker" />,
       <SiKeycloak  title="Keycloak" />,
       <GrMysql  title="MySql" />,
-
     ],
     image:
       "https://wsrv.nl/?url=https://drive.google.com/uc?id=1AowPqlt2VlsdZ5TYL5dknPvioRv7DtM0",
+
+
+    links: [
+      {siteEnglish: "Repository", siteSpanish:"Repositorio", url: "https://github.com/moneta-sofia/challengebackend", icon: <FaGithub /> },
+      
+    ],
+
     color: "bg-blue-100",
     textColor: "#09192A",
     spanishAlt: "Un monitor con mi proyecto de Digital Money",
@@ -74,9 +79,9 @@ export const proyects = [
   },
 
   {
-    link: "https://infinit-ashen.vercel.app/",
     nameSpanish: "Infinit",
     nameEnglish: "Infinit",
+    
     descriptionSpanish: "Proyecto Full-Stack: Alquiler de autos de lujo",
     descriptionEnglish:
       "Full-Stack project: Luxury car rental service with premium fleet ",
@@ -89,17 +94,23 @@ export const proyects = [
       <SiPrisma title="Prisma" />,
       <GrMysql title="mySQL" />,
     ],
-    image:
-      "https://wsrv.nl/?url=https://drive.google.com/uc?id=1V0m0pNmu6huuvDIMZvAlNAUVvMR_-kox",
+    image:"https://wsrv.nl/?url=https://drive.google.com/uc?id=1V0m0pNmu6huuvDIMZvAlNAUVvMR_-kox",
+    
+    links: [
+      {siteSpanish: "Ver sitio", siteEnglish: "View site", url: "https://infinit-ashen.vercel.app/", icon:  <RiComputerLine /> },
+      {siteSpanish: "Repositorio", siteEnglish: "Repository", url: "https://github.com/moneta-sofia/infinit", icon: <FaGithub /> },
+    ],
+
     color: "bg-blue-50",
     textColor: "#2B4D6D",
     spanishAlt: "Un monitor con mi proyecto de alquiler de autos",
     englishAlt: "A monitor displaying my car rental project",
   },
   {
-    link: "https://github.com/moneta-sofia/ProyectBackend",
     nameSpanish: "Clínica",
     nameEnglish: "Clinic",
+
+
     descriptionSpanish: "Proyecto Backend: Gestión de pacientes",
     descriptionEnglish: "Backend project: Patient Management",
     descriptionLongSpanish: "Un sistema backend para la gestión de pacientes en una clínica. Implementado con Spring Boot y Java, incluye lógica para administrar datos de pacientes, turnos y profesionales de la salud. También cuenta con integración de tecnologías web básicas.",
@@ -113,13 +124,17 @@ export const proyects = [
     ],
     image:
       "https://wsrv.nl/?url=https://drive.google.com/uc?id=1K6bOhHW0qgNcDagSYS7nnhxFuBoZCUEC",
+
+    links: [
+      {siteSpanish: "Repositorio", siteEnglish: "Repository", url: "https://github.com/moneta-sofia/ProyectBackend", icon: <FaGithub /> }
+    ],
+
     color: "bg-stone-50",
     textColor: "#9AB6D3",
     spanishAlt: "Un monitor con mi proyecto de gestion de pacientes",
     englishAlt: "A monitor displaying my patient management project",
   },
   {
-    link: "https://odontologos-sofi.netlify.app/",
     nameSpanish: "Odontologos",
     nameEnglish: "Dentists",
     descriptionSpanish: "Proyecto FrontEnd: Listado de Odontologos",
@@ -134,6 +149,12 @@ export const proyects = [
     ],
     image:
       "https://wsrv.nl/?url=https://drive.google.com/uc?id=1_vs3EbMz8cdjNQ2n7MC1yGKwu2MzRosd",
+
+    
+    links: [
+      {siteSpanish: "Repositorio", siteEnglish:"Repository", url: "https://github.com/moneta-sofia/ProyectBackend", icon: <FaGithub /> },
+      {siteSpanish: "Ver sitio",siteEnglish: "View site", url: "https://odontologos-sofi.netlify.app/", icon:  <RiComputerLine />},
+    ],
     color: "bg-red-100",
     textColor: "#FF0002",
     spanishAlt: "Un monitor con mi proyecto de listado de odontologos",

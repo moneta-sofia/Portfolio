@@ -12,11 +12,11 @@ export default function ProyectInfo({proyect, setOpenInfo, openInfo}) {
                 <IoClose className="cursor-pointer absolute md:right-7 right-5 text-4xl" onClick={()=>setOpenInfo(false)}/>
                 <h1 className={`md:text-4xl text-3xl md:pt-0 pt-12 text-center font-bold `} style={{'color': proyect.textColor}}>{isSpanish? proyect.nameSpanish : proyect.nameEnglish}</h1>
                 <p className="md:py-7 py-6 md:text-left text-center">{isSpanish? proyect.descriptionLongSpanish : proyect.descriptionLongEnglish }</p>
-                <div className="w-full flex sm:flex-row flex-col items-center justify-between ">
+                <div className="w-full flex sm:flex-row flex-col items-center justify-between gap-x-5">
                     {
-                        proyect.links.map((link)=>{
+                        proyect.links?.map((link)=>{
                             return(
-                                <a href={link.url} target="_blank" className="flex items-center justify-center bg-black text-gray-300 rounded-lg p-2 w-full my-2 md:mx-4 mx-1 font-bold"> <div className="px-2">{link.icon}</div> {link.site}</a>
+                                <a href={link.url} target="_blank" className="flex items-center justify-center bg-black text-gray-50 rounded-lg p-2 w-full my-2 font-bold gap-x-2"> {link.icon} {isSpanish? link.siteSpanish : link.siteEnglish}</a>
                             )
                         })
                     }
