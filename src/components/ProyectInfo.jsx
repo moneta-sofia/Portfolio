@@ -21,6 +21,14 @@ export default function ProyectInfo({proyect, setOpenInfo, openInfo}) {
                         })
                     }
                 </div>
+                <div className="w-full flex gap-y-6 flex-col mt-5">
+                    {proyect.data?.map((item)=>(
+                        /\.(jpg|jpeg|png|gif|webp|svg)$/i.test(item) ? 
+                        <img src={item} className="my-2 rounded-lg w-full"></img>
+                        :
+                        <p className="font-semibold">{item}</p>
+                    ))}
+                </div>
             </div>
         </>
     )

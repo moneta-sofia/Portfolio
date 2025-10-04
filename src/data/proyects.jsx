@@ -23,6 +23,8 @@ export const proyects = [
     descriptionSpanish: "Proyecto Full-Stack: Obras y trayectoria artística",
     descriptionEnglish: "Frontend project: Artistic works and journey",
 
+    data:["Login", "https://i.imgur.com/6xZWImh.gif", "Move", "https://i.imgur.com/QTK55iW.gif", "Nav", "https://i.imgur.com/dKsMxeM.gif", "Add", "https://i.imgur.com/QWNEQtp.gif", "Delete", "https://i.imgur.com/vvmaJ0e.gif"],
+    
     icons: [
       <FaNodeJs title="NodeJS" />,
       <SiExpress  title="Express" />,
