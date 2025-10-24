@@ -7,7 +7,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 export default function About() {
-  const [infoText, setInfoText] = useState(true);
+  const [infoText, setInfoText] = useState(false);
   const { isSpanish } = useContext(LanguageContext);
 
   var settings = {
@@ -145,7 +145,7 @@ export default function About() {
               <>
                 <iframe
                   className="w-full aspect-video rounded-xl"
-                  src="https://www.youtube.com/embed/QKuRQq6rXBw?si=_3PaF-SIybFlff4D"
+                  src="https://www.youtube.com/embed/bsFGtxbfyU4?si=kM-ZZh1aKtuoLBaA"
                   title="YouTube video player"
                   frameBorder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -157,7 +157,7 @@ export default function About() {
               <>
                 <iframe
                   className="w-full aspect-video rounded-xl"
-                  src="https://www.youtube.com/embed/dC3VYLMZD7A?si=9UyOHbM5ZMEdkRVu"
+                  src="https://www.youtube.com/embed/p8QeFdJPPkA?si=Ncj2V4CeeDltlKVp"
                   title="YouTube video player"
                   frameBorder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
