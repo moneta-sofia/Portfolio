@@ -151,7 +151,6 @@ export default function About() {
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                   allowfullscreen
                 ></iframe>
-                <p className="pt-3">*Desactualizado</p>
               </>
             ) : (
               <>
@@ -163,7 +162,6 @@ export default function About() {
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                   allowfullscreen
                 ></iframe>
-                <p className="pt-3">*Outdated</p>
               </>
             )}
           </motion.div>
