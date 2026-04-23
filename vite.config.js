@@ -8,8 +8,7 @@ export default defineConfig({
       output: {
         manualChunks: {
           vendor: ['react', 'react-dom'],
-          // Si usás react-router:
-          router: ['react-router-dom'],
+
         }
       }
     },
