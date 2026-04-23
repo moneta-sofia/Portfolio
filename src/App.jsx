@@ -1,10 +1,12 @@
 import { useContext, useEffect, useState } from "react";
-import About from "./components/About";
-import Contact from "./components/Contact";
-import Loader from "./components/Loader";
-import Navbar from "./components/Navbar";
-import Proyects from "./components/Proyects";
-import Start from "./components/Start";
+import { lazy, Suspense } from 'react'
+
+const About = lazy(() => import("./components/About"));
+const Contact = lazy(() => import("./components/Contact"));
+const Loader = lazy(() => import("./components/Loader"));
+const Navbar = lazy(() => import("./components/Navbar"));
+const Proyects = lazy(() => import("./components/Proyects"));
+const Start = lazy(() => import("./components/Start"));
 import { LanguageContext } from "./contexts/LanguageContext";
 
 function App() {

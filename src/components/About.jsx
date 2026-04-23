@@ -31,12 +31,13 @@ export default function About() {
   return (
     <div className="w-screen bg-cuadricula2 font-inter">
       <img
+      loading="lazy"
         alt={
           isSpanish
             ? "Una ola color bordo para la estetica de la página"
             : "A Burgundy wave for web's aesthetics"
         }
-        src="https://wsrv.nl/?url=https://drive.google.com/uc?id=1hYgYqlgtYylE1-y7_CE_efNghaO5ZYTb"
+        src="/imgs/wave.webp"
         className="w-full md:pt-10 pt-24"
       ></img>
       <div

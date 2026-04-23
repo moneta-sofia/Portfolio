@@ -106,6 +106,7 @@ export default function Proyects() {
                     })}
                   </div>
                   <img
+                  loading="lazy"
                     alt={isSpanish ? proy.spanishAlt : proy.englishAlt}
                     src={proy.image}
                     className=" relative -bottom-5 self-center"
@@ -117,12 +118,13 @@ export default function Proyects() {
         </motion.div>
       </div>
       <img
+      loading="lazy"
         alt={
           isSpanish
             ? "Una ola color bordo para la estetica de la página"
             : "A Burgundy wave for web's aesthetics"
         }
-        src="https://wsrv.nl/?url=https://drive.google.com/uc?id=1hYgYqlgtYylE1-y7_CE_efNghaO5ZYTb"
+        src="/imgs/wave.webp"
         className="w-full rotate-180 relative -top-5"
       ></img>
     </>
