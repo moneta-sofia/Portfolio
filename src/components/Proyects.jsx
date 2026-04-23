@@ -1,34 +1,31 @@
-
 import TextAnimation from "./TextAnimation";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { useContext, useEffect, useState } from "react";
 import { LanguageContext } from "../contexts/LanguageContext";
 import ProyectInfo from "./ProyectInfo";
-import { proyects } from "../data/proyects"
-
-
+import { proyects } from "../data/proyects";
 
 export default function Proyects() {
   const { isSpanish } = useContext(LanguageContext);
-  const [openInfo, setOpenInfo] = useState(false); 
-  const [idProyectInfo, setidProyectInfo] = useState(0); 
+  const [openInfo, setOpenInfo] = useState(false);
+  const [idProyectInfo, setidProyectInfo] = useState(0);
 
   useEffect(() => {
-  if (openInfo) {
-    document.body.style.overflow = "hidden";
-  } else {
-    document.body.style.overflow = "auto";
-  }
+    if (openInfo) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
 
-  return () => (document.body.style.overflow = "auto");
-}, [openInfo]);
+    return () => (document.body.style.overflow = "auto");
+  }, [openInfo]);
 
   const handlerOpenProyectInfo = (idProyect) => {
-    setidProyectInfo(idProyect)
-    setOpenInfo(true)
+    setidProyectInfo(idProyect);
+    setOpenInfo(true);
     console.log(idProyect);
-  }
+  };
 
   const [ref, inView] = useInView({
     triggerOnce: true, // Change this to false if you want the animation to trigger again whenever it comes in view
@@ -36,7 +33,11 @@ export default function Proyects() {
 
   return (
     <>
-      <ProyectInfo proyect={proyects[idProyectInfo]} setOpenInfo={setOpenInfo} openInfo={openInfo}/>
+      <ProyectInfo
+        proyect={proyects[idProyectInfo]}
+        setOpenInfo={setOpenInfo}
+        openInfo={openInfo}
+      />
       <div className="w-full bg-primary relative -top-2 font-inter pt-10">
         <svg className="w-full h-full" ref={ref} viewBox="1 0 190 70">
           <motion.path
@@ -74,7 +75,7 @@ export default function Proyects() {
             {proyects.map((proy, index) => {
               return (
                 <motion.div
-                  onClick={()=>handlerOpenProyectInfo(index)}
+                  onClick={() => handlerOpenProyectInfo(index)}
                   // href={proy.link}
                   // target="_blank"
                   className={` cursor-pointer card-p1 flex flex-col ${proy.color} hover:bg-white px-6 pt-8 mb-16 w-80 overflow-hidden rounded-xl hover:scale-105 transition ease-out shadow-special hover:shadow-special2 mx-5`}
@@ -106,7 +107,9 @@ export default function Proyects() {
                     })}
                   </div>
                   <img
-                  loading="lazy"
+                      width="300"
+                      height="300"
+                    loading="lazy"
                     alt={isSpanish ? proy.spanishAlt : proy.englishAlt}
                     src={proy.image}
                     className=" relative -bottom-5 self-center"
@@ -118,7 +121,9 @@ export default function Proyects() {
         </motion.div>
       </div>
       <img
-      loading="lazy"
+        width="1920"
+        height="260"
+        loading="lazy"
         alt={
           isSpanish
             ? "Una ola color bordo para la estetica de la página"

@@ -43,35 +43,35 @@ export const proyects = [
           "Este proyecto cuenta con una funcionalidad de inicio de sesión que permite a los usuarios autenticarse de forma segura y acceder a las herramientas administrativas del sitio.",
         descriptionEnglish:
           "This project includes a login feature that allows users to authenticate securely and access the site's administrative tools.",
-        gif: "https://i.imgur.com/6xZWImh.gif",
+        gif: "/imgs/proyects/taco/login.gif",
       },
       {
         descriptionSpanish:
           "También incorpora una navegación fluida y transiciones dinámicas entre secciones, ofreciendo una experiencia visual atractiva y envolvente.",
         descriptionEnglish:
           "It also features smooth navigation and dynamic transitions between sections, providing an engaging and visually appealing experience.",
-        gif: "https://i.imgur.com/QTK55iW.gif",
+        gif: "/imgs/proyects/taco/move.gif",
       },
       {
         descriptionSpanish:
           "El menú de navegación interactivo facilita el acceso a las distintas categorías de obras y secciones del portfolio, mejorando la usabilidad general.",
         descriptionEnglish:
           "The interactive navigation menu makes it easy to access different artwork categories and sections of the portfolio, enhancing overall usability.",
-        gif: "https://i.imgur.com/dKsMxeM.gif",
+        gif: "/imgs/proyects/taco/exploring.gif",
       },
       {
         descriptionSpanish:
           "Desde el panel administrativo, es posible agregar nuevas obras al portfolio, incluyendo la carga de imágenes y la gestión de su información asociada.",
         descriptionEnglish:
           "From the admin panel, new artworks can be added to the portfolio, including image uploads and management of related information.",
-        gif: "https://i.imgur.com/QWNEQtp.gif",
+        gif: "/imgs/proyects/taco/add.gif",
       },
       {
         descriptionSpanish:
           "Además, el sistema permite eliminar obras existentes de forma segura, garantizando un control completo sobre el contenido mostrado.",
         descriptionEnglish:
           "Additionally, the system allows existing artworks to be safely deleted, ensuring full control over the displayed content.",
-        gif: "https://i.imgur.com/vvmaJ0e.gif",
+        gif: "/imgs/proyects/taco/delete.gif",
       },
     ],
 

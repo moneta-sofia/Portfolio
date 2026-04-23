@@ -5,6 +5,7 @@ import { LanguageContext } from "../contexts/LanguageContext";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import VideoLite from "./VideoLite";
 
 export default function About() {
   const [infoText, setInfoText] = useState(false);
@@ -31,7 +32,8 @@ export default function About() {
   return (
     <div className="w-screen bg-cuadricula2 font-inter">
       <img
-      loading="lazy"
+        width="1920"
+        height="260"
         alt={
           isSpanish
             ? "Una ola color bordo para la estetica de la página"
@@ -142,29 +144,7 @@ export default function About() {
             viewport={{ once: true }}
             className="md:my-16 my-9 bg-secondary md:p-8 p-3 rounded-xl hover:shadow-2xl shadow-sm hover:scale-105 transition-all ease-in-out md:w-2/3 w-10/12 "
           >
-            {isSpanish ? (
-              <>
-                <iframe
-                  className="w-full aspect-video rounded-xl"
-                  src="https://www.youtube.com/embed/bsFGtxbfyU4?si=kM-ZZh1aKtuoLBaA"
-                  title="YouTube video player"
-                  frameBorder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  allowfullscreen
-                ></iframe>
-              </>
-            ) : (
-              <>
-                <iframe
-                  className="w-full aspect-video rounded-xl"
-                  src="https://www.youtube.com/embed/p8QeFdJPPkA?si=Ncj2V4CeeDltlKVp"
-                  title="YouTube video player"
-                  frameBorder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  allowfullscreen
-                ></iframe>
-              </>
-            )}
+            <VideoLite/>
           </motion.div>
         )}
         <motion.div
