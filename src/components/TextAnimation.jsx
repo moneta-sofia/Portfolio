@@ -7,29 +7,44 @@ const TextAnimation = ({ text }) => {
   useEffect(() => {
     if (!ref.current) return;
 
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-          observer.disconnect();
-        }
-      },
-    );
+    const observer = new IntersectionObserver(([entry]) => {
+      if (entry.isIntersecting) {
+        setIsVisible(true);
+        observer.disconnect();
+      }
+    });
 
     observer.observe(ref.current);
 
     return () => observer.disconnect();
   }, []);
 
+  let letterCount = 0;
+
   return (
     <span ref={ref} className={`text-anim ${isVisible ? "is-visible" : ""}`}>
-      {text.split("").map((letter, index) => (
+      {text.split(" ").map((word, wordIndex, words) => (
         <span
-          key={index}
-          className="text-anim__letter"
-          style={{ animationDelay: `${index * 0.05 + 0.25}s` }}
+          key={`${word}-${wordIndex}`}
+          style={{
+            whiteSpace: "nowrap",
+            marginRight: wordIndex === words.length - 1 ? 0 : "0.35em",
+          }}
         >
-          {letter === " " ? "\u00A0" : letter}
+          {word.split("").map((letter, letterIndex) => {
+            const delay = letterCount * 0.05 + 0.25;
+            letterCount++;
+
+            return (
+              <span
+                key={`${word}-${letterIndex}`}
+                className="text-anim__letter"
+                style={{ animationDelay: `${delay}s` }}
+              >
+                {letter}
+              </span>
+            );
+          })}
         </span>
       ))}
     </span>
