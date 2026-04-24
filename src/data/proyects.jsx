@@ -63,7 +63,7 @@ export const proyects = [
 
     
     image:
-      "https://wsrv.nl/?url=https://drive.google.com/uc?id=17n8ONybOT5SE1YZgf09diL5m41ugCkW3",
+      "/imgs/TacoMockup.webp",
     color: "bg-stone-300",
     textColor: "#000",
 
@@ -118,7 +118,7 @@ export const proyects = [
       { lib: "gr", name: "GrMysql", title: "MySql" },
     ],
     image:
-      "https://wsrv.nl/?url=https://drive.google.com/uc?id=1AowPqlt2VlsdZ5TYL5dknPvioRv7DtM0",
+      "/imgs/DHmoneyMockup.webp",
 
     links: [
       {
@@ -158,7 +158,7 @@ export const proyects = [
       { lib: "gr", name: "GrMysql", title: "mySQL" },
     ],
     image:
-      "https://wsrv.nl/?url=https://drive.google.com/uc?id=1V0m0pNmu6huuvDIMZvAlNAUVvMR_-kox",
+      "/imgs/infinitMockup.webp",
 
     links: [
       {
@@ -203,7 +203,7 @@ export const proyects = [
       { lib: "si", name: "SiSpring", title: "SpringBoot" },
     ],
     image:
-      "https://wsrv.nl/?url=https://drive.google.com/uc?id=1K6bOhHW0qgNcDagSYS7nnhxFuBoZCUEC",
+      "/imgs/ClinicaMockup.webp",
 
     links: [
       {
@@ -240,7 +240,7 @@ export const proyects = [
       { lib: "si", name: "SiVite", title: "Vite" },
     ],
     image:
-      "https://wsrv.nl/?url=https://drive.google.com/uc?id=1_vs3EbMz8cdjNQ2n7MC1yGKwu2MzRosd",
+      "/imgs/OdontologosMockup.webp",
 
     links: [
       {

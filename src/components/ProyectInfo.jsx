@@ -30,7 +30,7 @@ export default function ProyectInfo({proyect, setOpenInfo, openInfo}) {
                     {proyect.data?.map((item)=>(
                         <>
                             <p>{isSpanish? item.descriptionSpanish : item.descriptionEnglish }</p>
-                            <img loading="lazy" src={item.gif}/>
+                            <img loading="lazy"  fetchpriority="low"  decoding="async"  src={item.gif}/>
                         </>
                     ))}
                 </div>
