@@ -1,26 +1,3 @@
-import {
-  SiTailwindcss,
-  SiNextdotjs,
-  SiPrisma,
-  SiSpring,
-  SiVite,
-  SiExpress,
-  SiKeycloak,
-} from "react-icons/si";
-import { RiComputerLine } from "react-icons/ri";
-import {
-  FaReact,
-  FaHtml5,
-  FaSass,
-  FaCss3Alt,
-  FaJava,
-  FaNodeJs,
-  FaDocker,
-  FaGithub,
-} from "react-icons/fa";
-import { DiMongodb } from "react-icons/di";
-import { GrMysql } from "react-icons/gr";
-
 export const proyects = [
   /* -------------------------------------------------------------------------- */
   /*                                Tacos Proyect                               */
@@ -76,12 +53,12 @@ export const proyects = [
     ],
 
     icons: [
-      <FaNodeJs title="NodeJS" />,
-      <SiExpress title="Express" />,
-      <DiMongodb title="MongoDB" />,
-      <FaReact title="React" />,
-      <SiTailwindcss title="Tailwind" />,
-      <SiVite title="Vite" />,
+      { lib: "fa", name: "FaNodeJs", title: "NodeJS" },
+      { lib: "si", name: "SiExpress", title: "Express" },
+      { lib: "di", name: "DiMongodb", title: "MongoDB" },
+      { lib: "fa", name: "FaReact", title: "React" },
+      { lib: "si", name: "SiTailwindcss", title: "Tailwind" },
+      { lib: "si", name: "SiVite", title: "Vite" },
     ],
 
     
@@ -95,19 +72,19 @@ export const proyects = [
         siteSpanish: "FrontEnd",
         siteEnglish: "Frontend",
         url: "https://github.com/moneta-sofia/ProyectoTaco",
-        icon: <FaGithub />,
+        icon: { lib: "fa", name: "FaGithub" },
       },
       {
         siteSpanish: "BackEnd",
         siteEnglish: "BackEnd",
         url: "https://github.com/moneta-sofia/BackTaco",
-        icon: <FaGithub />,
+        icon: { lib: "fa", name: "FaGithub" },
       },
       {
         siteSpanish: "Ver sitio",
         siteEnglish: "View site",
         url: "https://tacoportfolio.netlify.app/",
-        icon: <RiComputerLine />,
+        icon: { lib: "ri", name: "RiComputerLine" },
       },
     ],
 
@@ -117,7 +94,7 @@ export const proyects = [
 
   /* -------------------------------------------------------------------------- */
   /*                            DIGITAL MONEY PROYECT                           */
-  /* -------------------------------------------------------------------------- */
+  // /* -------------------------------------------------------------------------- */
 
   {
     link: "https://github.com/moneta-sofia/challengebackend",
@@ -134,11 +111,11 @@ export const proyects = [
       "A backend built on microservices to manage digital money operations. Developed with Spring Boot and secured with Keycloak for authentication and authorization. Services are deployed and orchestrated using Docker, with MySQL as the database.",
 
     icons: [
-      <FaJava title="Java" />,
-      <SiSpring title="SpringBoot" />,
-      <FaDocker title="Docker" />,
-      <SiKeycloak title="Keycloak" />,
-      <GrMysql title="MySql" />,
+      { lib: "fa", name: "FaJava", title: "Java" },
+      { lib: "si", name: "SiSpring", title: "SpringBoot" },
+      { lib: "fa", name: "FaDocker", title: "Docker" },
+      { lib: "si", name: "SiKeycloak", title: "Keycloak" },
+      { lib: "gr", name: "GrMysql", title: "MySql" },
     ],
     image:
       "https://wsrv.nl/?url=https://drive.google.com/uc?id=1AowPqlt2VlsdZ5TYL5dknPvioRv7DtM0",
@@ -148,7 +125,7 @@ export const proyects = [
         siteEnglish: "Repository",
         siteSpanish: "Repositorio",
         url: "https://github.com/moneta-sofia/challengebackend",
-        icon: <FaGithub />,
+        icon: { lib: "fa", name: "FaGithub" },
       },
     ],
 
@@ -174,11 +151,11 @@ export const proyects = [
     descriptionLongEnglish:
       "A Full-Stack application for managing a luxury car rental service. It features a modern interface developed with Next.js, React, and TailwindCSS, and a backend connected to MySQL using Prisma, enabling fleet and booking management.",
     icons: [
-      <FaReact title="React" />,
-      <SiTailwindcss title="Tailwind" />,
-      <SiNextdotjs title="Next" />,
-      <SiPrisma title="Prisma" />,
-      <GrMysql title="mySQL" />,
+      { lib: "fa", name: "FaReact", title: "React" },
+      { lib: "si", name: "SiTailwindcss", title: "Tailwind" },
+      { lib: "si", name: "SiNextdotjs", title: "Next" },
+      { lib: "si", name: "SiPrisma", title: "Prisma" },
+      { lib: "gr", name: "GrMysql", title: "mySQL" },
     ],
     image:
       "https://wsrv.nl/?url=https://drive.google.com/uc?id=1V0m0pNmu6huuvDIMZvAlNAUVvMR_-kox",
@@ -188,13 +165,13 @@ export const proyects = [
         siteSpanish: "Ver sitio",
         siteEnglish: "View site",
         url: "https://infinit-ashen.vercel.app/",
-        icon: <RiComputerLine />,
+        icon: { lib: "ri", name: "RiComputerLine" },
       },
       {
         siteSpanish: "Repositorio",
         siteEnglish: "Repository",
         url: "https://github.com/moneta-sofia/infinit",
-        icon: <FaGithub />,
+        icon: { lib: "fa", name: "FaGithub" },
       },
     ],
 
@@ -219,11 +196,11 @@ export const proyects = [
     descriptionLongEnglish:
       "A backend system for managing patients in a clinic. Implemented with Spring Boot and Java, it includes logic for handling patient data, appointments, and healthcare professionals. It also integrates basic web technologies.",
     icons: [
-      <FaHtml5 title="HTML" />,
-      <FaCss3Alt title="CSS" />,
-      <FaSass title="Sass" />,
-      <FaJava title="Java" />,
-      <SiSpring title="SpringBoot" />,
+      { lib: "fa", name: "FaHtml5", title: "HTML" },
+      { lib: "fa", name: "FaCss3Alt", title: "CSS" },
+      { lib: "fa", name: "FaSass", title: "Sass" },
+      { lib: "fa", name: "FaJava", title: "Java" },
+      { lib: "si", name: "SiSpring", title: "SpringBoot" },
     ],
     image:
       "https://wsrv.nl/?url=https://drive.google.com/uc?id=1K6bOhHW0qgNcDagSYS7nnhxFuBoZCUEC",
@@ -233,7 +210,7 @@ export const proyects = [
         siteSpanish: "Repositorio",
         siteEnglish: "Repository",
         url: "https://github.com/moneta-sofia/ProyectBackend",
-        icon: <FaGithub />,
+        icon: { lib: "fa", name: "FaGithub" },
       },
     ],
 
@@ -257,10 +234,10 @@ export const proyects = [
     descriptionLongEnglish:
       "A frontend application that allows displaying and storing a list of dentists. Built with React, Vite, CSS, and Sass, it features an appealing design and basic storage functionalities for managing professionals.",
     icons: [
-      <FaCss3Alt title="CSS" />,
-      <FaSass title="Sass" />,
-      <FaReact title="React" />,
-      <SiVite title="Vite" />,
+      { lib: "fa", name: "FaCss3Alt", title: "CSS" },
+      { lib: "fa", name: "FaSass", title: "Sass" },
+      { lib: "fa", name: "FaReact", title: "React" },
+      { lib: "si", name: "SiVite", title: "Vite" },
     ],
     image:
       "https://wsrv.nl/?url=https://drive.google.com/uc?id=1_vs3EbMz8cdjNQ2n7MC1yGKwu2MzRosd",
@@ -270,13 +247,13 @@ export const proyects = [
         siteSpanish: "Repositorio",
         siteEnglish: "Repository",
         url: "https://github.com/moneta-sofia/ProyectBackend",
-        icon: <FaGithub />,
+        icon: { lib: "fa", name: "FaGithub" },
       },
       {
         siteSpanish: "Ver sitio",
         siteEnglish: "View site",
         url: "https://odontologos-sofi.netlify.app/",
-        icon: <RiComputerLine />,
+        icon: { lib: "ri", name: "RiComputerLine" },
       },
     ],
     color: "bg-red-100",

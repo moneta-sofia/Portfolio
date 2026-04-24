@@ -1,3 +1,11 @@
+import { SiTailwindcss, SiNextdotjs, SiPrisma, SiSpring, SiVite, SiExpress, SiKeycloak} from "react-icons/si";
+import { FaReact, FaHtml5, FaSass, FaCss3Alt, FaJava, FaNodeJs, FaDocker, FaGithub} from "react-icons/fa";
+import { DiMongodb } from "react-icons/di";
+import { GrMysql } from "react-icons/gr";
+
+// Esto es para poder acceder a los iconos dinamicamente
+const iconMap = { FaNodeJs, SiExpress, DiMongodb, FaReact, SiTailwindcss, SiVite, FaGithub, FaJava, SiSpring, FaDocker, SiKeycloak, GrMysql, FaHtml5, FaCss3Alt, FaSass, SiNextdotjs, SiPrisma };
+
 import TextAnimation from "./TextAnimation";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
@@ -102,8 +110,10 @@ export default function Proyects() {
                       : proy.descriptionEnglish}
                   </p>
                   <div className="flex justify-between items-center text-3xl px-3 my-5">
-                    {proy.icons.map((icon) => {
-                      return icon;
+                    {proy.icons.map((icon, i) => {
+                      const IconComponent = iconMap[icon.name];
+                      
+                      return <IconComponent key={i} title={icon.title}/>;
                     })}
                   </div>
                   <img
