@@ -1,5 +1,5 @@
 import { useContext, useEffect, useState } from "react";
-import { lazy, Suspense } from 'react'
+import { lazy } from 'react'
 
 const About = lazy(() => import("./components/About"));
 const Contact = lazy(() => import("./components/Contact"));
@@ -56,11 +56,11 @@ function App() {
           <div className="relative flex justify-start items-center">
             {isSpanish ? (
               <p className="p-5 font-park text-center opacity-70 sm2:text">
-                ©2025 Sofia Moneta.<br></br>Todos los derechos reservados.
+                ©{new Date().getFullYear()} Sofia Moneta.<br></br>Todos los derechos reservados.
               </p>
             ) : (
               <p className="p-5 font-park text-center opacity-70 sm2:text">
-                ©2025 Sofia Moneta.<br></br>All rights reserved.
+                ©{new Date().getFullYear()} Sofia Moneta.<br></br>All rights reserved.
               </p>
             )}
           </div>
