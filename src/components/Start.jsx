@@ -105,16 +105,13 @@ export default function Start() {
             </motion.a>
           </div>
         </motion.div>
-        <motion.img
+        <img
           width="400"
           height="700"
           fetchpriority="high"
           decoding="async"
           src="/imgs/imgHome.webp"
-          className="md:p-0 mt-16 sm:p-16 p-5 md:absolute relative 2xl:right-10 right-0 2xl:bottom-10 bottom-5"
-          initial={{ y: "10px", opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ duration: 1 }}
+          className="md:p-0 mt-16 sm:p-16 p-5 md:absolute relative 2xl:right-10 right-0 2xl:bottom-10 bottom-5 hero-img"
           alt={
             isSpanish
               ? "Dibujo de una chica plirroja con su computadora"

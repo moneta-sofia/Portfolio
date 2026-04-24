@@ -28,8 +28,8 @@ export default function VideoLite() {
                     <img
                         src={
                             isSpanish
-                                ? "https://i.ytimg.com/vi/bsFGtxbfyU4/hqdefault.jpg"
-                                : "https://i.ytimg.com/vi/p8QeFdJPPkA/hqdefault.jpg"
+                                ? "https://i.ytimg.com/vi/bsFGtxbfyU4/maxresdefault.jpg"
+                                : "https://i.ytimg.com/vi/p8QeFdJPPkA/maxresdefault.jpg"
                         }
                         alt="Vista previa del video"
                         className="w-full h-full object-cover rounded-xl"

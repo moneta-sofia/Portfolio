@@ -1,22 +1,38 @@
-import { motion } from "framer-motion";
+import { useEffect, useRef, useState } from "react";
 
 const TextAnimation = ({ text }) => {
+  const ref = useRef(null);
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    if (!ref.current) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.disconnect();
+        }
+      },
+    );
+
+    observer.observe(ref.current);
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
-    <motion.div>
+    <span ref={ref} className={`text-anim ${isVisible ? "is-visible" : ""}`}>
       {text.split("").map((letter, index) => (
-        <motion.span
+        <span
           key={index}
-          initial={{ opacity: 0 }}
-          whileInView={{
-            opacity: 1,
-            transition: { duration: 0.2, delay: index * 0.05 + 0.25 },
-          }}
-          viewport={{ once: true }}
+          className="text-anim__letter"
+          style={{ animationDelay: `${index * 0.05 + 0.25}s` }}
         >
-          {letter}
-        </motion.span>
+          {letter === " " ? "\u00A0" : letter}
+        </span>
       ))}
-    </motion.div>
+    </span>
   );
 };
 

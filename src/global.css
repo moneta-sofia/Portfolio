@@ -13,6 +13,31 @@
   margin: 0;
   background: var(--color-secondary);
 }
+
+
+.text-anim__letter {
+  display: inline-block;
+  opacity: 0;
+}
+
+.text-anim.is-visible .text-anim__letter {
+  animation: fadeIn 0.2s ease forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+.hero-img {
+  animation: slideUp 1s ease both;
+}
+@keyframes slideUp {
+  from { transform: translateY(10px); opacity: 0; }
+  to   { transform: translateY(0);    opacity: 1; }
+}
+
 .bg-cuadricula {
   background-image: url("/imgs/cuadricula.webp");
   background-position: center top;
