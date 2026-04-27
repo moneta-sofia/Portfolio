@@ -14,20 +14,12 @@ function App() {
   const { isSpanish } = useContext(LanguageContext);
 
   /* ------------------------ Para que cargue el loader ----------------------- */
-  useEffect(() => {
-    const handleLoad = () => {
-      setCargando(false);
-    };
-
-    if (document.readyState === "complete") {
-      handleLoad();
-    } else {
-      window.addEventListener("load", handleLoad);
-    }
-    return () => {
-      window.removeEventListener("load", handleLoad);
-    };
-  }, []);
+useEffect(() => {
+  const id = requestAnimationFrame(() => {
+    setCargando(false);
+  });
+  return () => cancelAnimationFrame(id);
+}, []);
 
   /* -------------- Para evitar que oneko cargue junto al loader -------------- */
   useEffect(() => {
