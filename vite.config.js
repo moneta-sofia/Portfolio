@@ -8,10 +8,15 @@ export default defineConfig({
       output: {
         manualChunks: {
           vendor: ['react', 'react-dom'],
-
+          framer: ['framer-motion'],
+          icons: ['react-icons'],
+          emailjs: ['@emailjs/browser'],
+          recaptcha: ['react-google-recaptcha'],
+          sonner: ['sonner'],
+          scroll: ['react-scroll'],
+          observer: ['react-intersection-observer'],
         }
       }
     },
-    chunkSizeWarningLimit: 500,
   }
 })

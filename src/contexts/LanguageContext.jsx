@@ -1,4 +1,4 @@
-import { createContext, useEffect, useState } from "react";
+import { createContext, useEffect, useMemo, useState } from "react";
 
 export const LanguageContext = createContext();
 
@@ -13,10 +13,7 @@ export default function LanguageProvider({ children }) {
     localStorage.setItem("language", JSON.stringify(isSpanish));
   }, [isSpanish]);
 
-  const values = {
-    isSpanish,
-    setIsSpanish,
-  };
+  const values = useMemo(() => ({ isSpanish, setIsSpanish }), [isSpanish]);
 
   return (
     <LanguageContext.Provider value={values}>

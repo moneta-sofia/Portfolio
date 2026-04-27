@@ -1,23 +1,26 @@
-import React, { useContext, useRef, useState } from "react";
+import React, { useContext, useRef, lazy, Suspense } from "react";
 import ReCAPTCHA from "react-google-recaptcha";
-import emailjs from "@emailjs/browser";
-import { Toaster, toast } from "sonner";
 import TextAnimation from "./TextAnimation";
 import { motion } from "framer-motion";
 import { LanguageContext } from "../contexts/LanguageContext";
 
+const Toaster = lazy(() => import("sonner").then(mod => ({ default: mod.Toaster })));
+
 export default function Contact() {
   const { isSpanish } = useContext(LanguageContext);
-  const [validCaptcha, setValidCaptcha] = useState(false);
+  // const [validCaptcha, setValidCaptcha] = useState(false);
   const form = useRef();
   const captcha = useRef();
 
-  const sendForm = (e) => {
+  const sendForm = async (e) => {
     e.preventDefault();
 
     captcha.current.execute();
 
-    if (captcha.current.status)
+    if (captcha.current.status) {
+      const { default: emailjs } = await import("@emailjs/browser");
+      const { toast } = await import("sonner");
+
       toast.promise(
         emailjs.sendForm(
           import.meta.env.VITE_EMAILJS_SERVICE,
@@ -37,15 +40,20 @@ export default function Contact() {
             : "I'm sorry! The email couldn't be sent :/",
         },
       );
+    }
   };
 
-  const onReCAPTCHAChange = (captchaValue) => {
+  const onReCAPTCHAChange = async (captchaValue) => {
     if (!captchaValue) {
+      const { toast } = await import("sonner");
       toast.error(
         isSpanish ? "Captcha no validado." : "Captcha not validated.",
       );
       return;
     }
+    const { default: emailjs } = await import("@emailjs/browser");
+    const { toast } = await import("sonner");
+
     toast.promise(
       emailjs.sendForm(
         import.meta.env.VITE_EMAILJS_SERVICE,
@@ -70,7 +78,9 @@ export default function Contact() {
       className="text-center mb-32 flex flex-col justify-center items-center"
       name="contacto"
     >
-      <Toaster richColors expand={false} position="bottom-center" />
+      <Suspense fallback={null}>
+        <Toaster richColors expand={false} position="bottom-center" />
+      </Suspense>
       <h1 className="font-bold text-primary 3xl:text-8xl xl:text-7xl lg:text-6xl md:text-5xl text-4xl my-10 px-3">
         {isSpanish ? (
           <TextAnimation text="TRABAJEMOS JUNTOS!  " />

@@ -1,50 +1,47 @@
-import { useEffect, useRef, useState } from "react";
+import { useMemo } from "react";
+import { useInView } from "react-intersection-observer";
 
-const TextAnimation = ({ text }) => {
-  const ref = useRef(null);
-  const [isVisible, setIsVisible] = useState(false);
+const TextAnimation = ({ text = "" }) => {
+  const { ref, inView } = useInView({ triggerOnce: true });
 
-  useEffect(() => {
-    if (!ref.current) return;
+  const words = useMemo(() => {
+    const wordArray = text.split(" ");
+    let letterCount = 0;
 
-    const observer = new IntersectionObserver(([entry]) => {
-      if (entry.isIntersecting) {
-        setIsVisible(true);
-        observer.disconnect();
-      }
-    });
+    return wordArray.map((word, wordIndex) => ({
+      word,
+      letters: word.split("").map((letter) => {
+        const delay = letterCount * 0.05 + 0.25;
+        letterCount += 1;
 
-    observer.observe(ref.current);
-
-    return () => observer.disconnect();
-  }, []);
-
-  let letterCount = 0;
+        return {
+          letter,
+          delay,
+        };
+      }),
+      isLast: wordIndex === wordArray.length - 1,
+    }));
+  }, [text]);
 
   return (
-    <span ref={ref} className={`text-anim ${isVisible ? "is-visible" : ""}`}>
-      {text.split(" ").map((word, wordIndex, words) => (
+    <span ref={ref} className={`text-anim ${inView ? "is-visible" : ""}`}>
+      {words.map(({ word, letters, isLast }, wordIndex) => (
         <span
           key={`${word}-${wordIndex}`}
           style={{
             whiteSpace: "nowrap",
-            marginRight: wordIndex === words.length - 1 ? 0 : "0.35em",
+            marginRight: isLast ? 0 : "0.35em",
           }}
         >
-          {word.split("").map((letter, letterIndex) => {
-            const delay = letterCount * 0.05 + 0.25;
-            letterCount++;
-
-            return (
-              <span
-                key={`${word}-${letterIndex}`}
-                className="text-anim__letter"
-                style={{ animationDelay: `${delay}s` }}
-              >
-                {letter}
-              </span>
-            );
-          })}
+          {letters.map(({ letter, delay }, letterIndex) => (
+            <span
+              key={`${wordIndex}-${letterIndex}`}
+              className="text-anim__letter"
+              style={{ animationDelay: `${delay}s` }}
+            >
+              {letter}
+            </span>
+          ))}
         </span>
       ))}
     </span>

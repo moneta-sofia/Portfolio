@@ -40,7 +40,7 @@
 
 .bg-cuadricula {
   background-image: url("/imgs/cuadricula.webp");
-  background-position: center top;
+  background-position: center bottom;
   background-size: 100%;
   background-repeat: repeat;
 }

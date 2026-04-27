@@ -1,9 +1,9 @@
 import { useContext, useEffect, useState } from "react";
-import { lazy } from 'react'
+import { lazy, Suspense } from 'react'
 
 const About = lazy(() => import("./components/About"));
 const Contact = lazy(() => import("./components/Contact"));
-const Loader = lazy(() => import("./components/Loader"));
+import Loader from "./components/Loader";
 const Navbar = lazy(() => import("./components/Navbar"));
 const Proyects = lazy(() => import("./components/Proyects"));
 const Start = lazy(() => import("./components/Start"));
@@ -43,7 +43,7 @@ function App() {
   }, [cargando]);
 
   return (
-    <>
+    <Suspense fallback={<Loader />}>
       {cargando ? (
         <Loader></Loader>
       ) : (
@@ -66,7 +66,7 @@ function App() {
           </div>
         </div>
       )}
-    </>
+    </Suspense>
   );
 }
 

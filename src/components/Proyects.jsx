@@ -1,3 +1,4 @@
+import { memo, useContext, useEffect, useState } from "react";
 import {
   SiTailwindcss,
   SiNextdotjs,
@@ -20,7 +21,6 @@ import {
 import { DiMongodb } from "react-icons/di";
 import { GrMysql } from "react-icons/gr";
 
-// Esto es para poder acceder a los iconos dinamicamente
 const iconMap = {
   FaNodeJs,
   SiExpress,
@@ -44,10 +44,54 @@ const iconMap = {
 import TextAnimation from "./TextAnimation";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import { useContext, useEffect, useState } from "react";
 import { LanguageContext } from "../contexts/LanguageContext";
 import ProyectInfo from "./ProyectInfo";
 import { proyects } from "../data/proyects";
+
+const ProjectCard = memo(({ proy, index, isSpanish, onClick }) => {
+  return (
+    <motion.div
+      onClick={() => onClick(index)}
+      className={`cursor-pointer card-p1 flex flex-col ${proy.color} hover:bg-white px-6 pt-8 mb-16 w-80 overflow-hidden rounded-xl hover:scale-105 transition ease-out shadow-special hover:shadow-special2 mx-5`}
+      key={index}
+      initial={{ opacity: 0, scale: 0 }}
+      whileInView={{
+        opacity: 1,
+        scale: 1,
+        transition: {
+          delay: window.innerWidth <= 768 ? 0.3 : 0.3 * index,
+        },
+      }}
+      viewport={{ once: true }}
+    >
+      <h1
+        className="md:text-4xl text-3xl font-extrabold md:mb-5 mb-2"
+        style={{ color: proy.textColor }}
+      >
+        {isSpanish ? proy.nameSpanish : proy.nameEnglish}
+      </h1>
+      <p className="my-1 font-medium">
+        {isSpanish ? proy.descriptionSpanish : proy.descriptionEnglish}
+      </p>
+      <div className="flex justify-between items-center text-3xl px-3 my-5">
+        {proy.icons.map((icon, i) => {
+          const IconComponent = iconMap[icon.name];
+          return <IconComponent key={i} title={icon.title} />;
+        })}
+      </div>
+      <img
+        fetchpriority="low"
+        decoding="async"
+        width="300"
+        height="300"
+        loading="lazy"
+        alt={isSpanish ? proy.spanishAlt : proy.englishAlt}
+        src={proy.image}
+        className="relative -bottom-5 self-center"
+      />
+    </motion.div>
+  );
+});
 
 export default function Proyects() {
   const { isSpanish } = useContext(LanguageContext);
@@ -67,20 +111,21 @@ export default function Proyects() {
   const handlerOpenProyectInfo = (idProyect) => {
     setidProyectInfo(idProyect);
     setOpenInfo(true);
-    console.log(idProyect);
   };
 
   const [ref, inView] = useInView({
-    triggerOnce: true, // Change this to false if you want the animation to trigger again whenever it comes in view
+    triggerOnce: true,
   });
 
   return (
     <>
-      <ProyectInfo
-        proyect={proyects[idProyectInfo]}
-        setOpenInfo={setOpenInfo}
-        openInfo={openInfo}
-      />
+      {openInfo && (
+        <ProyectInfo
+          proyect={proyects[idProyectInfo]}
+          setOpenInfo={setOpenInfo}
+          openInfo={openInfo}
+        />
+      )}
       <div className="w-full bg-primary relative -top-2 font-inter pt-10">
         <svg className="w-full h-full" ref={ref} viewBox="1 0 190 70">
           <motion.path
@@ -107,7 +152,6 @@ export default function Proyects() {
         </svg>
         <motion.div className="flex flex-col items-center" name="proyectos">
           <h1 className="font-bold text-secondary 3xl:text-8xl xl:text-7xl lg:text-6xl md:text-5xl text-4xl my-28">
-            {" "}
             {isSpanish ? (
               <TextAnimation text="PROYECTOS" />
             ) : (
@@ -115,55 +159,15 @@ export default function Proyects() {
             )}
           </h1>
           <motion.div className="w-full flex flex-row flex-wrap justify-center items-center">
-            {proyects.map((proy, index) => {
-              return (
-                <motion.div
-                  onClick={() => handlerOpenProyectInfo(index)}
-                  // href={proy.link}
-                  // target="_blank"
-                  className={` cursor-pointer card-p1 flex flex-col ${proy.color} hover:bg-white px-6 pt-8 mb-16 w-80 overflow-hidden rounded-xl hover:scale-105 transition ease-out shadow-special hover:shadow-special2 mx-5`}
-                  key={index}
-                  initial={{ opacity: 0, scale: 0 }}
-                  whileInView={{
-                    opacity: 1,
-                    scale: 1,
-                    transition: {
-                      delay: window.innerWidth <= 768 ? 0.3 : 0.3 * index,
-                    },
-                  }}
-                  viewport={{ once: true }}
-                >
-                  <h1
-                    className="md:text-4xl text-3xl font-extrabold md:mb-5 mb-2"
-                    style={{ color: proy.textColor }}
-                  >
-                    {isSpanish ? proy.nameSpanish : proy.nameEnglish}
-                  </h1>
-                  <p className="my-1 font-medium">
-                    {isSpanish
-                      ? proy.descriptionSpanish
-                      : proy.descriptionEnglish}
-                  </p>
-                  <div className="flex justify-between items-center text-3xl px-3 my-5">
-                    {proy.icons.map((icon, i) => {
-                      const IconComponent = iconMap[icon.name];
-
-                      return <IconComponent key={i} title={icon.title} />; 
-                    })}
-                  </div>
-                  <img
-                    fetchpriority="low"
-                    decoding="async"
-                    width="300"
-                    height="300"
-                    loading="lazy"
-                    alt={isSpanish ? proy.spanishAlt : proy.englishAlt}
-                    src={proy.image}
-                    className=" relative -bottom-5 self-center"
-                  ></img>
-                </motion.div>
-              );
-            })}
+            {proyects.map((proy, index) => (
+              <ProjectCard
+                key={index}
+                proy={proy}
+                index={index}
+                isSpanish={isSpanish}
+                onClick={handlerOpenProyectInfo}
+              />
+            ))}
           </motion.div>
         </motion.div>
       </div>
@@ -178,7 +182,7 @@ export default function Proyects() {
         }
         src="/imgs/wave.webp"
         className="w-full rotate-180 relative -top-5"
-      ></img>
+      />
     </>
   );
 }
