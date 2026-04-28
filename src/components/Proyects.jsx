@@ -1,51 +1,9 @@
-import { memo, useContext, useEffect, useState } from "react";
-import {
-  SiTailwindcss,
-  SiNextdotjs,
-  SiPrisma,
-  SiSpring,
-  SiVite,
-  SiExpress,
-  SiKeycloak,
-} from "react-icons/si";
-import {
-  FaReact,
-  FaHtml5,
-  FaSass,
-  FaCss3Alt,
-  FaJava,
-  FaNodeJs,
-  FaDocker,
-  FaGithub,
-} from "react-icons/fa";
-import { DiMongodb } from "react-icons/di";
-import { GrMysql } from "react-icons/gr";
-
-const iconMap = {
-  FaNodeJs,
-  SiExpress,
-  DiMongodb,
-  FaReact,
-  SiTailwindcss,
-  SiVite,
-  FaGithub,
-  FaJava,
-  SiSpring,
-  FaDocker,
-  SiKeycloak,
-  GrMysql,
-  FaHtml5,
-  FaCss3Alt,
-  FaSass,
-  SiNextdotjs,
-  SiPrisma,
-};
-
+import { memo, useContext, useEffect, useState, lazy, Suspense } from "react";
 import TextAnimation from "./TextAnimation";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { LanguageContext } from "../contexts/LanguageContext";
-import ProyectInfo from "./ProyectInfo";
+const ProyectInfo = lazy(() => import("./ProyectInfo"));
 import { proyects } from "../data/proyects";
 
 const ProjectCard = memo(({ proy, index, isSpanish, onClick }) => {
@@ -75,8 +33,8 @@ const ProjectCard = memo(({ proy, index, isSpanish, onClick }) => {
       </p>
       <div className="flex justify-between items-center text-3xl px-3 my-5">
         {proy.icons.map((icon, i) => {
-          const IconComponent = iconMap[icon.name];
-          return <IconComponent key={i} title={icon.title} />;
+          const IconComponent = icon;
+          return <IconComponent key={i}/>;
         })}
       </div>
       <img
@@ -119,13 +77,15 @@ export default function Proyects() {
 
   return (
     <>
-      {openInfo && (
-        <ProyectInfo
-          proyect={proyects[idProyectInfo]}
-          setOpenInfo={setOpenInfo}
-          openInfo={openInfo}
-        />
-      )}
+      <Suspense fallback={null}>
+        {openInfo && (
+          <ProyectInfo
+            proyect={proyects[idProyectInfo]}
+            setOpenInfo={setOpenInfo}
+            openInfo={openInfo}
+          />
+        )}
+      </Suspense>
       <div className="w-full bg-primary relative -top-2 font-inter pt-10">
         <svg className="w-full h-full" ref={ref} viewBox="1 0 190 70">
           <motion.path

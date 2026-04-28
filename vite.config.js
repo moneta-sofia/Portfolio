@@ -15,7 +15,6 @@ export default defineConfig({
         manualChunks: {
           vendor: ['react', 'react-dom'],
           framer: ['framer-motion'],
-          icons: ['react-icons'],
           emailjs: ['@emailjs/browser'],
           recaptcha: ['react-google-recaptcha'],
           sonner: ['sonner'],

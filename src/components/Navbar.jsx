@@ -1,7 +1,8 @@
 import { useContext, useState } from "react";
-import { IoMenu, IoCloseOutline } from "react-icons/io5";
+import { CloseIcon, MenuIcon } from "../data/icons";
 import { Link } from "react-scroll";
 import { LanguageContext } from "../contexts/LanguageContext";
+
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -23,9 +24,9 @@ export default function Navbar() {
           onClick={() => setIsOpen(!isOpen)}
         >
           {isOpen ? (
-            <IoCloseOutline className="text-black" />
+            <CloseIcon className="text-black" />
           ) : (
-            <IoMenu className="text-black" />
+            <MenuIcon className="text-black" />
           )}
         </div>
 

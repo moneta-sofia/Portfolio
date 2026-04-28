@@ -1,6 +1,4 @@
-import { FaGithub, FaLinkedin } from "react-icons/fa";
-import { HiOutlineDocumentDownload } from "react-icons/hi";
-import { PiHandWaving } from "react-icons/pi";
+import { WaveHandIcon, DownloadIcon, GithubIcon, LinkedinIcon } from "../data/icons";
 import { motion } from "framer-motion";
 import TextAnimation from "./TextAnimation";
 import { useContext } from "react";
@@ -43,7 +41,7 @@ export default function Start() {
               variants={item}
             >
               {isSpanish ? "Un gusto verte por aqui!" : "Nice to see you here"}{" "}
-              <PiHandWaving className="ml-3 text-1xl" />{" "}
+              <WaveHandIcon  className="ml-3 text-1xl" />{" "}
             </motion.p>
             <motion.p
               className="subrayado font-bold 3xl:text-8xl xl:text-6xl lg:text-5xl text-4xl md:text-center text-center"
@@ -77,7 +75,7 @@ export default function Start() {
                   : "Click here to go to my GitHub "
               }
             >
-              <FaGithub className="3xl:h-16 lg:h-10 h-5 3xl:w-16 lg:w-10 w-5 " />
+              <GithubIcon className="3xl:h-16 lg:h-10 h-5 3xl:w-16 lg:w-10 w-5 " />
             </motion.a>
             <motion.a
               variants={item}
@@ -89,7 +87,7 @@ export default function Start() {
                   : "Click here to go to my Linkedin "
               }
             >
-              <FaLinkedin className="3xl:h-16 lg:h-10 h-5 3xl:w-16 lg:w-10 w-5 " />
+              <LinkedinIcon className="3xl:h-16 lg:h-10 h-5 3xl:w-16 lg:w-10 w-5 " />
             </motion.a>
             <motion.a
               variants={item}
@@ -101,7 +99,7 @@ export default function Start() {
                   : "Click here to download my curriculum vitae "
               }
             >
-              <HiOutlineDocumentDownload className="3xl:h-16 lg:h-10 h-5 3xl:w-16 lg:w-10 w-5 " />
+              <DownloadIcon className="3xl:h-16 lg:h-10 h-5 3xl:w-16 lg:w-10 w-5 " />
             </motion.a>
           </div>
         </motion.div>
