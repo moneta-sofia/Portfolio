@@ -6,7 +6,9 @@ import { LanguageContext } from "../contexts/LanguageContext";
 const ProyectInfo = lazy(() => import("./ProyectInfo"));
 import { proyects } from "../data/proyects";
 
+
 const ProjectCard = memo(({ proy, index, isSpanish, onClick }) => {
+  const isMobile = window.innerWidth <= 768;
   return (
     <motion.div
       onClick={() => onClick(index)}
@@ -17,7 +19,7 @@ const ProjectCard = memo(({ proy, index, isSpanish, onClick }) => {
         opacity: 1,
         scale: 1,
         transition: {
-          delay: window.innerWidth <= 768 ? 0.3 : 0.3 * index,
+          delay: isMobile ? 0.3 : 0.3 * index,
         },
       }}
       viewport={{ once: true }}

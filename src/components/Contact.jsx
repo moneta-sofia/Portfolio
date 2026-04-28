@@ -1,10 +1,15 @@
-import React, { useContext, useRef, lazy, Suspense } from "react";
+import React, { useContext, useRef, lazy, Suspense, useEffect } from "react";
+import emailjs from "@emailjs/browser";
 import ReCAPTCHA from "react-google-recaptcha";
 import TextAnimation from "./TextAnimation";
 import { motion } from "framer-motion";
 import { LanguageContext } from "../contexts/LanguageContext";
 
 const Toaster = lazy(() => import("sonner").then(mod => ({ default: mod.Toaster })));
+
+useEffect(() => {
+  emailjs.init("1i2zGYSVJo9MrYcxO");
+}, []);
 
 export default function Contact() {
   const { isSpanish } = useContext(LanguageContext);
