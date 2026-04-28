@@ -7,16 +7,18 @@ import { LanguageContext } from "../contexts/LanguageContext";
 
 const Toaster = lazy(() => import("sonner").then(mod => ({ default: mod.Toaster })));
 
-useEffect(() => {
-  emailjs.init("1i2zGYSVJo9MrYcxO");
-}, []);
 
 export default function Contact() {
   const { isSpanish } = useContext(LanguageContext);
   // const [validCaptcha, setValidCaptcha] = useState(false);
   const form = useRef();
   const captcha = useRef();
+  
+  useEffect(() => {
+    emailjs.init("1i2zGYSVJo9MrYcxO");
+  }, []);
 
+  
   const sendForm = async (e) => {
     e.preventDefault();
 
