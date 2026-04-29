@@ -1,4 +1,4 @@
-import { WaveHandIcon, DownloadIcon, GithubIcon, LinkedinIcon } from "../data/icons";
+import { WaveHandIcon} from "../data/icons";
 import TextAnimation from "./TextAnimation";
 import { useTranslation } from "../hooks/useTranslation";
 
@@ -20,47 +20,26 @@ export default function Start() {
             >
               {t.start.greeting} <WaveHandIcon className="ml-3 text-1xl" />
             </p>
-            <p
-              className="subrayado font-bold 3xl:text-8xl xl:text-6xl lg:text-5xl text-4xl md:text-center text-center animate-fade-in-up"
+            <h1
+              className="subrayado font-bold 3xl:text-8xl xl:text-6xl lg:text-5xl text-4xl md:text-left text-center animate-fade-in-up w-fit"
               style={{ animationDelay: isMobile ? "0s" : "0.4s" }}
             >
               <TextAnimation text={t.start.name} />
-            </p>
-            <p
-              className="3xl:text-5xl xl:text-4xl lg:text-3xl text-xl 3xl:my-6 lg:my-5 my-4 font-extrabold md:text-start text-center animate-fade-in-up"
+            </h1>
+            <h1
+              className="text-primary 3xl:text-5xl xl:text-4xl lg:text-3xl text-xl 3xl:my-6 lg:my-5 my-4 font-extrabold md:text-start text-center animate-fade-in-up"
               style={{ animationDelay: isMobile ? "0s" : "0.6s" }}
             >
               <TextAnimation text={t.start.role} />
-            </p>
+            </h1>
+            <h2
+              className="3xl:text-2xl xl:text-xl lg:text-lg text-base 3xl:my-6 lg:my-5 my-4 md:text-start text-center animate-fade-in-up w-7/12 font-extralight font-inter"
+              style={{ animationDelay: '0s'}}
+            >
+              <TextAnimation text={t.start.description} />
+            </h2>
           </div>
           <div className="flex w-2/4 justify-between 3xl:my-6 my-2">
-            <a
-              href="https://github.com/moneta-sofia"
-              target="_blank"
-              aria-label={t.start.githubAria}
-              className="animate-fade-in-up"
-              style={{ animationDelay: isMobile ? "0s" : "0.8s" }}
-            >
-              <GithubIcon className="3xl:h-16 lg:h-10 h-5 3xl:w-16 lg:w-10 w-5 " />
-            </a>
-            <a
-              href="https://www.linkedin.com/in/sofiamoneta/"
-              target="_blank"
-              aria-label={t.start.linkedinAria}
-              className="animate-fade-in-up"
-              style={{ animationDelay: isMobile ? "0s" : "1s" }}
-            >
-              <LinkedinIcon className="3xl:h-16 lg:h-10 h-5 3xl:w-16 lg:w-10 w-5 " />
-            </a>
-            <a
-              href="/CV-Sofia_Moneta.pdf"
-              download={""}
-              aria-label={t.start.cvAria}
-              className="animate-fade-in-up"
-              style={{ animationDelay: isMobile ? "0s" : "1.2s" }}
-            >
-              <DownloadIcon className="3xl:h-16 lg:h-10 h-5 3xl:w-16 lg:w-10 w-5 " />
-            </a>
           </div>
         </div>
         <img
