@@ -1,12 +1,11 @@
-import { useContext } from "react"
-import { LanguageContext } from "../contexts/LanguageContext"
-import { CloseIcon} from "../data/icons";
+import { useTranslation } from "../hooks/useTranslation";
+import { CloseIcon } from "../data/icons";
 
+export default function ProyectInfo({ proyect, setOpenInfo, openInfo }) {
+  const t = useTranslation();
+  const isSpanish = t.locale === "es";
 
-export default function ProyectInfo({proyect, setOpenInfo, openInfo}) {
-    const {isSpanish} = useContext(LanguageContext)
-
-    return(
+  return (
         <>
             <div className={`${openInfo? 'fixed' : 'hidden'} z-50 blur inset-0`} onClick={() => setOpenInfo(false)}/>
             <div className={`${openInfo? 'fixed' : 'hidden'} overflow-auto md:mx-14 md:my-10 mx-5 my-5 px-10 py-7 flex flex-col items-center inset-0 z-50 ${proyect.color} rounded-xl shadow-xl`}>

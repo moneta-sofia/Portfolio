@@ -1,11 +1,10 @@
 import { WaveHandIcon, DownloadIcon, GithubIcon, LinkedinIcon } from "../data/icons";
 import { motion } from "framer-motion";
 import TextAnimation from "./TextAnimation";
-import { useContext } from "react";
-import { LanguageContext } from "../contexts/LanguageContext";
+import { useTranslation } from "../hooks/useTranslation";
 
 export default function Start() {
-  const { isSpanish } = useContext(LanguageContext);
+  const t = useTranslation();
 
   const container = {
     hidden: { opacity: 0 },
@@ -40,28 +39,20 @@ export default function Start() {
               className="flex items-center md:justify-start justify-center 3xl:text-4xl xl:text-2xl lg:text-xl text-sm 3xl:my-4 lg:my-3 my-1 "
               variants={item}
             >
-              {isSpanish ? "Un gusto verte por aqui!" : "Nice to see you here"}{" "}
-              <WaveHandIcon  className="ml-3 text-1xl" />{" "}
+              {t.start.greeting}{" "}
+              <WaveHandIcon className="ml-3 text-1xl" />{" "}
             </motion.p>
             <motion.p
               className="subrayado font-bold 3xl:text-8xl xl:text-6xl lg:text-5xl text-4xl md:text-center text-center"
               variants={item}
             >
-              {isSpanish ? (
-                <TextAnimation text="Soy Sofia Moneta" />
-              ) : (
-                <TextAnimation text="I'm Sofia Moneta" />
-              )}
+              <TextAnimation text={t.start.name} />
             </motion.p>
             <motion.p
               className="3xl:text-5xl xl:text-4xl lg:text-3xl text-xl 3xl:my-6 lg:my-5 my-4 font-extrabold md:text-start text-center"
               variants={item}
             >
-              {isSpanish ? (
-                <TextAnimation text="Desarrolladora Full-Stack" />
-              ) : (
-                <TextAnimation text="Full-Stack Developer     " />
-              )}
+              <TextAnimation text={t.start.role} />
             </motion.p>
           </motion.div>
           <div className="flex w-2/4 justify-between 3xl:my-6 my-2">
@@ -69,11 +60,7 @@ export default function Start() {
               variants={item}
               href="https://github.com/moneta-sofia"
               target="_blank"
-              aria-label={
-                isSpanish
-                  ? "Clickea aqui para ir a mi GitHub"
-                  : "Click here to go to my GitHub "
-              }
+              aria-label={t.start.githubAria}
             >
               <GithubIcon className="3xl:h-16 lg:h-10 h-5 3xl:w-16 lg:w-10 w-5 " />
             </motion.a>
@@ -81,11 +68,7 @@ export default function Start() {
               variants={item}
               href="https://www.linkedin.com/in/sofiamoneta/"
               target="_blank"
-              aria-label={
-                isSpanish
-                  ? "Clickea aqui para ir a mi Linkedin"
-                  : "Click here to go to my Linkedin "
-              }
+              aria-label={t.start.linkedinAria}
             >
               <LinkedinIcon className="3xl:h-16 lg:h-10 h-5 3xl:w-16 lg:w-10 w-5 " />
             </motion.a>
@@ -93,11 +76,7 @@ export default function Start() {
               variants={item}
               href="/CV-Sofia_Moneta.pdf"
               download={""}
-              aria-label={
-                isSpanish
-                  ? "Clickea aqui para descargar mi curriculum vitae"
-                  : "Click here to download my curriculum vitae "
-              }
+              aria-label={t.start.cvAria}
             >
               <DownloadIcon className="3xl:h-16 lg:h-10 h-5 3xl:w-16 lg:w-10 w-5 " />
             </motion.a>
@@ -110,11 +89,7 @@ export default function Start() {
           decoding="async"
           src="/imgs/imgHome.webp"
           className="md:p-0 mt-16 sm:p-16 p-5 md:absolute relative 2xl:right-10 right-0 2xl:bottom-10 bottom-5 hero-img"
-          alt={
-            isSpanish
-              ? "Dibujo de una chica plirroja con su computadora"
-              : "Drawing of red-haired girl with her computer "
-          }
+          alt={t.start.imageAlt}
         />
       </div>
     </div>

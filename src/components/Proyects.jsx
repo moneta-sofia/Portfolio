@@ -1,8 +1,8 @@
-import { memo, useContext, useEffect, useState, lazy, Suspense } from "react";
+import { memo, useEffect, useState, lazy, Suspense } from "react";
 import TextAnimation from "./TextAnimation";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import { LanguageContext } from "../contexts/LanguageContext";
+import { useTranslation } from "../hooks/useTranslation";
 const ProyectInfo = lazy(() => import("./ProyectInfo"));
 import { proyects } from "../data/proyects";
 
@@ -54,7 +54,8 @@ const ProjectCard = memo(({ proy, index, isSpanish, onClick }) => {
 });
 
 export default function Proyects() {
-  const { isSpanish } = useContext(LanguageContext);
+  const t = useTranslation();
+  const isSpanish = t.locale === "es";
   const [openInfo, setOpenInfo] = useState(false);
   const [idProyectInfo, setidProyectInfo] = useState(0);
 
@@ -114,11 +115,7 @@ export default function Proyects() {
         </svg>
         <motion.div className="flex flex-col items-center" name="proyectos">
           <h1 className="font-bold text-secondary 3xl:text-8xl xl:text-7xl lg:text-6xl md:text-5xl text-4xl my-28">
-            {isSpanish ? (
-              <TextAnimation text="PROYECTOS" />
-            ) : (
-              <TextAnimation text="PROJECTS" />
-            )}
+            <TextAnimation text={t.projects.sectionTitle} />
           </h1>
           <motion.div className="w-full flex flex-row flex-wrap justify-center items-center">
             {proyects.map((proy, index) => (
@@ -137,11 +134,7 @@ export default function Proyects() {
         width="1920"
         height="260"
         loading="lazy"
-        alt={
-          isSpanish
-            ? "Una ola color bordo para la estetica de la página"
-            : "A Burgundy wave for web's aesthetics"
-        }
+        alt={t.projects.waveAlt}
         src="/imgs/wave.webp"
         className="w-full rotate-180 relative -top-5"
       />

@@ -1,4 +1,4 @@
-import { useContext, useEffect } from "react";
+import { useEffect } from "react";
 import { lazy, Suspense } from "react";
 import { LazyMotion, domAnimation } from "framer-motion";
 
@@ -8,10 +8,10 @@ const Contact = lazy(() => import("./components/Contact"));
 const Navbar = lazy(() => import("./components/Navbar"));
 const Proyects = lazy(() => import("./components/Proyects"));
 import Start from "./components/Start";
-import { LanguageContext } from "./contexts/LanguageContext";
+import { useTranslation } from "./hooks/useTranslation";
 
 function App() {
-  const { isSpanish } = useContext(LanguageContext);
+  const t = useTranslation();
 
   /* ------------------------ Para que cargue el loader ----------------------- */
   useEffect(() => {
@@ -42,17 +42,10 @@ function App() {
           <Proyects />
           <Contact />
           <div className="relative flex justify-start items-center">
-            {isSpanish ? (
-              <p className="p-5 font-park text-center opacity-70 sm2:text">
-                ©{new Date().getFullYear()} Sofia Moneta.<br></br>Todos los
-                derechos reservados.
-              </p>
-            ) : (
-              <p className="p-5 font-park text-center opacity-70 sm2:text">
-                ©{new Date().getFullYear()} Sofia Moneta.<br></br>All rights
-                reserved.
-              </p>
-            )}
+            <p className="p-5 font-park text-center opacity-70 sm2:text">
+              ©{new Date().getFullYear()} Sofia Moneta.<br></br>
+              {t.app.footer}
+            </p>
           </div>
         </div>
       </Suspense>

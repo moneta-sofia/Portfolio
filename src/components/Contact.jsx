@@ -1,15 +1,15 @@
-import React, { useContext, useRef, lazy, Suspense, useEffect } from "react";
+import React, { useRef, lazy, Suspense, useEffect } from "react";
 import emailjs from "@emailjs/browser";
 import ReCAPTCHA from "react-google-recaptcha";
 import TextAnimation from "./TextAnimation";
 import { motion } from "framer-motion";
-import { LanguageContext } from "../contexts/LanguageContext";
+import { useTranslation } from "../hooks/useTranslation";
 
 const Toaster = lazy(() => import("sonner").then(mod => ({ default: mod.Toaster })));
 
 
 export default function Contact() {
-  const { isSpanish } = useContext(LanguageContext);
+  const t = useTranslation();
   // const [validCaptcha, setValidCaptcha] = useState(false);
   const form = useRef();
   const captcha = useRef();
@@ -36,15 +36,9 @@ export default function Contact() {
           import.meta.env.VITE_EMAILJS_PASSWORD,
         ),
         {
-          loading: isSpanish ? "Cargando..." : "Loading...",
-          success: () => {
-            return isSpanish
-              ? "El correo se ha enviado correctamente!"
-              : "The email has been sent successfully!";
-          },
-          error: isSpanish
-            ? "Lo siento! No se ha podido enviar el mail :/"
-            : "I'm sorry! The email couldn't be sent :/",
+          loading: t.contact.loading,
+          success: () => t.contact.success,
+          error: t.contact.error,
         },
       );
     }
@@ -53,9 +47,7 @@ export default function Contact() {
   const onReCAPTCHAChange = async (captchaValue) => {
     if (!captchaValue) {
       const { toast } = await import("sonner");
-      toast.error(
-        isSpanish ? "Captcha no validado." : "Captcha not validated.",
-      );
+      toast.error(t.contact.captchaError);
       return;
     }
     const { default: emailjs } = await import("@emailjs/browser");
@@ -69,13 +61,9 @@ export default function Contact() {
         import.meta.env.VITE_EMAILJS_PASSWORD,
       ),
       {
-        loading: isSpanish ? "Cargando..." : "Loading...",
-        success: isSpanish
-          ? "El correo se ha enviado correctamente!"
-          : "The email has been sent successfully!",
-        error: isSpanish
-          ? "Lo siento! No se ha podido enviar el mail :/"
-          : "I'm sorry! The email couldn't be sent :/",
+        loading: t.contact.loading,
+        success: t.contact.success,
+        error: t.contact.error,
       },
     );
   };
@@ -89,11 +77,7 @@ export default function Contact() {
         <Toaster richColors expand={false} position="bottom-center" />
       </Suspense>
       <h1 className="font-bold text-primary 3xl:text-8xl xl:text-7xl lg:text-6xl md:text-5xl text-4xl my-10 px-3">
-        {isSpanish ? (
-          <TextAnimation text="TRABAJEMOS JUNTOS!  " />
-        ) : (
-          <TextAnimation text="LET'S WORK TOGETHER!" />
-        )}
+        <TextAnimation text={t.contact.title} />
       </h1>
       <motion.p
         className="md:text-xl text-lg md:px-10 px-5"
@@ -101,19 +85,15 @@ export default function Contact() {
         whileInView={{ opacity: 1, transition: { duration: 1.5, delay: 0.5 } }}
         viewport={{ once: true }}
       >
-        {isSpanish
-          ? "Puedes contactarme por mi correo "
-          : "You can reach out to me via my email at "}
+        {t.contact.introStart}
         <a
           href="https://mail.google.com/mail/?view=cm&fs=1&to=sofia.moneta.dev@gmail.com"
           target="_blank"
           className="text-primary font-bold underline"
         >
-          sofia.moneta.dev@gmail.com
+          {t.contact.email}
         </a>
-        {isSpanish
-          ? ", o bien por este formulario 🥰"
-          : " or through this form 🥰."}
+        {t.contact.introEnd}
       </motion.p>
       <motion.form
         ref={form}
@@ -129,7 +109,7 @@ export default function Contact() {
       >
         <div className="flex flex-col w-full relative my-3">
           <label className="labelName text-xl font-bold px-2 text-primary">
-            {isSpanish ? "Nombre" : "Name"}
+            {t.contact.fields.name}
           </label>
           <input
             type="text"
@@ -142,7 +122,7 @@ export default function Contact() {
 
         <div className="flex flex-col w-full relative my-3">
           <label className="labelName text-xl font-bold px-2 text-primary">
-            Email
+            {t.contact.fields.email}
           </label>
           <input
             id="email"
@@ -155,7 +135,7 @@ export default function Contact() {
 
         <div className="flex flex-col w-full relative my-3">
           <label className="labelName text-xl font-bold px-2 text-primary">
-            {isSpanish ? "Mensaje" : "Message"}
+            {t.contact.fields.message}
           </label>
           <textarea
             id="message"
@@ -172,7 +152,7 @@ export default function Contact() {
         />
 
         <button className="bg-primary w-3/4 py-3 rounded-xl font-bold text-secondary my-3">
-          {isSpanish ? "Enviar" : "Send"}
+          {t.contact.fields.send}
         </button>
       </motion.form>
     </div>

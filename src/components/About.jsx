@@ -1,86 +1,16 @@
-  import { useContext, useEffect, useMemo, useState } from "react";
+  import { useEffect, useMemo, useState } from "react";
   import { AnimatePresence, easeOut, motion } from "framer-motion";
   import TextAnimation from "./TextAnimation";
-  import { LanguageContext } from "../contexts/LanguageContext";
+  import { useTranslation } from "../hooks/useTranslation";
   import VideoLite from "./VideoLite";
 
   export default function About() {
     const [infoText, setInfoText] = useState(false);
       const [currentSlide, setCurrentSlide] = useState(0);
-    const { isSpanish } = useContext(LanguageContext);
+    const t = useTranslation();
 
 
-    const slides = useMemo(
-    () =>
-      isSpanish
-        ? [
-            <>
-              Soy una <b className="text-bold">desarrolladora apasionada</b> 💪
-              con inclinación por el Back-End{" "}
-              <b className="text-bold">sin dejar de lado el Front-End</b>
-            </>,
-            <>
-              He completado mi especialización en Back-End{" "}
-              <b className="text-bold">
-                y busco activamente una oportunidad laboral
-              </b>{" "}
-              combinándola con proyectos freelance 📚
-            </>,
-            <>
-              Mi enfoque versátil me permite no solo entender la lógica del
-              Back-End 🤓, sino también la creatividad del Front-End 🖌️
-            </>,
-            <>
-              En mi viaje, he descubierto que el desarrollo va más allá de
-              líneas de código; se trata de{" "}
-              <b className="text-bold">
-                resolver problemas y mejorar experiencias 🙌
-              </b>
-              .
-            </>,
-            <>
-              Estoy emocionada por lo que el futuro me depara y me encuentro{" "}
-              <b className="text-bold">comprometida a crecer</b> constantemente
-              en este apasionante campo 🌱
-            </>,
-          ]
-        : [
-            <>
-              I am a <b className="text-bold">passionate developer</b> 💪 with a
-              strong preference for Back-End{" "}
-              <b className="text-bold">
-                while still appreciating the Front-End
-              </b>
-            </>,
-            <>
-              I have completed my Back-End specialization{" "}
-              <b className="text-bold">
-                and now am seeking job opportunities
-              </b>{" "}
-              while working on freelance projects 📚
-            </>,
-            <>
-              My versatile approach allows me not only to grasp the logic of the
-              Back-End 🤓 but also the creativity of the Front-End 🖌️
-            </>,
-            <>
-              In my journey, I've discovered that development goes beyond lines
-              of code; it's about{" "}
-              <b className="text-bold">
-                solving problems and enhancing experiences 🙌
-              </b>
-              .
-            </>,
-            <>
-              I'm excited about what the future holds for me, and{" "}
-              <b className="text-bold">
-                I'm committed to continuously growing
-              </b>{" "}
-              in this exciting field 🌱
-            </>,
-          ],
-    [isSpanish]
-  );
+    const slides = t.about.slides;
 
 
   useEffect(() => {
@@ -95,18 +25,14 @@
 
   useEffect(() => {
     setCurrentSlide(0);
-  }, [isSpanish]);
+  }, [t.locale]);
 
     return (
       <div className="w-screen bg-cuadricula2 font-inter">
         <img
           width="1920"
           height="260"
-          alt={
-            isSpanish
-              ? "Una ola color bordo para la estetica de la página"
-              : "A Burgundy wave for web's aesthetics"
-          }
+          alt={t.about.waveAlt}
           src="/imgs/wave.webp"
           className="w-full md:pt-10 pt-24"
         ></img>
@@ -115,11 +41,7 @@
           name="sobreMi"
         >
           <motion.h1 className="font-bold text-secondary 3xl:text-8xl xl:text-6xl lg:text-5xl text-4xl">
-            {isSpanish ? (
-              <TextAnimation text="SOBRE MI" />
-            ) : (
-              <TextAnimation text="ABOUT ME" />
-            )}
+            <TextAnimation text={t.about.title} />
           </motion.h1>
           {infoText ? 
           <div className="relative flex flex-col items-center justify-center md:w-10/12 w-11/12 md:px-10 px-3 md:text-3xl text-sm my-10 text-center bg-secondary rounded-3xl overflow-hidden min-h-[220px]">
@@ -181,7 +103,7 @@
               }`}
               onClick={() => setInfoText(true)}
             >
-              {isSpanish ? "TEXTO" : "TEXT"}
+              {t.about.buttons.text}
             </div>
             <div
               className={`py-3 md:px-12 px-8 rounded-tr-xl rounded-br-xl ${
@@ -189,7 +111,7 @@
               }`}
               onClick={() => setInfoText(false)}
             >
-              VIDEO
+              {t.about.buttons.video}
             </div>
           </motion.div>
         </div>

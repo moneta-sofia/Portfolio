@@ -1,0 +1,122 @@
+export const translations = {
+  es: {
+    app: {
+      footer: "Todos los derechos reservados.",
+    },
+    navbar: {
+      start: "Inicio",
+      about: "Sobre Mi",
+      projects: "Proyectos",
+      contact: "Contacto",
+    },
+    start: {
+      greeting: "¡Un gusto verte por aquí!",
+      name: "Soy Sofia Moneta",
+      role: "Desarrolladora Full-Stack",
+      githubAria: "Clickea aqui para ir a mi GitHub",
+      linkedinAria: "Clickea aqui para ir a mi Linkedin",
+      cvAria: "Clickea aqui para descargar mi curriculum vitae",
+      imageAlt: "Dibujo de una chica pelirroja con su computadora",
+    },
+    about: {
+      title: "SOBRE MÍ",
+      waveAlt: "Una ola color bordo para la estética de la página",
+      buttons: {
+        text: "Texto",
+        video: "Video",
+      },
+      slides: [
+        "Soy una desarrolladora apasionada 💪 con inclinación por el Back-End sin dejar de lado el Front-End",
+        "He completado mi especialización en Back-End y busco activamente una oportunidad laboral combinándola con proyectos freelance 📚",
+        "Mi enfoque versátil me permite no solo entender la lógica del Back-End 🤓, sino también la creatividad del Front-End 🖌️",
+        "En mi viaje, he descubierto que el desarrollo va más allá de líneas de código; se trata de resolver problemas y mejorar experiencias 🙌.",
+        "Estoy emocionada por lo que el futuro me depara y me encuentro comprometida a crecer constantemente en este apasionante campo 🌱",
+      ],
+    },
+    contact: {
+      title: "TRABAJEMOS JUNTOS!",
+      introStart: "Puedes contactarme por mi correo ",
+      email: "sofia.moneta.dev@gmail.com",
+      introEnd: ", o bien por este formulario 🥰",
+      loading: "Cargando...",
+      success: "El correo se ha enviado correctamente!",
+      error: "Lo siento! No se ha podido enviar el mail :/",
+      captchaError: "Captcha no validado.",
+      fields: {
+        name: "Nombre",
+        email: "Email",
+        message: "Mensaje",
+        send: "Enviar",
+      },
+    },
+    video: {
+      title: "Video presentación",
+      previewAlt: "Vista previa del video",
+      playAria: "Reproducir video",
+    },
+    projects: {
+      sectionTitle: "PROYECTOS",
+      waveAlt: "Una ola color bordo para la estética de la página",
+    },
+  },
+  en: {
+    app: {
+      footer: "All rights reserved.",
+    },
+    navbar: {
+      start: "Start",
+      about: "About Me",
+      projects: "Projects",
+      contact: "Contact",
+    },
+    start: {
+      greeting: "Nice to see you here!",
+      name: "I'm Sofia Moneta",
+      role: "Full-Stack Developer",
+      githubAria: "Click here to go to my GitHub",
+      linkedinAria: "Click here to go to my Linkedin",
+      cvAria: "Click here to download my resume",
+      imageAlt: "Drawing of a red-haired girl with her computer",
+    },
+    about: {
+      title: "ABOUT ME",
+      waveAlt: "A Burgundy wave for web's aesthetics",
+      buttons: {
+        text: "Text",
+        video: "Video",
+      },
+      slides: [
+        "I am a passionate developer 💪 with a strong preference for Back-End while still appreciating the Front-End",
+        "I have completed my Back-End specialization and now am seeking job opportunities while working on freelance projects 📚",
+        "My versatile approach allows me not only to grasp the logic of the Back-End 🤓 but also the creativity of the Front-End 🖌️",
+        "In my journey, I've discovered that development goes beyond lines of code; it's about solving problems and enhancing experiences 🙌.",
+        "I'm excited about what the future holds for me, and I'm committed to continuously growing in this exciting field 🌱",
+      ],
+    },
+    contact: {
+      title: "LET'S WORK TOGETHER!",
+      introStart: "You can reach out to me via my email at ",
+      email: "sofia.moneta.dev@gmail.com",
+      introEnd: " or through this form 🥰.",
+      loading: "Loading...",
+      success: "The email has been sent successfully!",
+      error: "I'm sorry! The email couldn't be sent :/",
+      captchaError: "Captcha not validated.",
+      fields: {
+        name: "Name",
+        email: "Email",
+        message: "Message",
+        send: "Send",
+      },
+    },
+    video: {
+      title: "Presentation video",
+      previewAlt: "Video preview",
+      playAria: "Play video",
+    },
+    projects: {
+      sectionTitle: "PROJECTS",
+      waveAlt: "A Burgundy wave for web's aesthetics",
+    },
+  },
+};
