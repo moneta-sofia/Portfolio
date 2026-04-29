@@ -2,20 +2,23 @@
 <html lang="en">
 
 <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <!-- Preload critical image to improve LCP -->
+  <link rel="preload" as="image" href="/imgs/imgHome.webp" fetchpriority="high" type="image/webp">
+  
+  <!-- Optimize font loading with display=swap for better CLS -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preload" as="style"
+  <link rel="preload" as="style" fetchpriority="low"
     href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Kulim+Park:wght@400;700&display=swap"
     onload="this.rel='stylesheet'">
   <noscript>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=...&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Kulim+Park:wght@400;700&display=swap">
   </noscript>
-  <meta charset="UTF-8" />
-  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <link rel="preload" as="image" href="/imgs/imgHome.webp"
-    fetchpriority="high">
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
 
   <!-- HTML Meta Tags -->
   <title>Sofia Moneta - Portfolio</title>
@@ -38,8 +41,6 @@
   <meta name="twitter:description" content="Descubre mi portfolio, explora mis proyectos y contáctame ;) 
 ¡Te invito a conocer mi trabajo!" />
   <meta name="twitter:image" content="https://subir-imagen.com/images/2023/11/17/preview.jpeg" />
-
-  <title>Sofia Moneta</title>
 </head>
 
 <body>

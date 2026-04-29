@@ -4,6 +4,7 @@ import { useTranslation } from "../hooks/useTranslation";
 
 export default function Start() {
   const t = useTranslation();
+  const isMobile = typeof window !== 'undefined' && window.innerWidth <= 768;
 
   return (
     <div
@@ -11,23 +12,23 @@ export default function Start() {
       name="inicio"
     >
       <div className="flex flex-col md:items-start items-center relative md:w-5/6 w-full md:h-3/4 h-full">
-        <div className="flex flex-col md:items-start items-center md:mt-8 mt-24 md:ml-12 ml-0 md:w-fit animate-fade-in-up" style={{ animationDelay: "0s" }}>
+        <div className="flex flex-col md:items-start items-center md:mt-8 mt-24 md:ml-12 ml-0 md:w-fit animate-fade-in-up" style={{ animationDelay: isMobile ? "0s" : "0s" }}>
           <div className="text-black 3xl:my-4 lg:my-2 my-1 ">
             <p
               className="flex items-center md:justify-start justify-center 3xl:text-4xl xl:text-2xl lg:text-xl text-sm 3xl:my-4 lg:my-3 my-1 animate-fade-in-up"
-              style={{ animationDelay: "0.2s" }}
+              style={{ animationDelay: isMobile ? "0s" : "0.2s" }}
             >
               {t.start.greeting} <WaveHandIcon className="ml-3 text-1xl" />
             </p>
             <p
               className="subrayado font-bold 3xl:text-8xl xl:text-6xl lg:text-5xl text-4xl md:text-center text-center animate-fade-in-up"
-              style={{ animationDelay: "0.4s" }}
+              style={{ animationDelay: isMobile ? "0s" : "0.4s" }}
             >
               <TextAnimation text={t.start.name} />
             </p>
             <p
               className="3xl:text-5xl xl:text-4xl lg:text-3xl text-xl 3xl:my-6 lg:my-5 my-4 font-extrabold md:text-start text-center animate-fade-in-up"
-              style={{ animationDelay: "0.6s" }}
+              style={{ animationDelay: isMobile ? "0s" : "0.6s" }}
             >
               <TextAnimation text={t.start.role} />
             </p>
@@ -38,7 +39,7 @@ export default function Start() {
               target="_blank"
               aria-label={t.start.githubAria}
               className="animate-fade-in-up"
-              style={{ animationDelay: "0.8s" }}
+              style={{ animationDelay: isMobile ? "0s" : "0.8s" }}
             >
               <GithubIcon className="3xl:h-16 lg:h-10 h-5 3xl:w-16 lg:w-10 w-5 " />
             </a>
@@ -47,7 +48,7 @@ export default function Start() {
               target="_blank"
               aria-label={t.start.linkedinAria}
               className="animate-fade-in-up"
-              style={{ animationDelay: "1s" }}
+              style={{ animationDelay: isMobile ? "0s" : "1s" }}
             >
               <LinkedinIcon className="3xl:h-16 lg:h-10 h-5 3xl:w-16 lg:w-10 w-5 " />
             </a>
@@ -56,7 +57,7 @@ export default function Start() {
               download={""}
               aria-label={t.start.cvAria}
               className="animate-fade-in-up"
-              style={{ animationDelay: "1.2s" }}
+              style={{ animationDelay: isMobile ? "0s" : "1.2s" }}
             >
               <DownloadIcon className="3xl:h-16 lg:h-10 h-5 3xl:w-16 lg:w-10 w-5 " />
             </a>

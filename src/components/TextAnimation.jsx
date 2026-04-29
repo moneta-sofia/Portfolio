@@ -31,13 +31,14 @@ const TextAnimation = ({ text = "" }) => {
           style={{
             whiteSpace: "nowrap",
             marginRight: isLast ? 0 : "0.35em",
+            contain: "layout style paint",
           }}
         >
           {letters.map(({ letter, delay }, letterIndex) => (
             <span
               key={`${wordIndex}-${letterIndex}`}
               className="text-anim__letter"
-              style={{ animationDelay: `${delay}s` }}
+              style={{ animationDelay: `${delay}s`, willChange: "opacity" }}
             >
               {letter}
             </span>

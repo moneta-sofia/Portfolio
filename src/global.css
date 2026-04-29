@@ -3,9 +3,16 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Performance optimizations */
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
 ::-webkit-scrollbar {
   display: none; /* Oculta el scrollbar */
 }
+
 :root {
   --color-primary: #953735;
   --color-secondary: #fbeee4;
@@ -18,10 +25,17 @@
 .text-anim__letter {
   display: inline-block;
   opacity: 0;
+  will-change: opacity;
 }
 
 .text-anim.is-visible .text-anim__letter {
   animation: fadeIn 0.2s ease forwards;
+}
+
+@media (max-width: 768px) {
+  .text-anim.is-visible .text-anim__letter {
+    animation: fadeIn 0.15s ease forwards;
+  }
 }
 
 @keyframes fadeIn {
@@ -32,23 +46,55 @@
 
 .hero-img {
   animation: slideUp 1s ease both;
+  will-change: transform;
 }
+
+@media (max-width: 768px) {
+  .hero-img {
+    animation: slideUp 0.6s ease both;
+  }
+}
+
 .animate-fade-in-up {
   opacity: 0;
   transform: translateY(15px);
   animation: fadeInUp 0.8s ease forwards;
+  will-change: transform, opacity;
 }
+
+@media (max-width: 768px) {
+  .animate-fade-in-up {
+    animation: fadeInUp 0.5s ease forwards;
+  }
+}
+
 .animate-fade-up {
   opacity: 0;
   transform: translateY(15px);
   animation: fadeInUp 0.8s ease forwards;
+  will-change: transform, opacity;
 }
+
+@media (max-width: 768px) {
+  .animate-fade-up {
+    animation: fadeInUp 0.5s ease forwards;
+  }
+}
+
 .project-card {
   opacity: 0;
   transform: translateY(20px);
+  will-change: transform, opacity;
 }
+
 .animate-project-card {
   animation: fadeInUp 0.7s ease forwards;
+}
+
+@media (max-width: 768px) {
+  .animate-project-card {
+    animation: fadeInUp 0.4s ease forwards !important;
+  }
 }
 .wave-path {
   stroke-dasharray: 1000;
@@ -56,6 +102,13 @@
 }
 .wave-path.animate-wave {
   animation: drawWave 4s ease-in-out infinite alternate;
+  will-change: stroke-dashoffset;
+}
+
+@media (max-width: 768px) {
+  .wave-path.animate-wave {
+    animation: drawWave 6s ease-in-out infinite alternate;
+  }
 }
 
 @keyframes drawWave {

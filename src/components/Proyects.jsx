@@ -6,7 +6,7 @@ const ProyectInfo = lazy(() => import("./ProyectInfo"));
 import { proyects } from "../data/proyects";
 
 const ProjectCard = memo(({ proy, index, isSpanish, onClick }) => {
-  const isMobile = window.innerWidth <= 768;
+  const isMobile = typeof window !== 'undefined' && window.innerWidth <= 768;
   const [ref, inView] = useInView({
     triggerOnce: true,
   });
@@ -16,7 +16,7 @@ const ProjectCard = memo(({ proy, index, isSpanish, onClick }) => {
       ref={ref}
       onClick={() => onClick(index)}
       className={`project-card cursor-pointer card-p1 flex flex-col ${proy.color} hover:bg-white px-6 pt-8 mb-16 w-80 overflow-hidden rounded-xl hover:scale-105 transition ease-out shadow-special hover:shadow-special2 mx-5 ${inView ? 'animate-project-card' : ''}`}
-      style={{ animationDelay: `${isMobile ? 0.3 : 0.3 * index}s` }}
+      style={{ animationDelay: `${isMobile ? '0s' : (0.3 * index) + 's'}` }}
     >
       <h1
         className="md:text-4xl text-3xl font-extrabold md:mb-5 mb-2"
