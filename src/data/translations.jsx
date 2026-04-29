@@ -8,6 +8,7 @@ export const translations = {
       about: "Sobre Mi",
       projects: "Proyectos",
       contact: "Contacto",
+      cv: "Descargar CV",
     },
     start: {
       greeting: "¡Un gusto verte por aquí!",
@@ -68,6 +69,7 @@ export const translations = {
       about: "About Me",
       projects: "Projects",
       contact: "Contact",
+      cv: "Download CV",
     },
     start: {
       greeting: "Nice to see you here!",

@@ -1,10 +1,9 @@
-import { useState } from "react";
-import { CloseIcon, MenuIcon } from "../data/icons";
+
 import { Link } from "react-scroll";
 import { useTranslation } from "../hooks/useTranslation";
+import { DownloadIcon, GithubIcon, LinkedinIcon } from "../data/icons";
 
 export default function Navbar() {
-  const [isOpen, setIsOpen] = useState(false);
   const t = useTranslation();
   const locale = t.locale;
 
@@ -14,99 +13,33 @@ export default function Navbar() {
   };
 
   return (
-    <div className="fixed top-0 right-0 lg:mr-16 mr-5 lg:mt-10 mt-5  z-50 flex justify-around">
-      <div
-        className={` cursor-pointer bg-white text-black font-bold text-2xl md:flex hidden items-center justify-around lg:mr-10 mr-6 lg:w-16 w-14 p-1 z-50 rounded-full transition-transform shadow-mdButCenter`}
-        onClick={toggleLanguage}
-      >
-        {locale === "es" ? "En" : "Es"}
-      </div>
-      <div className="flex flex-col items-center justify-center">
-        <div
-          className={`relative bg-white text-secondary font-bold text-4xl flex items-center justify-around w-fit h-fit lg:p-3 p-2 z-50 rounded-full transition-transform shadow-mdButCenter cursor-pointer ${
-            isOpen ? "rotate" : ""
-          }`}
-          onClick={() => setIsOpen(!isOpen)}
-        >
-          {isOpen ? (
-            <CloseIcon className="text-black" />
-          ) : (
-            <MenuIcon className="text-black" />
-          )}
-        </div>
 
-        {isOpen && (
-          <>
-            <div
-              className={`blur w-screen h-screen fixed inset-0 ${
-                isOpen ? "md:hidden flex" : "hidden"
-              }  `}
-            ></div>
-            <div className=" flex flex-col text-center items-center justify-center md:text-xl text-2xl md:mt-5 mt-0 bg-white rounded-xl md:px-4 px-10 md:py-0 py-5 md:absolute fixed md:inset-0 md:-translate-x-0 -translate-x-2/4 md:-translate-y-0 -translate-y-2/4 md:left-auto left-2/4 md:-right-7 md:top-14 top-2/4 z-40 h-fit w-fit p-3 shadow-mdButCenter">
-              <Link
-                activeClass="active"
-                to="inicio"
-                spy={true}
-                smooth={true}
-                offset={0}
-                duration={500}
-                onClick={() => setIsOpen(false)}
-                className="my-2 cursor-pointer "
-              >
-                {t.navbar.start}
-              </Link>
-              <hr className="w-full " />
-              <Link
-                activeClass="active"
-                to="sobreMi"
-                spy={true}
-                smooth={true}
-                offset={-80}
-                duration={500}
-                onClick={() => setIsOpen(false)}
-                className="my-2 cursor-pointer"
-              >
-                {t.navbar.about}
-              </Link>
-              <hr className="w-full " />
-              <Link
-                activeClass="active"
-                to="proyectos"
-                spy={true}
-                smooth={true}
-                offset={0}
-                duration={500}
-                onClick={() => setIsOpen(false)}
-                className="my-2 cursor-pointer"
-              >
-                {t.navbar.projects}
-              </Link>
-              <hr className="w-full " />
-              <Link
-                activeClass="active"
-                to="contacto"
-                spy={true}
-                smooth={true}
-                offset={-10}
-                duration={500}
-                onClick={() => setIsOpen(false)}
-                className="my-2 cursor-pointer"
-              >
-                {t.navbar.contact}
-              </Link>
-            </div>
-            <div
-              className={`bg-white text-black font-bold text-2xl md:hidden flex items-center justify-around mt-5 lg:w-16 w-14 h-14 p-1 z-50 rounded-full transition-transform shadow-mdButCenter`}
-              onClick={() => {
-                toggleLanguage();
-                setIsOpen(false);
-              }}
-            >
-              {locale === "es" ? "En" : "Es"}
-            </div>
-          </>
-        )}
+    <div className="w-11/12 fixed py-4 p-6 m-3 top-0 z-10 flex justify-between items-center bg-white border-b-[1.5px] border-gray-300 rounded-lg shadow-md">
+      <div >
+        <Link to="inicio" className="mx-5 font-semibold cursor-pointer">{t.navbar.start}</Link>
+        <Link to="sobreMi" className="mx-5 font-semibold cursor-pointer">{t.navbar.about}</Link>
+        <Link to="proyectos" className="mx-5 font-semibold cursor-pointer">{t.navbar.projects}</Link>
+        <Link to="contacto" className="mx-5 font-semibold cursor-pointer">{t.navbar.contact}</Link>
       </div>
+
+      <div>
+        <a href="https://github.com/moneta-sofia" target="_blank" className=" text-xl py-2 px-[0.7rem] bg-white rounded-xl ml-5 border-gray-300 border-[1.5px]"><GithubIcon/></a>
+        <a href="https://www.linkedin.com/in/sofiamoneta" target="_blank" className=" text-xl py-2 px-[0.7rem] bg-white rounded-xl ml-5 border-gray-300 border-[1.5px]"><LinkedinIcon/></a>
+        <a href="/CV-Sofia_Moneta.pdf" download={""}  className="  py-[0.8rem] px-[0.7rem] bg-primary text-white rounded-xl ml-5"><DownloadIcon className="text-xl "/> {t.navbar.cv} </a>
+      </div>
+
     </div>
+
+    // <div className="fixed top-0 right-0 lg:mr-16 mr-5 lg:mt-10 mt-5  z-50 flex justify-around">
+    //   <div
+    //     className={` cursor-pointer bg-white text-black font-bold text-2xl md:flex hidden items-center justify-around lg:mr-10 mr-6 lg:w-16 w-14 p-4 z-50 rounded-full transition-transform shadow-mdButCenter`}
+    //     onClick={toggleLanguage}
+    //   >
+    //     {locale === "es" ? "En" : "Es"}
+    //   </div>
+    //   <div className="flex flex-col items-center justify-center">
+
+    //   </div>
+    // </div>
   );
 }
