@@ -33,9 +33,46 @@
 .hero-img {
   animation: slideUp 1s ease both;
 }
-@keyframes slideUp {
-  from { transform: translateY(10px); opacity: 0; }
-  to   { transform: translateY(0);    opacity: 1; }
+.animate-fade-in-up {
+  opacity: 0;
+  transform: translateY(15px);
+  animation: fadeInUp 0.8s ease forwards;
+}
+.animate-fade-up {
+  opacity: 0;
+  transform: translateY(15px);
+  animation: fadeInUp 0.8s ease forwards;
+}
+.project-card {
+  opacity: 0;
+  transform: translateY(20px);
+}
+.animate-project-card {
+  animation: fadeInUp 0.7s ease forwards;
+}
+.wave-path {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+}
+.wave-path.animate-wave {
+  animation: drawWave 4s ease-in-out infinite alternate;
+}
+
+@keyframes drawWave {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .bg-cuadricula {

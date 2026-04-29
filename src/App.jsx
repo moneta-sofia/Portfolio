@@ -1,6 +1,4 @@
-import { useEffect } from "react";
-import { lazy, Suspense } from "react";
-import { LazyMotion, domAnimation } from "framer-motion";
+import { lazy, Suspense, useEffect } from "react";
 
 const About = lazy(() => import("./components/About"));
 const Contact = lazy(() => import("./components/Contact"));
@@ -33,23 +31,21 @@ function App() {
   }, []);
 
   return (
-    <LazyMotion features={domAnimation}>
-      <Suspense fallback={<div />}>
-        <div className="flex flex-col justify-center items-center overflow-x-hidden">
-          <Navbar />
-          <Start />
-          <About />
-          <Proyects />
-          <Contact />
-          <div className="relative flex justify-start items-center">
-            <p className="p-5 font-park text-center opacity-70 sm2:text">
-              ©{new Date().getFullYear()} Sofia Moneta.<br></br>
-              {t.app.footer}
-            </p>
-          </div>
+    <Suspense fallback={<div />}>
+      <div className="flex flex-col justify-center items-center overflow-x-hidden">
+        <Navbar />
+        <Start />
+        <About />
+        <Proyects />
+        <Contact />
+        <div className="relative flex justify-start items-center">
+          <p className="p-5 font-park text-center opacity-70 sm2:text">
+            ©{new Date().getFullYear()} Sofia Moneta.<br />
+            {t.app.footer}
+          </p>
         </div>
-      </Suspense>
-    </LazyMotion>
+      </div>
+    </Suspense>
   );
 }
 

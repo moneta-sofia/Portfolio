@@ -1,28 +1,22 @@
 import { memo, useEffect, useState, lazy, Suspense } from "react";
 import TextAnimation from "./TextAnimation";
-import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { useTranslation } from "../hooks/useTranslation";
 const ProyectInfo = lazy(() => import("./ProyectInfo"));
 import { proyects } from "../data/proyects";
 
-
 const ProjectCard = memo(({ proy, index, isSpanish, onClick }) => {
   const isMobile = window.innerWidth <= 768;
+  const [ref, inView] = useInView({
+    triggerOnce: true,
+  });
+
   return (
-    <motion.div
+    <div
+      ref={ref}
       onClick={() => onClick(index)}
-      className={`cursor-pointer card-p1 flex flex-col ${proy.color} hover:bg-white px-6 pt-8 mb-16 w-80 overflow-hidden rounded-xl hover:scale-105 transition ease-out shadow-special hover:shadow-special2 mx-5`}
-      key={index}
-      initial={{ opacity: 0, scale: 0 }}
-      whileInView={{
-        opacity: 1,
-        scale: 1,
-        transition: {
-          delay: isMobile ? 0.3 : 0.3 * index,
-        },
-      }}
-      viewport={{ once: true }}
+      className={`project-card cursor-pointer card-p1 flex flex-col ${proy.color} hover:bg-white px-6 pt-8 mb-16 w-80 overflow-hidden rounded-xl hover:scale-105 transition ease-out shadow-special hover:shadow-special2 mx-5 ${inView ? 'animate-project-card' : ''}`}
+      style={{ animationDelay: `${isMobile ? 0.3 : 0.3 * index}s` }}
     >
       <h1
         className="md:text-4xl text-3xl font-extrabold md:mb-5 mb-2"
@@ -36,7 +30,7 @@ const ProjectCard = memo(({ proy, index, isSpanish, onClick }) => {
       <div className="flex justify-between items-center text-3xl px-3 my-5">
         {proy.icons.map((icon, i) => {
           const IconComponent = icon;
-          return <IconComponent key={i}/>;
+          return <IconComponent key={i} />;
         })}
       </div>
       <img
@@ -49,7 +43,7 @@ const ProjectCard = memo(({ proy, index, isSpanish, onClick }) => {
         src={proy.image}
         className="relative -bottom-5 self-center"
       />
-    </motion.div>
+    </div>
   );
 });
 
@@ -91,33 +85,19 @@ export default function Proyects() {
       </Suspense>
       <div className="w-full bg-primary relative -top-2 font-inter pt-10">
         <svg className="w-full h-full" ref={ref} viewBox="1 0 190 70">
-          <motion.path
+          <path
+            className={`wave-path ${inView ? "animate-wave" : ""}`}
             fill="transparent"
             strokeWidth="3"
             stroke="#FBEEE4"
             d="m 0 30 q 39.75 -37.5 75 0 t 64.5 -2.25 c 4.5 -8.25 -13.5 -10.5 -9.75 -1.5 c 3 6.75 12.75 15.75 16.5 15 c 25.5 2.25 20.25 -27 47.25 -11.25"
-            animate={
-              inView
-                ? {
-                    pathLength: [0, 1],
-                    strokeDashoffset: [2],
-                  }
-                : {}
-            }
-            transition={{
-              duration: 2,
-              ease: "easeInOut",
-              times: [0, 1],
-              loop: Infinity,
-              repeatDelay: 1,
-            }}
           />
         </svg>
-        <motion.div className="flex flex-col items-center" name="proyectos">
+        <div className="flex flex-col items-center" name="proyectos">
           <h1 className="font-bold text-secondary 3xl:text-8xl xl:text-7xl lg:text-6xl md:text-5xl text-4xl my-28">
             <TextAnimation text={t.projects.sectionTitle} />
           </h1>
-          <motion.div className="w-full flex flex-row flex-wrap justify-center items-center">
+          <div className="w-full flex flex-row flex-wrap justify-center items-center">
             {proyects.map((proy, index) => (
               <ProjectCard
                 key={index}
@@ -127,8 +107,8 @@ export default function Proyects() {
                 onClick={handlerOpenProyectInfo}
               />
             ))}
-          </motion.div>
-        </motion.div>
+          </div>
+        </div>
       </div>
       <img
         width="1920"

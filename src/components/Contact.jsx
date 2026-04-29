@@ -2,23 +2,19 @@ import React, { useRef, lazy, Suspense, useEffect } from "react";
 import emailjs from "@emailjs/browser";
 import ReCAPTCHA from "react-google-recaptcha";
 import TextAnimation from "./TextAnimation";
-import { motion } from "framer-motion";
 import { useTranslation } from "../hooks/useTranslation";
 
-const Toaster = lazy(() => import("sonner").then(mod => ({ default: mod.Toaster })));
-
+const Toaster = lazy(() => import("sonner").then((mod) => ({ default: mod.Toaster })));
 
 export default function Contact() {
   const t = useTranslation();
-  // const [validCaptcha, setValidCaptcha] = useState(false);
   const form = useRef();
   const captcha = useRef();
-  
+
   useEffect(() => {
     emailjs.init("1i2zGYSVJo9MrYcxO");
   }, []);
 
-  
   const sendForm = async (e) => {
     e.preventDefault();
 
@@ -79,12 +75,7 @@ export default function Contact() {
       <h1 className="font-bold text-primary 3xl:text-8xl xl:text-7xl lg:text-6xl md:text-5xl text-4xl my-10 px-3">
         <TextAnimation text={t.contact.title} />
       </h1>
-      <motion.p
-        className="md:text-xl text-lg md:px-10 px-5"
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1, transition: { duration: 1.5, delay: 0.5 } }}
-        viewport={{ once: true }}
-      >
+      <p className="md:text-xl text-lg md:px-10 px-5 animate-fade-up">
         {t.contact.introStart}
         <a
           href="https://mail.google.com/mail/?view=cm&fs=1&to=sofia.moneta.dev@gmail.com"
@@ -94,18 +85,11 @@ export default function Contact() {
           {t.contact.email}
         </a>
         {t.contact.introEnd}
-      </motion.p>
-      <motion.form
+      </p>
+      <form
         ref={form}
         onSubmit={sendForm}
-        className="my-10 flex flex-col justify-center items-center bg-white sm:px-10 px-8 py-10 rounded-xl md:w-3/4 w-11/12 shadow-md"
-        initial={{ opacity: 0, y: 10 }}
-        whileInView={{
-          opacity: 1,
-          y: 0,
-          transition: { duration: 1, delay: 0.5 },
-        }}
-        viewport={{ once: true }}
+        className="my-10 flex flex-col justify-center items-center bg-white sm:px-10 px-8 py-10 rounded-xl md:w-3/4 w-11/12 shadow-md animate-fade-up"
       >
         <div className="flex flex-col w-full relative my-3">
           <label className="labelName text-xl font-bold px-2 text-primary">
@@ -154,7 +138,7 @@ export default function Contact() {
         <button className="bg-primary w-3/4 py-3 rounded-xl font-bold text-secondary my-3">
           {t.contact.fields.send}
         </button>
-      </motion.form>
+      </form>
     </div>
   );
 }
