@@ -1,10 +1,9 @@
-import React, { useRef, lazy, Suspense, useEffect } from "react";
+import React, { useRef, useEffect } from "react";
 import emailjs from "@emailjs/browser";
 import ReCAPTCHA from "react-google-recaptcha";
+import toast, { Toaster } from "react-hot-toast";
 import TextAnimation from "./TextAnimation";
 import { useTranslation } from "../hooks/useTranslation";
-
-const Toaster = lazy(() => import("sonner").then((mod) => ({ default: mod.Toaster })));
 
 export default function Contact() {
   const t = useTranslation();
@@ -21,47 +20,42 @@ export default function Contact() {
     captcha.current.execute();
 
     if (captcha.current.status) {
-      const { default: emailjs } = await import("@emailjs/browser");
-      const { toast } = await import("sonner");
-
-      toast.promise(
-        emailjs.sendForm(
+      const loadingToast = toast.loading(t.contact.loading);
+      try {
+        await emailjs.sendForm(
           import.meta.env.VITE_EMAILJS_SERVICE,
           import.meta.env.VITE_EMAILJS_TEMPLATE,
           form.current,
           import.meta.env.VITE_EMAILJS_PASSWORD,
-        ),
-        {
-          loading: t.contact.loading,
-          success: () => t.contact.success,
-          error: t.contact.error,
-        },
-      );
+        );
+        toast.dismiss(loadingToast);
+        toast.success(t.contact.success);
+      } catch (error) {
+        toast.dismiss(loadingToast);
+        toast.error(t.contact.error);
+      }
     }
   };
 
   const onReCAPTCHAChange = async (captchaValue) => {
     if (!captchaValue) {
-      const { toast } = await import("sonner");
       toast.error(t.contact.captchaError);
       return;
     }
-    const { default: emailjs } = await import("@emailjs/browser");
-    const { toast } = await import("sonner");
-
-    toast.promise(
-      emailjs.sendForm(
+    const loadingToast = toast.loading(t.contact.loading);
+    try {
+      await emailjs.sendForm(
         import.meta.env.VITE_EMAILJS_SERVICE,
         import.meta.env.VITE_EMAILJS_TEMPLATE,
         form.current,
         import.meta.env.VITE_EMAILJS_PASSWORD,
-      ),
-      {
-        loading: t.contact.loading,
-        success: t.contact.success,
-        error: t.contact.error,
-      },
-    );
+      );
+      toast.dismiss(loadingToast);
+      toast.success(t.contact.success);
+    } catch (error) {
+      toast.dismiss(loadingToast);
+      toast.error(t.contact.error);
+    }
   };
 
   return (
@@ -69,9 +63,7 @@ export default function Contact() {
       className="text-center mb-32 flex flex-col justify-center items-center"
       name="contacto"
     >
-      <Suspense fallback={null}>
-        <Toaster richColors expand={false} position="bottom-center" />
-      </Suspense>
+      <Toaster position="bottom-center" />
       <h1 className="font-bold text-primary 3xl:text-8xl xl:text-7xl lg:text-6xl md:text-5xl text-4xl my-10 px-3">
         <TextAnimation text={t.contact.title} />
       </h1>

@@ -10,10 +10,13 @@ export default defineConfig({
           vendor: ['react', 'react-dom'],
           emailjs: ['@emailjs/browser'],
           recaptcha: ['react-google-recaptcha'],
-          sonner: ['sonner'],
+          toast: ['react-hot-toast'],
           scroll: ['react-scroll'],
           observer: ['react-intersection-observer'],
-        }
+        },
+        entryFileNames: 'assets/[name]-[hash].js',
+        chunkFileNames: 'assets/[name]-[hash].js',
+        assetFileNames: 'assets/[name]-[hash].[ext]',
       }
     },
   },

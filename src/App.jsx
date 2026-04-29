@@ -2,7 +2,6 @@ import { lazy, Suspense, useEffect } from "react";
 
 const About = lazy(() => import("./components/About"));
 const Contact = lazy(() => import("./components/Contact"));
-// const Loader = lazy(() => import("./components/Loader"));
 const Navbar = lazy(() => import("./components/Navbar"));
 const Proyects = lazy(() => import("./components/Proyects"));
 import Start from "./components/Start";
@@ -21,7 +20,7 @@ function App() {
   useEffect(() => {
     if (window.innerWidth >= 1280) {
       const scriptElement = document.createElement("script");
-      scriptElement.src = "./oneko.js";
+      scriptElement.src = "/oneko.js";
       document.body.appendChild(scriptElement);
 
       return () => {
