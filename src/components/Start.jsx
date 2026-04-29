@@ -1,9 +1,8 @@
-import React from "react";
 import { WaveHandIcon, DownloadIcon, GithubIcon, LinkedinIcon } from "../data/icons";
 import TextAnimation from "./TextAnimation";
 import { useTranslation } from "../hooks/useTranslation";
 
-export default React.memo(function Start() {
+export default function Start() {
   const t = useTranslation();
   const isMobile = typeof window !== 'undefined' && window.innerWidth <= 768;
 
@@ -72,9 +71,8 @@ export default React.memo(function Start() {
           src="/imgs/imgHome.webp"
           className="md:p-0 mt-16 sm:p-16 p-5 md:absolute relative 2xl:right-10 right-0 2xl:bottom-10 bottom-5 hero-img"
           alt={t.start.imageAlt}
-          loading="eager"
         />
       </div>
     </div>
   );
-});
+}
