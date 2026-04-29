@@ -1,4 +1,4 @@
-import { WaveHandIcon} from "../data/icons";
+import { ExpressIcon, JavaIcon, NodeIcon, ReactIcon, SpringIcon, WaveHandIcon} from "../data/icons";
 import TextAnimation from "./TextAnimation";
 import { useTranslation } from "../hooks/useTranslation";
 
@@ -21,7 +21,7 @@ export default function Start() {
               {t.start.greeting} <WaveHandIcon className="ml-3 text-1xl" />
             </p>
             <h1
-              className="subrayado font-bold 3xl:text-8xl xl:text-6xl lg:text-5xl text-4xl md:text-left text-center animate-fade-in-up w-fit"
+              className="subrayado font-bold 3xl:text-9xl xl:text-7xl lg:text-6xl text-3xl md:text-left text-center animate-fade-in-up w-fit"
               style={{ animationDelay: isMobile ? "0s" : "0.4s" }}
             >
               <TextAnimation text={t.start.name} />
@@ -33,15 +33,22 @@ export default function Start() {
               <TextAnimation text={t.start.role} />
             </h1>
             <h2
-              className="3xl:text-2xl xl:text-xl lg:text-lg text-base 3xl:my-6 lg:my-5 my-4 md:text-start text-center animate-fade-in-up w-7/12 font-extralight font-inter"
+              className="3xl:text-xl xl:text-lg lg:text-base text-sm 3xl:my-6 lg:my-5 my-4 sm:text-start text-center animate-fade-in-up w-7/12 font-extralight font-inter"
               style={{ animationDelay: '0s'}}
             >
               <TextAnimation text={t.start.description} />
             </h2>
           </div>
           <div className="flex w-2/4 justify-between 3xl:my-6 my-2">
+            <div className="flex justify-center mr-4 p-2 shadow-lg rounded-2xl bg-white"><NodeIcon className="text-2xl mr-2"/>Node.js</div>
+            <div className="flex justify-center mr-4 p-2 shadow-lg rounded-2xl bg-white"><ExpressIcon  className="text-2xl mr-2"/>Express.js</div>
+            <div className="flex justify-center mr-4 p-2 shadow-lg rounded-2xl bg-white"><JavaIcon  className="text-2xl mr-2"/>Java</div>
+            <div className="flex justify-center mr-4 p-2 shadow-lg rounded-2xl bg-white"><SpringIcon  className="text-2xl mr-2"/>SpringBoot</div>
+            <div className="flex justify-center mr-4 p-2 shadow-lg rounded-2xl bg-white"><ReactIcon  className="text-2xl mr-2"/>React</div>
+            <div className="flex justify-center mr-4 p-2 shadow-lg rounded-2xl bg-white">+</div>
+
           </div>
-        </div>
+      </div>
         <img
           width="400"
           height="700"

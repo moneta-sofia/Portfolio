@@ -202,7 +202,8 @@ input:focus {
 }
 
 .subrayado {
-  background: linear-gradient(to bottom, transparent 50%, #9537356f 50%);
+  background: linear-gradient(to bottom, transparent 50%, #95373549 50%);
+
 }
 
 /* ------------------------------- cat loader ------------------------------- */
