@@ -28,6 +28,11 @@ export const DownloadIcon = ({ className = "", title }) => (
     <path d="M0 64C0 28.7 28.7 0 64 0L213.5 0c17 0 33.3 6.7 45.3 18.7L365.3 125.3c12 12 18.7 28.3 18.7 45.3L384 448c0 35.3-28.7 64-64 64L64 512c-35.3 0-64-28.7-64-64L0 64zm208-5.5l0 93.5c0 13.3 10.7 24 24 24L325.5 176 208 58.5zM175 441c9.4 9.4 24.6 9.4 33.9 0l64-64c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0l-23 23 0-86.1c0-13.3-10.7-24-24-24s-24 10.7-24 24l0 86.1-23-23c-9.4-9.4-24.6-9.4-33.9 0s-9.4 24.6 0 33.9l64 64z" />
   </IconBase>
 );
+export const MailIcon = ({ className = "", title }) => (
+  <IconBase viewBox="0 0 24 24" className={className} title={title}>
+    <path d="M 22 6 c 0 -1.1 -0.9 -2 -2 -2 H 4 c -1.1 0 -2 0.9 -2 2 v 12 c 0 1.1 0.9 2 2 2 h 16 c 1.1 0 2 -0.9 2 -2 V 6 Z m -2 0 l -8 5 l -8 -5 h 16 Z m 0 12 H 4 V 8 l 8 5 l 8 -5 v 10 Z" />
+  </IconBase>
+);
 
 export const WaveHandIcon = ({ className = "", title }) => (
   <IconBase viewBox="0 0 24 24" className={className} title={title}>
@@ -149,10 +154,53 @@ export const KeycloakIcon = ({ className = "", title }) => (
   </IconBase>
 );
 
+export const HomeIcon = ({ className = "", title }) => (
+  <IconBase viewBox="0 0 512 512" className={className} title={title}>
+    <path
+      fill="none"
+      stroke="currentColor"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth="32"
+      d="M80 212v236a16 16 0 0016 16h96V328a24 24 0 0124-24h56a24 24 0 0124 24v136h96a16 16 0 0016-16V212"
+    />
+    <path
+      fill="none"
+      stroke="currentColor"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth="32"
+      d="M480 256L256 56 32 256"
+    />
+  </IconBase>
+);
+
+export const AboutIcon = ({ className = "", title }) => (
+  <IconBase viewBox="0 0 24 24" className={className} title={title}>
+    <path d="M12 2.5a5.5 5.5 0 0 1 3.096 10.047 9.005 9.005 0 0 1 5.9 8.181.75.75 0 1 1-1.499.044 7.5 7.5 0 0 0-14.993 0 .75.75 0 0 1-1.5-.045 9.005 9.005 0 0 1 5.9-8.18A5.5 5.5 0 0 1 12 2.5ZM8 8a4 4 0 1 0 8 0 4 4 0 0 0-8 0Z"/>
+  </IconBase>
+);
+
+export const ProyectsIcon = ({ className = "", title }) => (
+  <IconBase viewBox="0 0 16 16" className={className} title={title}>
+    <path d="M 1 3.5 A 1.5 1.5 0 0 1 2.5 2 h 2.764 c 0.958 0 1.76 0.56 2.311 1.184 C 7.985 3.648 8.48 4 9 4 h 4.5 A 1.5 1.5 0 0 1 15 5.5 v 0.64 c 0.57 0.265 0.94 0.876 0.856 1.546 l -0.64 5.124 A 2.5 2.5 0 0 1 12.733 15 H 3.266 a 2.5 2.5 0 0 1 -2.481 -2.19 l -0.64 -5.124 A 1.5 1.5 0 0 1 1 6.14 Z M 2 6 h 12 v -0.5 a 0.5 0.5 0 0 0 -0.5 -0.5 H 9 c -0.964 0 -1.71 -0.629 -2.174 -1.154 C 6.374 3.334 5.82 3 5.264 3 H 2.5 a 0.5 0.5 0 0 0 -0.5 0.5 Z m -0.367 1 a 0.5 0.5 0 0 0 -0.496 0.562 l 0.64 5.124 A 1.5 1.5 0 0 0 3.266 14 h 9.468 a 1.5 1.5 0 0 0 1.489 -1.314 l 0.64 -5.124 A 0.5 0.5 0 0 0 14.367 7 Z" />
+  </IconBase>
+);
+
+export const ContactIcon = ({ className = "", title }) => (
+  <IconBase viewBox="0 0 16 16" className={className} title={title}>
+    <path d="M14 1a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H4.414A2 2 0 0 0 3 11.586l-2 2V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12.793a.5.5 0 0 0 .854.353l2.853-2.853A1 1 0 0 1 4.414 12H14a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"></path>
+    <path d="M3 3.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5M3 6a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9A.5.5 0 0 1 3 6m0 2.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5"></path>
+    </IconBase>
+);
+
+
+
 export const iconMap = {
   GithubIcon,
   LinkedinIcon,
   DownloadIcon,
+  MailIcon,
   WaveHandIcon,
   MenuIcon,
   CloseIcon,
@@ -173,5 +221,9 @@ export const iconMap = {
   NextIcon,
   PrismaIcon,
   KeycloakIcon,
+  ContactIcon,
+  AboutIcon,
+  ProyectsIcon,
+  HomeIcon,
 };
 
