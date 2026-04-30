@@ -1,6 +1,5 @@
 import React, { useRef, lazy, Suspense, useEffect } from "react";
 import emailjs from "@emailjs/browser";
-import ReCAPTCHA from "react-google-recaptcha";
 import TextAnimation from "./TextAnimation";
 import { useTranslation } from "../hooks/useTranslation";
 
@@ -9,15 +8,56 @@ const Toaster = lazy(() => import("sonner").then((mod) => ({ default: mod.Toaste
 export default function Contact() {
   const t = useTranslation();
   const form = useRef();
-  const captcha = useRef();
+  const captchaInput = useRef();
+  const siteKey = import.meta.env.VITE_SITE_KEY_CAPTCHA;
 
   useEffect(() => {
     emailjs.init("1i2zGYSVJo9MrYcxO");
-  }, []);
 
-  const handleSubmit = (e) => {
+    if (!siteKey || typeof window === "undefined") {
+      return;
+    }
+
+    if (window.grecaptcha) {
+      return;
+    }
+
+    const script = document.createElement("script");
+    script.src = `https://www.google.com/recaptcha/api.js?render=${siteKey}`;
+    script.async = true;
+    script.defer = true;
+    document.head.appendChild(script);
+
+    return () => {
+      document.head.removeChild(script);
+    };
+  }, [siteKey]);
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    captcha.current.execute();
+
+    const { toast } = await import("sonner");
+
+    if (!siteKey) {
+      toast.error(t.contact.captchaError);
+      return;
+    }
+
+    if (!window.grecaptcha) {
+      toast.error(t.contact.captchaError);
+      return;
+    }
+
+    window.grecaptcha.ready(async () => {
+      try {
+        const token = await window.grecaptcha.execute(siteKey, {
+          action: "contact_form",
+        });
+        await onReCAPTCHAChange(token);
+      } catch (error) {
+        toast.error(t.contact.captchaError);
+      }
+    });
   };
 
   const onReCAPTCHAChange = async (captchaValue) => {
@@ -27,10 +67,10 @@ export default function Contact() {
       return;
     }
 
-    // Set the captcha token in the hidden input
-    document.querySelector('input[name="captcha"]').value = captchaValue;
+    if (captchaInput.current) {
+      captchaInput.current.value = captchaValue;
+    }
 
-    const { default: emailjs } = await import("@emailjs/browser");
     const { toast } = await import("sonner");
 
     toast.promise(
@@ -42,7 +82,7 @@ export default function Contact() {
       ),
       {
         loading: t.contact.loading,
-        success: t.contact.success,
+        success: () => t.contact.success,
         error: t.contact.error,
       },
     );
@@ -113,14 +153,7 @@ export default function Contact() {
           />
         </div>
 
-        <input type="hidden" name="captcha" />
-
-        <ReCAPTCHA
-          ref={captcha}
-          size="invisible"
-          sitekey={import.meta.env.VITE_SITE_KEY_CAPTCHA}
-          onChange={onReCAPTCHAChange}
-        />
+        <input type="hidden" name="captcha" ref={captchaInput} />
 
         <button className="bg-primary w-3/4 py-3 rounded-xl font-bold text-secondary my-3">
           {t.contact.fields.send}
