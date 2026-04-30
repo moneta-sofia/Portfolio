@@ -15,29 +15,9 @@ export default function Contact() {
     emailjs.init("1i2zGYSVJo9MrYcxO");
   }, []);
 
-  const sendForm = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
-
     captcha.current.execute();
-
-    if (captcha.current.status) {
-      const { default: emailjs } = await import("@emailjs/browser");
-      const { toast } = await import("sonner");
-
-      toast.promise(
-        emailjs.sendForm(
-          import.meta.env.VITE_EMAILJS_SERVICE,
-          import.meta.env.VITE_EMAILJS_TEMPLATE,
-          form.current,
-          import.meta.env.VITE_EMAILJS_PASSWORD,
-        ),
-        {
-          loading: t.contact.loading,
-          success: () => t.contact.success,
-          error: t.contact.error,
-        },
-      );
-    }
   };
 
   const onReCAPTCHAChange = async (captchaValue) => {
@@ -46,6 +26,10 @@ export default function Contact() {
       toast.error(t.contact.captchaError);
       return;
     }
+
+    // Set the captcha token in the hidden input
+    document.querySelector('input[name="captcha"]').value = captchaValue;
+
     const { default: emailjs } = await import("@emailjs/browser");
     const { toast } = await import("sonner");
 
@@ -89,7 +73,7 @@ export default function Contact() {
       </p>
       <form
         ref={form}
-        onSubmit={sendForm}
+        onSubmit={handleSubmit}
         className="my-10 flex flex-col justify-center items-center bg-white sm:px-10 px-8 py-10 rounded-xl md:w-3/4 w-11/12 shadow-md animate-fade-up"
       >
         <div className="flex flex-col w-full relative my-3">
@@ -128,6 +112,8 @@ export default function Contact() {
             className="px-5 lg:h-36 h-60 inputName w-full text-lg text-gray-800 rounded-xl bg-inherit border-2 focus:border-4 border-solid border-primary py-3"
           />
         </div>
+
+        <input type="hidden" name="captcha" />
 
         <ReCAPTCHA
           ref={captcha}
