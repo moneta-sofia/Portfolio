@@ -25,13 +25,13 @@ export default function About() {
   }, [t.locale]);
 
   return (
-    <div className="w-screen bg-cuadricula2 font-inter">
+    <div className="w-screen bg-cuadricula2 font-inter relative -mt-6 md:-mt-8 lg:-mt-15">
       <img
         width="1920"
         height="260"
         alt={t.about.waveAlt}
-        src="/imgs/wave.webp"
-        className="w-full md:pt-10 pt-24"
+        src="/imgs/wave.svg"
+        className="w-full  left-0  -z-10"
       />
       <div
         className="w-full md:pt-0 pt-24 pb-24 bg-primary relative -top-1 flex flex-col items-center"

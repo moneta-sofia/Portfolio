@@ -128,18 +128,18 @@ html {
   }
 }
 
-.bg-cuadricula {
-  background-image: url("/imgs/cuadricula.webp");
-  background-position: center bottom;
-  background-size: 100%;
-  background-repeat: repeat;
-}
-.bg-cuadricula2 {
+/* .bg-cuadricula {
   background-image: url("/imgs/cuadricula.webp");
   background-position: center top;
+  background-size: 100%;
+  background-repeat: repeat;
+} */
+/* .bg-cuadricula2 {
+  background-image: url("/imgs/cuadricula.webp");
+  background-position: center ;
   background-repeat: repeat;
   background-size: 100%;
-}
+} */
 
 @media (max-width: 750px) {
   .bg-cuadricula2 {
@@ -201,10 +201,10 @@ input:focus {
   background-color: rgba(0, 0, 0, 0.233);
 }
 
-.subrayado {
+/* .subrayado {
   background: linear-gradient(to bottom, transparent 50%, #95373549 50%);
 
-}
+} */
 
 /* ------------------------------- cat loader ------------------------------- */
 

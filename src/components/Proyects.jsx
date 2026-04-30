@@ -115,7 +115,7 @@ export default function Proyects() {
         height="260"
         loading="lazy"
         alt={t.projects.waveAlt}
-        src="/imgs/wave.webp"
+        src="/imgs/wave.svg"
         className="w-full rotate-180 relative -top-5"
       />
     </>
