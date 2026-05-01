@@ -17,18 +17,6 @@ function App() {
     return () => cancelAnimationFrame(id);
   }, []);
 
-  /* -------------- Para evitar que oneko cargue junto al loader -------------- */
-  useEffect(() => {
-    if (window.innerWidth >= 1280) {
-      const scriptElement = document.createElement("script");
-      scriptElement.src = "./oneko.js";
-      document.body.appendChild(scriptElement);
-
-      return () => {
-        document.body.removeChild(scriptElement);
-      };
-    }
-  }, []);
 
   return (
     <Suspense fallback={<div />}>
