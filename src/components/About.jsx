@@ -1,4 +1,4 @@
-import TextAnimation from "./TextAnimation";
+// import TextAnimation from "./TextAnimation";
 import { useTranslation } from "../hooks/useTranslation";
 import VideoLite from "./VideoLite";
 import { useInView } from "react-intersection-observer";
@@ -6,9 +6,9 @@ import { useInView } from "react-intersection-observer";
 export default function About() {
   const t = useTranslation();
 
-  const [ref, inView] = useInView({
-    triggerOnce: true,
-  });
+  // const [ref, inView] = useInView({
+  //   triggerOnce: true,
+  // });
 
   const [videoRef, videoInView] = useInView({
     triggerOnce: true,
@@ -18,7 +18,10 @@ export default function About() {
     <>
       <section className="w-screen flex flex-col items-center justify-center bg-primary font-inter relative ">
         {/* -------------------------------- scribble -------------------------------- */}
-        <svg className="w-full" ref={ref} viewBox="1 0 190 70">
+        {/* /* -------------------------------------------------------------------------- */
+        /*                                     FIX                                    */
+        /* -------------------------------------------------------------------------- */ }
+        {/* <svg className="w-full" ref={ref} viewBox="1 0 190 70">
           <path
             className={`wave-path ${inView ? "animate-wave" : ""}`}
             fill="transparent"
@@ -26,7 +29,7 @@ export default function About() {
             stroke="#FBEEE4"
             d="m 0 30 q 39.75 -37.5 75 0 t 64.5 -2.25 c 4.5 -8.25 -13.5 -10.5 -9.75 -1.5 c 3 6.75 12.75 15.75 16.5 15 c 25.5 2.25 20.25 -27 47.25 -11.25"
           />
-        </svg>
+        </svg> */}
 
         <div
           ref={videoRef}
