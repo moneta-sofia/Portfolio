@@ -23,8 +23,8 @@ function App() {
       <div className="flex flex-col justify-center items-center overflow-x-hidden">
         <Navbar />
         <Start />
+        <Proyects /> 
         <About />
-        <Proyects />
         <Contact />
         <div className="relative flex justify-start items-center">
           <p className="p-5 font-park text-center opacity-70 sm2:text">

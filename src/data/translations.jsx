@@ -14,7 +14,8 @@ export const translations = {
       greeting: "¡Un gusto verte por aquí!",
       name: "Soy Sofia Moneta",
       role: "Desarrolladora Full-Stack",
-      description: "Construyo aplicaciones escalables con foco en backend usando Node.js y React, con experiencia en Java y Spring Boot",
+      description:
+        "Construyo aplicaciones escalables con foco en backend usando Node.js y React, con experiencia en Java y Spring Boot",
       projects: "Ver proyectos",
       githubAria: "Clickea aqui para ir a mi GitHub",
       linkedinAria: "Clickea aqui para ir a mi Linkedin",
@@ -28,13 +29,35 @@ export const translations = {
         text: "Texto",
         video: "Video",
       },
-      slides: [
-        "Soy una desarrolladora apasionada 💪 con inclinación por el Back-End sin dejar de lado el Front-End",
-        "He completado mi especialización en Back-End y busco activamente una oportunidad laboral combinándola con proyectos freelance 📚",
-        "Mi enfoque versátil me permite no solo entender la lógica del Back-End 🤓, sino también la creatividad del Front-End 🖌️",
-        "En mi viaje, he descubierto que el desarrollo va más allá de líneas de código; se trata de resolver problemas y mejorar experiencias 🙌.",
-        "Estoy emocionada por lo que el futuro me depara y me encuentro comprometida a crecer constantemente en este apasionante campo 🌱",
+      subtitle: "Convirtiendo ideas en aplicaciones FullStack confiables",
+      description: [
+        <>
+          Soy <strong>Full-Stack Developer</strong> con un fuerte interés en el{" "}
+          <strong>desarrollo backend</strong>, formada en{" "}
+          <strong>Digital House</strong>.
+        </>,
+        <>
+          Actualmente estudio <strong>Desarrollo de Software</strong> en{" "}
+          <strong>INCUYO</strong> y desarrollo proyectos con{" "}
+          <strong>React</strong>, <strong>Node.js</strong> y{" "}
+          <strong>Java</strong>.
+        </>,
+        <>
+          Me enfoco en escribir <strong>código claro y mantenible</strong>,
+          creando aplicaciones con buena estructura, interfaces limpias y
+          funcionalidad práctica.
+        </>,
       ],
+      technologies: [
+        "Node.js / Express",
+        "Java / Spring Boot",
+        "React / Vite",
+        "Docker / Keycloak",
+        "MySQL / MongoDB",
+        "REST API / Microservices",
+        "Tailwind CSS / SASS",
+        "Git / CI/CD",
+      ]
     },
     contact: {
       title: "TRABAJEMOS JUNTOS!",
@@ -53,6 +76,7 @@ export const translations = {
       },
     },
     video: {
+      watchit: "Mira mi presentación :D",
       title: "Video presentación",
       previewAlt: "Vista previa del video",
       playAria: "Reproducir video",
@@ -77,7 +101,8 @@ export const translations = {
       greeting: "Nice to see you here!",
       name: "I'm Sofia Moneta",
       role: "Full-Stack Developer",
-      description: "I build scalable applications with a backend focus using Node.js and React, with experience in Java and Spring Boot",
+      description:
+        "I build scalable applications with a backend focus using Node.js and React, with experience in Java and Spring Boot",
       projects: "View Projects",
       githubAria: "Click here to go to my GitHub",
       linkedinAria: "Click here to go to my Linkedin",
@@ -91,13 +116,35 @@ export const translations = {
         text: "Text",
         video: "Video",
       },
-      slides: [
-        "I am a passionate developer 💪 with a strong preference for Back-End while still appreciating the Front-End",
-        "I have completed my Back-End specialization and now am seeking job opportunities while working on freelance projects 📚",
-        "My versatile approach allows me not only to grasp the logic of the Back-End 🤓 but also the creativity of the Front-End 🖌️",
-        "In my journey, I've discovered that development goes beyond lines of code; it's about solving problems and enhancing experiences 🙌.",
-        "I'm excited about what the future holds for me, and I'm committed to continuously growing in this exciting field 🌱",
+      subtitle: "Turning ideas into reliable fullStack applications",
+      description: [
+        <>
+          I’m a <strong>Full-Stack Developer</strong> with a strong interest in{" "}
+          <strong>backend development</strong>, trained at{" "}
+          <strong>Digital House</strong>.
+        </>,
+        <>
+          I’m currently studying <strong>Software Development</strong> at{" "}
+          <strong>INCUYO</strong> and building projects with{" "}
+          <strong>React</strong>, <strong>Node.js</strong>, and{" "}
+          <strong>Java</strong>.
+        </>,
+        <>
+          I focus on writing <strong>clear, maintainable code</strong> and
+          creating applications with solid structure, clean interfaces, and
+          practical functionality.
+        </>,
       ],
+      technologies: [
+        "Node.js / Express",
+        "Java / Spring Boot",
+        "React / Vite",
+        "Docker / Keycloak",
+        "MySQL / MongoDB",
+        "REST APIs / Microservices",
+        "Tailwind CSS / SASS",
+        "Git / CI/CD",
+      ]
     },
     contact: {
       title: "LET'S WORK TOGETHER!",
@@ -116,6 +163,7 @@ export const translations = {
       },
     },
     video: {
+      watchit: "Watch my presentation :D",
       title: "Presentation video",
       previewAlt: "Video preview",
       playAria: "Play video",

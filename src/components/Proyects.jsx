@@ -68,12 +68,16 @@ export default function Proyects() {
     setOpenInfo(true);
   };
 
-  const [ref, inView] = useInView({
-    triggerOnce: true,
-  });
 
   return (
-    <>
+    <div className="relative -mt-6 md:-mt-8 lg:-mt-15 w-full">
+      <img
+        width="1920"
+        height="260"
+        alt={t.about.waveAlt}
+        src="/imgs/wave.svg"
+        className="w-full  left-0  -z-10"
+      />
       <Suspense fallback={null}>
         {openInfo && (
           <ProyectInfo
@@ -83,16 +87,8 @@ export default function Proyects() {
           />
         )}
       </Suspense>
-      <div className="w-full bg-primary relative -top-2 font-inter pt-10">
-        <svg className="w-full h-full" ref={ref} viewBox="1 0 190 70">
-          <path
-            className={`wave-path ${inView ? "animate-wave" : ""}`}
-            fill="transparent"
-            strokeWidth="3"
-            stroke="#FBEEE4"
-            d="m 0 30 q 39.75 -37.5 75 0 t 64.5 -2.25 c 4.5 -8.25 -13.5 -10.5 -9.75 -1.5 c 3 6.75 12.75 15.75 16.5 15 c 25.5 2.25 20.25 -27 47.25 -11.25"
-          />
-        </svg>
+      <div className="w-full bg-primary relative font-inter">
+
         <div className="flex flex-col items-center" name="proyectos">
           <h1 className="font-bold text-secondary 3xl:text-8xl xl:text-7xl lg:text-6xl md:text-5xl text-4xl my-28">
             <TextAnimation text={t.projects.sectionTitle} />
@@ -110,14 +106,6 @@ export default function Proyects() {
           </div>
         </div>
       </div>
-      <img
-        width="1920"
-        height="260"
-        loading="lazy"
-        alt={t.projects.waveAlt}
-        src="/imgs/wave.svg"
-        className="w-full rotate-180 relative -top-5"
-      />
-    </>
+    </div>
   );
 }
