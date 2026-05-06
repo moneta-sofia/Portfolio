@@ -29,8 +29,8 @@ const ProjectCard = memo(({ proy, index, isSpanish, onClick }) => {
         cursor-pointer 
         flex  
         flex-col 
-        w-[330px] 
-        min-h-[440px]
+        w-[350px] 
+        min-h-[50px]
         bg-secondary 
         rounded-xl 
         overflow-hidden 
@@ -41,7 +41,7 @@ const ProjectCard = memo(({ proy, index, isSpanish, onClick }) => {
         ease-out 
         mx-5  
         mb-8
-        p-5
+        p-4
         ${inView ? "animate-project-card" : ""}
       `}
       style={{
@@ -67,7 +67,7 @@ const ProjectCard = memo(({ proy, index, isSpanish, onClick }) => {
             )}
           </div>
 
-          <p className="text-xs py-2 font-medium leading-relaxed line-clamp-2">
+          <p className="text-xs py-1 font-medium leading-relaxed ">
             {description}
           </p>
           
@@ -79,13 +79,13 @@ const ProjectCard = memo(({ proy, index, isSpanish, onClick }) => {
               {t.projects.whatIDid}
             </p>
 
-          <p className="text-xs leading-relaxed line-clamp-3 py-2">
+          <p className="text-xs leading-relaxed line-clamp-3 py-1">
             {role}
           </p>
         </div>
           
 
-        <div className="flex items-center gap-5 text-2xl mb-3 min-h-[32px]">
+        <div className="flex items-center gap-3 text-xl mb-3 min-h-[32px]">
           {proy.icons.map((icon, i) => {
             const IconComponent = icon;
             return <IconComponent key={i} />;
@@ -106,14 +106,14 @@ const ProjectCard = memo(({ proy, index, isSpanish, onClick }) => {
       />
 
       {/* Botones siempre abajo */}
-      <div className="flex w-full gap-3 mt-auto">
+      <div className="flex w-full gap-2">
         <button
           type="button"
           onClick={(e) => {
             e.stopPropagation();
             onClick(index);
           }}
-          className="flex-1 w-1/2 rounded-lg bg-primary py-3 text-xs font-bold text-secondary"
+          className="flex-1 w-1/2 rounded-lg bg-primary text-xs font-bold text-secondary"
         >
           {t.projects.seeDetails}
         </button>
@@ -139,6 +139,8 @@ const ProjectCard = memo(({ proy, index, isSpanish, onClick }) => {
     </article>
   );
 });
+
+
 export default function Proyects() {
   const t = useTranslation();
   const isSpanish = t.locale === "es";
@@ -171,13 +173,13 @@ export default function Proyects() {
         className="w-full left-0 -z-10"
       />
       <Suspense fallback={null}>
-        {openInfo && (
+        
           <ProyectInfo
             proyect={proyects[idProyectInfo]}
             setOpenInfo={setOpenInfo}
             openInfo={openInfo}
           />
-        )}
+        
       </Suspense>
       <div className="w-full bg-primary relative font-inter">
 
