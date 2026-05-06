@@ -33,7 +33,7 @@ export default function About() {
 
         <div
           ref={videoRef}
-          className="w-11/12 relative -top-1 flex flex-col items-center justify-center gap-6 md:gap-8"
+          className="w-11/12 relative -top-1 flex flex-col items-center justify-center gap-6 md:gap-8 pt-32"
           name="sobreMi"
         >
           <h2 className={`text-3xl md:text-4xl lg:text-5xl text-secondary font-bold flex self-start ${videoInView ? 'animate-fade-in' : ''}`} style={{ animationDelay: '0.5s' }}>

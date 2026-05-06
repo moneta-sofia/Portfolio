@@ -177,7 +177,7 @@ export const HomeIcon = ({ className = "", title }) => (
 
 export const AboutIcon = ({ className = "", title }) => (
   <IconBase viewBox="0 0 24 24" className={className} title={title}>
-    <path d="M12 2.5a5.5 5.5 0 0 1 3.096 10.047 9.005 9.005 0 0 1 5.9 8.181.75.75 0 1 1-1.499.044 7.5 7.5 0 0 0-14.993 0 .75.75 0 0 1-1.5-.045 9.005 9.005 0 0 1 5.9-8.18A5.5 5.5 0 0 1 12 2.5ZM8 8a4 4 0 1 0 8 0 4 4 0 0 0-8 0Z"/>
+    <path d="M12 2.5a5.5 5.5 0 0 1 3.096 10.047 9.005 9.005 0 0 1 5.9 8.181.75.75 0 1 1-1.499.044 7.5 7.5 0 0 0-14.993 0 .75.75 0 0 1-1.5-.045 9.005 9.005 0 0 1 5.9-8.18A5.5 5.5 0 0 1 12 2.5ZM8 8a4 4 0 1 0 8 0 4 4 0 0 0-8 0Z" />
   </IconBase>
 );
 
@@ -191,7 +191,7 @@ export const ContactIcon = ({ className = "", title }) => (
   <IconBase viewBox="0 0 16 16" className={className} title={title}>
     <path d="M14 1a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H4.414A2 2 0 0 0 3 11.586l-2 2V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12.793a.5.5 0 0 0 .854.353l2.853-2.853A1 1 0 0 1 4.414 12H14a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"></path>
     <path d="M3 3.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5M3 6a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9A.5.5 0 0 1 3 6m0 2.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5"></path>
-    </IconBase>
+  </IconBase>
 );
 
 export const ArrowIcon = ({ className = "", title }) => (
@@ -200,6 +200,11 @@ export const ArrowIcon = ({ className = "", title }) => (
   </IconBase>
 );
 
+export const ExternalLink = ({ className = "", title }) => (
+  <IconBase viewBox="0 0 24 24" className={className} title={title}>
+    <path d="M10 6V8H5V19H16V14H18V20C18 20.5523 17.5523 21 17 21H4C3.44772 21 3 20.5523 3 20V7C3 6.44772 3.44772 6 4 6H10ZM21 3V11H19L18.9999 6.413L11.2071 14.2071L9.79289 12.7929L17.5849 5H13V3H21Z"></path>
+  </IconBase>
+);
 
 export const iconMap = {
   GithubIcon,
@@ -231,5 +236,5 @@ export const iconMap = {
   ProyectsIcon,
   HomeIcon,
   ArrowIcon,
+  ExternalLink
 };
-

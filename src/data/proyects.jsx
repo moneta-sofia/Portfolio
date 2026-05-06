@@ -1,265 +1,476 @@
 import { iconMap } from "../data/icons";
+
 export const proyects = [
   /* -------------------------------------------------------------------------- */
-  /*                                Tacos Proyect                               */
+  /*                                TACO WORKS                                  */
   /* -------------------------------------------------------------------------- */
 
   {
     nameSpanish: "Taco Works",
     nameEnglish: "Taco's Works",
 
+    typeSpanish: "Full-Stack",
+    typeEnglish: "Full-Stack",
+
+    descriptionSpanish:
+      "Portfolio artístico para mostrar obras, trayectoria y contenido visual de Taco.",
+    descriptionEnglish:
+      "Artistic portfolio to showcase Taco’s artworks, journey, and visual content.",
+    roleSpanish:
+      "Desarrollé el frontend con React y TailwindCSS, el backend con Node.js y Express, y la base de datos en MongoDB.",
+    roleEnglish:
+      "I developed the frontend with React and TailwindCSS, the backend with Node.js and Express, and the database with MongoDB.",
+
     descriptionLongSpanish:
-      "Un proyecto Full-Stack que recopila y muestra las obras artísticas de Taco, junto con su trayectoria. Incluye un frontend interactivo construido con React y TailwindCSS, un backend con Node.js y Express, y base de datos en MongoDB.",
+      "Taco Works es un sitio web que centraliza y presenta las obras artísticas de Taco, ofreciendo una experiencia visual dinámica e inmersiva. Permite explorar la trayectoria del artista a través de ilustraciones, animaciones y diseños en distintos formatos.",
     descriptionLongEnglish:
-      "A Full-Stack project that showcases Taco’s artistic works and career journey. It features an interactive frontend built with React and TailwindCSS, a backend powered by Node.js and Express, and MongoDB as the database.",
-    descriptionSpanish: "Proyecto Full-Stack: Obras y trayectoria artística",
-    descriptionEnglish: "Frontend project: Artistic works and journey",
+      "Taco Works is a website that centralizes and presents Taco’s artistic works, offering a dynamic and immersive visual experience. It allows users to explore the artist’s journey through illustrations, animations, and designs in different formats.",
+
+    whatIDidSpanish: [
+      "Desarrollé el frontend interactivo con React y TailwindCSS.",
+      "Construí el backend con Node.js y Express, aplicando una arquitectura RESTful.",
+      "Modelé y conecté la base de datos en MongoDB.",
+      "Implementé autenticación, navegación dinámica y gestión de obras.",
+    ],
+
+    whatIDidEnglish: [
+      "I developed the interactive frontend with React and TailwindCSS.",
+      "I built the backend with Node.js and Express, applying a RESTful architecture.",
+      "I modeled and connected the database using MongoDB.",
+      "I implemented authentication, dynamic navigation, and artwork management.",
+    ],
+
+    featuresSpanish: [
+      "Inicio de sesión para acceder a herramientas administrativas.",
+      "Navegación fluida con transiciones dinámicas entre secciones.",
+      "Exploración de obras por categorías y formatos.",
+      "Panel administrativo para agregar y eliminar obras.",
+      "Carga y gestión de imágenes asociadas a cada obra.",
+    ],
+
+    featuresEnglish: [
+      "Login system to access administrative tools.",
+      "Smooth navigation with dynamic transitions between sections.",
+      "Artwork exploration by categories and formats.",
+      "Admin panel to add and delete artworks.",
+      "Image upload and management for each artwork.",
+    ],
 
     data: [
       {
+        titleSpanish: "Login",
+        titleEnglish: "Login",
         descriptionSpanish:
-          "Este proyecto cuenta con una funcionalidad de inicio de sesión que permite a los usuarios autenticarse de forma segura y acceder a las herramientas administrativas del sitio.",
+          "Inicio de sesión seguro para acceder a las herramientas administrativas del sitio.",
         descriptionEnglish:
-          "This project includes a login feature that allows users to authenticate securely and access the site's administrative tools.",
+          "Secure login to access the site’s administrative tools.",
         gif: "/imgs/proyects/taco/login.gif",
       },
       {
+        titleSpanish: "Transiciones",
+        titleEnglish: "Transitions",
         descriptionSpanish:
-          "También incorpora una navegación fluida y transiciones dinámicas entre secciones, ofreciendo una experiencia visual atractiva y envolvente.",
+          "Navegación fluida y transiciones dinámicas entre secciones.",
         descriptionEnglish:
-          "It also features smooth navigation and dynamic transitions between sections, providing an engaging and visually appealing experience.",
+          "Smooth navigation and dynamic transitions between sections.",
         gif: "/imgs/proyects/taco/move.gif",
       },
       {
+        titleSpanish: "Explorar obras",
+        titleEnglish: "Explore artworks",
         descriptionSpanish:
-          "El menú de navegación interactivo facilita el acceso a las distintas categorías de obras y secciones del portfolio, mejorando la usabilidad general.",
+          "Menú interactivo para recorrer categorías, obras y secciones del portfolio.",
         descriptionEnglish:
-          "The interactive navigation menu makes it easy to access different artwork categories and sections of the portfolio, enhancing overall usability.",
+          "Interactive menu to explore categories, artworks, and portfolio sections.",
         gif: "/imgs/proyects/taco/exploring.gif",
       },
       {
+        titleSpanish: "Agregar obras",
+        titleEnglish: "Add artworks",
         descriptionSpanish:
-          "Desde el panel administrativo, es posible agregar nuevas obras al portfolio, incluyendo la carga de imágenes y la gestión de su información asociada.",
+          "Panel administrativo para agregar nuevas obras con imágenes e información asociada.",
         descriptionEnglish:
-          "From the admin panel, new artworks can be added to the portfolio, including image uploads and management of related information.",
+          "Admin panel to add new artworks with images and related information.",
         gif: "/imgs/proyects/taco/add.gif",
       },
       {
+        titleSpanish: "Eliminar obras",
+        titleEnglish: "Delete artworks",
         descriptionSpanish:
-          "Además, el sistema permite eliminar obras existentes de forma segura, garantizando un control completo sobre el contenido mostrado.",
+          "Funcionalidad para eliminar obras existentes de forma segura.",
         descriptionEnglish:
-          "Additionally, the system allows existing artworks to be safely deleted, ensuring full control over the displayed content.",
+          "Feature to safely delete existing artworks.",
         gif: "/imgs/proyects/taco/delete.gif",
       },
     ],
 
     icons: [
-      iconMap.ExpressIcon,
       iconMap.NodeIcon,
+      iconMap.ExpressIcon,
       iconMap.MongoIcon,
       iconMap.ReactIcon,
       iconMap.TailwindIcon,
-      iconMap.ViteIcon
+      iconMap.ViteIcon,
     ],
 
-    
-    image:
-      "/imgs/TacoMockup.webp",
-    color: "bg-stone-300",
-    textColor: "#000",
+    image: "/imgs/TacoMockup.webp",
 
     links: [
       {
         siteSpanish: "FrontEnd",
         siteEnglish: "Frontend",
         url: "https://github.com/moneta-sofia/ProyectoTaco",
-        icon: iconMap.GithubIcon
+        icon: iconMap.GithubIcon,
       },
       {
         siteSpanish: "BackEnd",
-        siteEnglish: "BackEnd",
+        siteEnglish: "Backend",
         url: "https://github.com/moneta-sofia/BackTaco",
-        icon: iconMap.GithubIcon
+        icon: iconMap.GithubIcon,
       },
       {
         siteSpanish: "Ver sitio",
         siteEnglish: "View site",
         url: "https://tacoportfolio.netlify.app/",
-        icon: iconMap.ComputerIcon
+        icon: iconMap.ComputerIcon,
       },
     ],
 
-    spanishAlt: "Un monitor con mi proyecto del Portfolio de Taco, Diego Ruiz",
+    color: "bg-stone-300",
+    textColor: "#000",
+
+    spanishAlt: "Un monitor con mi proyecto del portfolio de Taco, Diego Ruiz",
     englishAlt: "A monitor displaying my Taco's Portfolio project",
   },
 
   /* -------------------------------------------------------------------------- */
-  /*                            DIGITAL MONEY PROYECT                           */
-  // /* -------------------------------------------------------------------------- */
+  /*                               DIGITAL MONEY                                */
+  /* -------------------------------------------------------------------------- */
 
   {
-    link: "https://github.com/moneta-sofia/challengebackend",
     nameSpanish: "Digital Money",
     nameEnglish: "Digital Money",
 
+    typeSpanish: "Back-End",
+    typeEnglish: "Back-End",
+
     descriptionSpanish:
-      "Proyecto Back-End: Microservicios con Spring Boot, Keycloak y Docker",
+      "Backend basado en microservicios para gestionar operaciones de dinero digital.",
     descriptionEnglish:
-      "Back-End project: Microservices with Spring Boot, Keycloak, and Docker",
+      "Microservices-based backend to manage digital money operations.",
+
+    roleSpanish:
+      "Diseñé y desarrollé microservicios con Spring Boot, seguridad con Keycloak, despliegue con Docker y persistencia en MySQL.",
+    roleEnglish:
+      "I designed and developed microservices with Spring Boot, security with Keycloak, Docker deployment, and MySQL persistence.",
+
     descriptionLongSpanish:
-      "Un backend basado en microservicios que gestiona operaciones de dinero digital. Desarrollado con Spring Boot y asegurado con Keycloak para autenticación y autorización. Los servicios se despliegan y orquestan mediante Docker, con MySQL como base de datos.",
+      "Digital Money es un proyecto backend basado en microservicios orientado a la gestión de operaciones de dinero digital. El sistema fue desarrollado con Spring Boot y protegido mediante Keycloak para manejar autenticación y autorización.",
     descriptionLongEnglish:
-      "A backend built on microservices to manage digital money operations. Developed with Spring Boot and secured with Keycloak for authentication and authorization. Services are deployed and orchestrated using Docker, with MySQL as the database.",
+      "Digital Money is a backend project based on microservices, focused on managing digital money operations. The system was developed with Spring Boot and secured with Keycloak to handle authentication and authorization.",
+
+    whatIDidSpanish: [
+      "Desarrollé servicios backend con Java y Spring Boot.",
+      "Implementé autenticación y autorización utilizando Keycloak.",
+      "Configuré el despliegue y la orquestación de servicios con Docker.",
+      "Integré MySQL como base de datos para la persistencia de la información.",
+    ],
+
+    whatIDidEnglish: [
+      "I developed backend services with Java and Spring Boot.",
+      "I implemented authentication and authorization using Keycloak.",
+      "I configured service deployment and orchestration with Docker.",
+      "I integrated MySQL as the database for data persistence.",
+    ],
+
+    featuresSpanish: [
+      "Arquitectura basada en microservicios.",
+      "Gestión segura de usuarios, autenticación y roles.",
+      "Persistencia de datos con MySQL.",
+      "Servicios preparados para ejecutarse mediante Docker.",
+    ],
+
+    featuresEnglish: [
+      "Microservices-based architecture.",
+      "Secure user, authentication, and role management.",
+      "Data persistence with MySQL.",
+      "Services prepared to run with Docker.",
+    ],
 
     icons: [
       iconMap.JavaIcon,
       iconMap.SpringIcon,
       iconMap.DockerIcon,
       iconMap.KeycloakIcon,
-      iconMap.MysqlIcon
+      iconMap.MysqlIcon,
     ],
-    image:
-      "/imgs/DHmoneyMockup.webp",
+
+    image: "/imgs/DHmoneyMockup.webp",
 
     links: [
       {
         siteEnglish: "Repository",
         siteSpanish: "Repositorio",
         url: "https://github.com/moneta-sofia/challengebackend",
-        icon: iconMap.GithubIcon
+        icon: iconMap.GithubIcon,
       },
     ],
 
     color: "bg-blue-100",
     textColor: "#09192A",
+
     spanishAlt: "Un monitor con mi proyecto de Digital Money",
     englishAlt: "A monitor displaying my Digital Money project",
   },
 
   /* -------------------------------------------------------------------------- */
-  /*                               INFINIT PROYECT                              */
+  /*                                  INFINIT                                   */
   /* -------------------------------------------------------------------------- */
 
   {
     nameSpanish: "Infinit",
     nameEnglish: "Infinit",
 
-    descriptionSpanish: "Proyecto Full-Stack: Alquiler de autos de lujo",
+    typeSpanish: "Full-Stack",
+    typeEnglish: "Full-Stack",
+
+    descriptionSpanish:
+      "Aplicación para gestionar un servicio de alquiler de autos de lujo.",
     descriptionEnglish:
-      "Full-Stack project: Luxury car rental service with premium fleet ",
+      "Application to manage a luxury car rental service.",
+
+    roleSpanish:
+      "Desarrollé una interfaz moderna con Next.js, React y TailwindCSS, conectada a MySQL mediante Prisma.",
+    roleEnglish:
+      "I developed a modern interface with Next.js, React, and TailwindCSS, connected to MySQL through Prisma.",
+
     descriptionLongSpanish:
-      "Una aplicación Full-Stack para gestionar un servicio de alquiler de autos de lujo. Ofrece una interfaz moderna desarrollada con Next.js, React y TailwindCSS, y un backend conectado a MySQL mediante Prisma, lo que permite administrar flota y reservas.",
+      "Infinit es una aplicación full-stack pensada para un servicio de alquiler de autos de lujo. Permite presentar una flota premium mediante una interfaz moderna y administrar información relacionada con vehículos y reservas.",
     descriptionLongEnglish:
-      "A Full-Stack application for managing a luxury car rental service. It features a modern interface developed with Next.js, React, and TailwindCSS, and a backend connected to MySQL using Prisma, enabling fleet and booking management.",
+      "Infinit is a full-stack application designed for a luxury car rental service. It presents a premium fleet through a modern interface and manages information related to vehicles and bookings.",
+
+    whatIDidSpanish: [
+      "Desarrollé la interfaz con Next.js, React y TailwindCSS.",
+      "Conecté la aplicación a una base de datos MySQL mediante Prisma.",
+      "Estructuré el proyecto para permitir la gestión de flota y reservas.",
+      "Trabajé en una experiencia visual moderna orientada a un servicio premium.",
+    ],
+
+    whatIDidEnglish: [
+      "I developed the interface with Next.js, React, and TailwindCSS.",
+      "I connected the application to a MySQL database using Prisma.",
+      "I structured the project to support fleet and booking management.",
+      "I worked on a modern visual experience focused on a premium service.",
+    ],
+
+    featuresSpanish: [
+      "Visualización de una flota de autos de lujo.",
+      "Interfaz responsive con estética moderna.",
+      "Gestión de datos mediante Prisma y MySQL.",
+      "Estructura full-stack para administración de reservas y vehículos.",
+    ],
+
+    featuresEnglish: [
+      "Luxury car fleet display.",
+      "Responsive interface with a modern aesthetic.",
+      "Data management with Prisma and MySQL.",
+      "Full-stack structure for booking and vehicle management.",
+    ],
+
     icons: [
       iconMap.ReactIcon,
       iconMap.TailwindIcon,
       iconMap.NextIcon,
       iconMap.PrismaIcon,
-      iconMap.MysqlIcon
+      iconMap.MysqlIcon,
     ],
-    image:
-      "/imgs/infinitMockup.webp",
+
+    image: "/imgs/infinitMockup.webp",
 
     links: [
       {
         siteSpanish: "Ver sitio",
         siteEnglish: "View site",
         url: "https://infinit-ashen.vercel.app/",
-        icon: iconMap.ComputerIcon
+        icon: iconMap.ComputerIcon,
       },
       {
         siteSpanish: "Repositorio",
         siteEnglish: "Repository",
         url: "https://github.com/moneta-sofia/infinit",
-        icon: iconMap.GithubIcon
+        icon: iconMap.GithubIcon,
       },
     ],
 
     color: "bg-blue-50",
     textColor: "#2B4D6D",
+
     spanishAlt: "Un monitor con mi proyecto de alquiler de autos",
     englishAlt: "A monitor displaying my car rental project",
   },
 
   /* -------------------------------------------------------------------------- */
-  /*                               CLINICA PROYECT                              */
+  /*                                  CLÍNICA                                   */
   /* -------------------------------------------------------------------------- */
 
   {
     nameSpanish: "Clínica",
     nameEnglish: "Clinic",
 
-    descriptionSpanish: "Proyecto Backend: Gestión de pacientes",
-    descriptionEnglish: "Backend project: Patient Management",
+    typeSpanish: "Back-End",
+    typeEnglish: "Back-End",
+
+    descriptionSpanish:
+      "Sistema backend para la gestión de pacientes, turnos y profesionales.",
+    descriptionEnglish:
+      "Backend system for managing patients, appointments, and professionals.",
+
+    roleSpanish:
+      "Desarrollé la lógica backend con Java y Spring Boot para administrar información clínica.",
+    roleEnglish:
+      "I developed the backend logic with Java and Spring Boot to manage clinical information.",
+
     descriptionLongSpanish:
-      "Un sistema backend para la gestión de pacientes en una clínica. Implementado con Spring Boot y Java, incluye lógica para administrar datos de pacientes, turnos y profesionales de la salud. También cuenta con integración de tecnologías web básicas.",
+      "Clínica es un sistema backend orientado a la gestión de pacientes en un entorno médico. El proyecto permite organizar información relacionada con pacientes, turnos y profesionales de la salud.",
     descriptionLongEnglish:
-      "A backend system for managing patients in a clinic. Implemented with Spring Boot and Java, it includes logic for handling patient data, appointments, and healthcare professionals. It also integrates basic web technologies.",
+      "Clinic is a backend system focused on patient management in a medical environment. The project helps organize information related to patients, appointments, and healthcare professionals.",
+
+    whatIDidSpanish: [
+      "Desarrollé el backend utilizando Java y Spring Boot.",
+      "Implementé lógica para administrar datos de pacientes.",
+      "Trabajé sobre funcionalidades relacionadas con turnos y profesionales.",
+      "Integré tecnologías web básicas como parte del proyecto.",
+    ],
+
+    whatIDidEnglish: [
+      "I developed the backend using Java and Spring Boot.",
+      "I implemented logic to manage patient data.",
+      "I worked on features related to appointments and healthcare professionals.",
+      "I integrated basic web technologies as part of the project.",
+    ],
+
+    featuresSpanish: [
+      "Gestión de pacientes.",
+      "Administración de turnos.",
+      "Registro de profesionales de la salud.",
+      "Estructura backend desarrollada con Spring Boot.",
+    ],
+
+    featuresEnglish: [
+      "Patient management.",
+      "Appointment management.",
+      "Healthcare professional records.",
+      "Backend structure developed with Spring Boot.",
+    ],
+
     icons: [
       iconMap.HtmlIcon,
       iconMap.CssIcon,
       iconMap.SassIcon,
       iconMap.JavaIcon,
-      iconMap.SpringIcon
+      iconMap.SpringIcon,
     ],
-    image:
-      "/imgs/ClinicaMockup.webp",
+
+    image: "/imgs/ClinicaMockup.webp",
 
     links: [
       {
         siteSpanish: "Repositorio",
         siteEnglish: "Repository",
         url: "https://github.com/moneta-sofia/ProyectBackend",
-        icon: iconMap.GithubIcon
+        icon: iconMap.GithubIcon,
       },
     ],
 
     color: "bg-stone-50",
     textColor: "#9AB6D3",
-    spanishAlt: "Un monitor con mi proyecto de gestion de pacientes",
+
+    spanishAlt: "Un monitor con mi proyecto de gestión de pacientes",
     englishAlt: "A monitor displaying my patient management project",
   },
 
   /* -------------------------------------------------------------------------- */
-  /*                             ODONTOLOGOS PROYECT                            */
+  /*                                ODONTÓLOGOS                                 */
   /* -------------------------------------------------------------------------- */
 
   {
-    nameSpanish: "Odontologos",
+    nameSpanish: "Odontólogos",
     nameEnglish: "Dentists",
-    descriptionSpanish: "Proyecto FrontEnd: Listado de Odontologos",
-    descriptionEnglish: "Frontend project: Dentists listing and storage",
+
+    typeSpanish: "Front-End",
+    typeEnglish: "Front-End",
+
+    descriptionSpanish:
+      "Aplicación frontend para visualizar y almacenar un listado de odontólogos.",
+    descriptionEnglish:
+      "Frontend application to display and store a list of dentists.",
+
+    roleSpanish:
+      "Implementé el frontend con React, Vite, CSS y Sass, incluyendo visualización y almacenamiento básico de datos.",
+    roleEnglish:
+      "I implemented the frontend with React, Vite, CSS, and Sass, including data display and basic storage.",
+
     descriptionLongSpanish:
-      "Una aplicación frontend que permite visualizar y almacenar un listado de odontólogos. Construida con React, Vite, CSS y Sass, incluye un diseño atractivo y funcionalidades de almacenamiento básico para la gestión de profesionales.",
+      "Odontólogos es una aplicación frontend que permite visualizar y almacenar un listado de profesionales odontológicos. Fue construida con React y Vite, incorporando estilos con CSS y Sass.",
     descriptionLongEnglish:
-      "A frontend application that allows displaying and storing a list of dentists. Built with React, Vite, CSS, and Sass, it features an appealing design and basic storage functionalities for managing professionals.",
+      "Dentists is a frontend application that allows users to display and store a list of dental professionals. It was built with React and Vite, using CSS and Sass for styling.",
+
+    whatIDidSpanish: [
+      "Desarrollé la interfaz utilizando React y Vite.",
+      "Apliqué estilos con CSS y Sass.",
+      "Implementé la visualización de odontólogos en formato de listado.",
+      "Agregué funcionalidades básicas de almacenamiento para gestionar profesionales.",
+    ],
+
+    whatIDidEnglish: [
+      "I developed the interface using React and Vite.",
+      "I applied styles with CSS and Sass.",
+      "I implemented the display of dentists in a list format.",
+      "I added basic storage features to manage professionals.",
+    ],
+
+    featuresSpanish: [
+      "Listado de odontólogos.",
+      "Visualización de información profesional.",
+      "Almacenamiento básico de datos.",
+      "Diseño responsive construido con React.",
+    ],
+
+    featuresEnglish: [
+      "Dentist listing.",
+      "Professional information display.",
+      "Basic data storage.",
+      "Responsive design built with React.",
+    ],
+
     icons: [
       iconMap.CssIcon,
       iconMap.SassIcon,
       iconMap.ReactIcon,
-      iconMap.ViteIcon
+      iconMap.ViteIcon,
     ],
-    image:
-      "/imgs/OdontologosMockup.webp",
+
+    image: "/imgs/OdontologosMockup.webp",
 
     links: [
       {
         siteSpanish: "Repositorio",
         siteEnglish: "Repository",
         url: "https://github.com/moneta-sofia/ProyectBackend",
-        icon: iconMap.GithubIcon
+        icon: iconMap.GithubIcon,
       },
       {
         siteSpanish: "Ver sitio",
         siteEnglish: "View site",
         url: "https://odontologos-sofi.netlify.app/",
-        icon: iconMap.ComputerIcon
+        icon: iconMap.ComputerIcon,
       },
     ],
+
     color: "bg-red-100",
     textColor: "#FF0002",
-    spanishAlt: "Un monitor con mi proyecto de listado de odontologos",
+
+    spanishAlt: "Un monitor con mi proyecto de listado de odontólogos",
     englishAlt: "A monitor displaying my dentists listing project",
   },
 ];

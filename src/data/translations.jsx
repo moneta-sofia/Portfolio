@@ -82,7 +82,10 @@ export const translations = {
       playAria: "Reproducir video",
     },
     projects: {
-      sectionTitle: "PROYECTOS",
+      sectionTitle: "PROYECTOS DESTACADOS",
+      sectionSubtitle: "Conoce algunos de mis proyectos destacados",
+      whatIDid: "Lo que hice:",
+      seeDetails: "Ver detalles",
       waveAlt: "Una ola color bordo para la estética de la página",
     },
   },
@@ -169,7 +172,10 @@ export const translations = {
       playAria: "Play video",
     },
     projects: {
-      sectionTitle: "PROJECTS",
+      sectionTitle: "FEATURED PROJECTS",
+      sectionSubtitle: "Take a look at some of my featured projects",
+      whatIDid: "What i did:",
+      seeDetails: "See details",
       waveAlt: "A Burgundy wave for web's aesthetics",
     },
   },
